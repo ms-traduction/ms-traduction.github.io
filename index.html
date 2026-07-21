@@ -153,12 +153,18 @@
     .portrait {
       min-height: 440px;
       border-radius: 36px 36px 12px 36px;
-      background:
-        linear-gradient(rgba(215,167,173,0.18), rgba(215,167,173,0.18)),
-        url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80') center/cover;
+      background: #f8ecee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
+      padding: 40px;
+    }
+
+    .portrait img {
+      width: 80%;
+      max-width: 360px;
+      height: auto;
     }
 
     .portrait-note {
@@ -347,9 +353,7 @@
       </div>
 
       <div class="portrait">
-        <div class="portrait-note">
-          <strong>Aquí iría tu retrato profesional.</strong><br />
-          La foto actual es solo una imagen de muestra.
+        <img src="logoms.png" alt="Logo María Salmerón">
         </div>
       </div>
     </section>
