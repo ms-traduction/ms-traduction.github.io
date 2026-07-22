@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>María Salmerón — Traductora Jurada</title>
+<title>María Salmerón – Traductora-Intérprete Jurada</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="shortcut icon" href="logo.png" type="image/png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -95,7 +98,8 @@
     display:flex;
     gap:38px;
   }
-  nav.main-nav a{
+  nav.main-nav a,
+  .dropdown-trigger{
     font-size:13px;
     letter-spacing:1.2px;
     text-transform:uppercase;
@@ -104,9 +108,68 @@
     padding-bottom:6px;
     border-bottom:2px solid transparent;
     transition:border-color .25s ease, color .25s ease;
+    display:inline-flex;
+    align-items:center;
+    line-height:1;
   }
-  nav.main-nav a:hover, nav.main-nav a.active{
+  nav.main-nav a:hover, nav.main-nav a.active,
+  .dropdown-trigger:hover, .dropdown-trigger.active{
     border-color:var(--rose);
+  }
+  .nav-item{
+    position:relative;
+    display:flex;
+    align-items:center;
+  }
+  .dropdown-trigger{
+    gap:6px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    padding:0 0 6px 0;
+    font-family:inherit;
+    text-align:left;
+  }
+  .dropdown-trigger .caret{
+    font-size:11px;
+    line-height:1;
+    color:var(--rose-dark);
+    transition:transform .25s ease;
+  }
+  .nav-item.open .dropdown-trigger .caret{
+    transform:rotate(180deg);
+  }
+  .dropdown-menu{
+    position:absolute;
+    top:calc(100% + 12px);
+    left:0;
+    display:none;
+    flex-direction:column;
+    min-width:210px;
+    padding:10px 0;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:rgba(251,248,244,0.96);
+    box-shadow:0 18px 35px -20px rgba(30,42,69,0.25);
+    backdrop-filter:blur(8px);
+  }
+  .nav-item.open .dropdown-menu{
+    display:flex;
+  }
+  .dropdown-menu a{
+    padding:10px 16px;
+    font-size:12px;
+    letter-spacing:1px;
+    font-weight:500;
+    color:var(--navy);
+    border-bottom:1px solid rgba(30,42,69,0.06);
+  }
+  .dropdown-menu a:last-child{
+    border-bottom:none;
+  }
+  .dropdown-menu a:hover{
+    color:var(--rose-dark);
+    background:rgba(198,123,129,0.06);
   }
 
   .nav-right{
@@ -118,15 +181,24 @@
   .lang-select{
     display:flex;
     align-items:center;
-    gap:6px;
+    gap:8px;
     border:1px solid var(--line);
     border-radius:30px;
-    padding:8px 16px;
+    padding:8px 14px;
     font-size:13px;
     letter-spacing:1px;
     color:var(--navy);
-    cursor:pointer;
     background:transparent;
+  }
+
+  .lang-select span{
+    font-weight:500;
+    color:var(--navy);
+  }
+
+  .lang-select .active{
+    font-weight:700;
+    color:var(--rose-dark);
   }
 
   .btn{
@@ -282,10 +354,37 @@
 
   /* ---------- SERVICIOS ---------- */
   .servicios{ background:var(--cream-2); }
+  .servicios-subtitle{
+    text-align:center;
+    font-family:var(--serif);
+    font-size:clamp(24px,2.4vw,30px);
+    color:var(--rose-dark);
+    margin:-10px 0 18px;
+    font-weight:600;
+  }
+  .servicios-division{
+    margin-top:56px;
+    padding-top:28px;
+    border-top:1px solid rgba(30,42,69,0.08);
+  }
+  .servicios-intro{
+    text-align:center;
+    color:#6b6b6b;
+    font-size:15.5px;
+    line-height:1.7;
+    max-width:760px;
+    margin:0 auto 56px;
+  }
   .servicios-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:32px;
+  }
+  .servicios-block{
+    margin-top:24px;
+  }
+  .servicios-block + .servicios-block{
+    margin-top:56px;
   }
   .service-card{
     background:var(--cream);
@@ -317,6 +416,14 @@
     font-size:14.5px;
     line-height:1.7;
     color:#6b6b6b;
+  }
+  .service-block-title{
+    text-align:center;
+    font-family:var(--serif);
+    font-size:clamp(28px,3.2vw,38px);
+    color:var(--navy);
+    font-weight:600;
+    margin-bottom:18px;
   }
 
   /* ---------- SOBRE MÍ ---------- */
@@ -598,7 +705,45 @@
       background:none;border:none;
     }
     .burger span{ width:24px;height:2px;background:var(--navy); }
+    .nav-wrap{ position:relative; }
     .nav-right .lang-select{ display:none; }
+    .main-nav{
+      display:none;
+      position:absolute;
+      top:calc(100% + 10px);
+      left:0;
+      right:0;
+      background:rgba(251,248,244,0.98);
+      border:1px solid var(--line);
+      border-radius:10px;
+      padding:18px 22px;
+      box-shadow:0 18px 35px -20px rgba(30,42,69,0.25);
+      z-index:20;
+    }
+    .main-nav.open{ display:block; }
+    .main-nav ul{
+      flex-direction:column;
+      gap:16px;
+    }
+    .dropdown-menu{
+      position:static;
+      display:none;
+      min-width:auto;
+      padding:8px 0 0;
+      border:none;
+      border-radius:0;
+      background:transparent;
+      box-shadow:none;
+      backdrop-filter:none;
+    }
+    .nav-item.open .dropdown-menu,
+    .nav-item:hover .dropdown-menu{
+      display:flex;
+    }
+    .dropdown-menu a{
+      padding:6px 0 0 0;
+      border-bottom:none;
+    }
     .servicios-grid{ grid-template-columns:1fr 1fr; }
     .steps{ grid-template-columns:1fr 1fr; row-gap:50px; }
     .step:not(:last-child)::after{ display:none; }
@@ -627,27 +772,36 @@
 
 <header>
   <div class="nav-wrap">
-    <div class="logo">
+    <a href="#inicio" class="logo logo-link" aria-label="Ir a la página de inicio">
       <img src="logo.png" alt="Logo María Salmerón" class="logo-img">
       <div class="logo-text">
         <div class="name">MARÍA SALMERÓN</div>
-        <div class="role">Traductora Jurada</div>
+        <div class="role">Traductora-Intérprete Jurada de francés</div>
       </div>
-    </div>
+    </a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegación principal">
       <ul>
-        <li><a href="#inicio" class="active">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#proceso">Proceso</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li class="nav-item nav-item-services">
+          <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">Servicios <span class="caret" aria-hidden="true">▾</span></button>
+          <div id="services-menu" class="dropdown-menu" role="menu">
+            <a href="#traduccion-jurada" class="nav-link" role="menuitem">Traducción jurada</a>
+            <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interpretación jurada</a>
+          </div>
+        </li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="#proceso" class="nav-link">Proceso</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
 
     <div class="nav-right">
-      <div class="lang-select">ES ⌄</div>
-      <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
+      <div class="lang-select" aria-label="Selector de idioma">
+        <span class="active">ES</span>
+        <span>|</span>
+        <span>FR</span>
+      </div>
       <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -676,11 +830,13 @@
       <span class="eyebrow">Servicios</span>
       <div class="divider" style="margin:14px auto 26px;"></div>
       <h2>Cómo puedo ayudarte</h2>
-      <p>Traducción jurada de documentos, con validez oficial ante administraciones españolas y francesas.</p>
+      <div class="servicios-subtitle">Traducción jurada</div>
+      <p class="servicios-intro">Traducción jurada de documentos, con validez oficial ante administraciones españolas y francesas.</p>
     </div>
 
-    <div class="servicios-grid">
-      <div class="service-card">
+    <div class="servicios-block" id="traduccion-jurada">
+      <div class="servicios-grid">
+        <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/><path d="M8 13h8M8 17h5"/></svg></div>
         <h3>Documentos civiles</h3>
         <p>Partidas de nacimiento, matrimonio, defunción, libros de familia y certificados de antecedentes penales.</p>
@@ -705,10 +861,33 @@
         <h3>Trámites administrativos</h3>
         <p>Documentación para residencia, nacionalidad, visados y otros procedimientos ante la administración.</p>
       </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <h3>Urgencias</h3>
-        <p>Servicio prioritario para plazos ajustados, con entrega digital certificada y envío postal opcional.</p>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Urgencias</h3>
+          <p>Servicio prioritario para plazos ajustados, con entrega digital certificada y envío postal opcional.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="servicios-block servicios-division" id="interpretacion-jurada">
+      <div class="servicios-subtitle">Interpretación jurada</div>
+      <p class="servicios-intro">Servicio de interpretación jurada español ⇄ francés para particulares, empresas e instituciones, garantizando una comunicación precisa, confidencial y adaptada a cada situación.</p>
+      <div class="servicios-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h9l7 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M13 4v7h7"/></svg></div>
+          <h3>Acompañamiento lingüístico</h3>
+          <p>Ayuntamientos, notarías, administraciones públicas, hospitales, registros civiles y cualquier gestión oficial que requiera asistencia lingüística.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M7 3v4"/><path d="M17 3v4"/><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 13h8"/><path d="M8 17h5"/></svg></div>
+          <h3>Eventos y reuniones</h3>
+          <p>Ferias profesionales, visitas comerciales, reuniones de empresa, negociaciones y encuentros entre clientes españoles y franceses.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18"/><path d="M7 3v4"/><path d="M17 3v4"/><rect x="5" y="7" width="14" height="12" rx="2"/><path d="M8 11h8"/><path d="M8 15h5"/></svg></div>
+          <h3>Interpretación presencial y en remoto</h3>
+          <p>Servicio disponible tanto de forma presencial como mediante videoconferencia o teléfono, adaptándose a las necesidades de cada cliente.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -839,15 +1018,79 @@
 </footer>
 
 <script>
-  document.querySelectorAll('nav.main-nav a').forEach(link=>{
+  const mainNav = document.querySelector('.main-nav');
+  const burger = document.querySelector('.burger');
+  const servicesItem = document.querySelector('.nav-item-services');
+  const servicesTrigger = document.querySelector('.nav-item-services .dropdown-trigger');
+  const servicesMenu = document.getElementById('services-menu');
+  const navLinks = document.querySelectorAll('nav.main-nav .nav-link');
+
+  function closeServicesMenu(){
+    servicesItem?.classList.remove('open');
+    servicesTrigger?.setAttribute('aria-expanded', 'false');
+  }
+
+  function toggleServicesMenu(){
+    const isOpen = servicesItem?.classList.toggle('open');
+    servicesTrigger?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  navLinks.forEach(link=>{
     link.addEventListener('click', ()=>{
-      document.querySelectorAll('nav.main-nav a').forEach(l=>l.classList.remove('active'));
+      navLinks.forEach(l=>l.classList.remove('active'));
       link.classList.add('active');
     });
   });
 
+  document.querySelectorAll('.dropdown-menu a').forEach(link=>{
+    link.addEventListener('click', event=>{
+      const targetId = link.getAttribute('href');
+      if(!targetId || !targetId.startsWith('#')) return;
+      event.preventDefault();
+      const target = document.querySelector(targetId);
+      if(target){
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      closeServicesMenu();
+      if(window.innerWidth <= 980){
+        mainNav.classList.remove('open');
+      }
+    });
+  });
+
+  servicesTrigger?.addEventListener('click', event=>{
+    event.stopPropagation();
+    toggleServicesMenu();
+  });
+
+  servicesTrigger?.addEventListener('keydown', event=>{
+    if(event.key === 'Escape'){
+      event.preventDefault();
+      closeServicesMenu();
+    }
+    if(event.key === 'Enter' || event.key === ' '){
+      event.preventDefault();
+      toggleServicesMenu();
+    }
+  });
+
+  burger?.addEventListener('click', ()=>{
+    mainNav.classList.toggle('open');
+    if(!mainNav.classList.contains('open')){
+      closeServicesMenu();
+    }
+  });
+
+  document.addEventListener('click', event=>{
+    if(!event.target.closest('.nav-item-services')){
+      closeServicesMenu();
+    }
+    if(window.innerWidth <= 980 && !event.target.closest('.main-nav') && !event.target.closest('.burger')){
+      mainNav.classList.remove('open');
+    }
+  });
+
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('nav.main-nav a');
   window.addEventListener('scroll', ()=>{
     let current = '';
     sections.forEach(sec=>{
@@ -855,7 +1098,8 @@
       if(window.scrollY >= top) current = sec.getAttribute('id');
     });
     navLinks.forEach(l=>{
-      l.classList.toggle('active', l.getAttribute('href') === '#'+current);
+      const href = l.getAttribute('href');
+      l.classList.toggle('active', href === '#'+current);
     });
   });
 </script>
