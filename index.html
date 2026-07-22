@@ -217,14 +217,28 @@
     background:transparent;
   }
 
-  .lang-select span{
-    font-weight:500;
+  .lang-select .lang-option{
+    border:none;
+    background:none;
+    padding:0;
+    font:inherit;
     color:var(--navy);
+    cursor:pointer;
+    font-weight:500;
+  }
+
+  .lang-select .lang-separator{
+    color:var(--navy);
+    opacity:0.7;
   }
 
   .lang-select .active{
     font-weight:700;
     color:var(--rose-dark);
+  }
+
+  .mobile-lang-select{
+    display:none;
   }
 
   .btn{
@@ -733,6 +747,11 @@
     .burger span{ width:24px;height:2px;background:var(--navy); }
     .nav-wrap{ position:relative; }
     .nav-right .lang-select{ display:none; }
+    .mobile-lang-select{
+      display:flex;
+      margin-bottom:12px;
+      align-self:flex-start;
+    }
     .main-nav{
       display:none;
       position:absolute;
@@ -810,6 +829,11 @@
     </a>
 
     <nav class="main-nav" aria-label="Navegación principal">
+      <div class="lang-select mobile-lang-select" role="group" aria-label="Selector de idioma">
+        <button type="button" class="lang-option active" data-lang="es">ES</button>
+        <span class="lang-separator">|</span>
+        <button type="button" class="lang-option" data-lang="fr">FR</button>
+      </div>
       <ul>
         <li><a href="#inicio" class="nav-link active">Inicio</a></li>
         <li class="nav-item nav-item-services">
@@ -828,10 +852,10 @@
     </nav>
 
     <div class="nav-right">
-      <div class="lang-select" aria-label="Selector de idioma">
-        <span class="active">ES</span>
-        <span>|</span>
-        <span>FR</span>
+      <div class="lang-select" role="group" aria-label="Selector de idioma">
+        <button type="button" class="lang-option active" data-lang="es">ES</button>
+        <span class="lang-separator">|</span>
+        <button type="button" class="lang-option" data-lang="fr">FR</button>
       </div>
       <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
@@ -1059,6 +1083,21 @@
   const servicesTrigger = document.querySelector('.nav-item-services .dropdown-trigger');
   const servicesMenu = document.getElementById('services-menu');
   const navLinks = document.querySelectorAll('nav.main-nav .nav-link');
+  const langSelectors = document.querySelectorAll('.lang-select');
+
+  function setActiveLanguage(lang){
+    document.documentElement.lang = lang;
+    document.documentElement.setAttribute('data-lang', lang);
+    langSelectors.forEach(selector=>{
+      selector.querySelectorAll('.lang-option').forEach(option=>{
+        const isActive = option.getAttribute('data-lang') === lang;
+        option.classList.toggle('active', isActive);
+      });
+    });
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.history.replaceState({}, '', url.toString());
+  }
 
   function closeServicesMenu(){
     servicesItem?.classList.remove('open');
@@ -1069,6 +1108,23 @@
     const isOpen = servicesItem?.classList.toggle('open');
     servicesTrigger?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
+
+  langSelectors.forEach(selector=>{
+    selector.querySelectorAll('.lang-option').forEach(option=>{
+      option.addEventListener('click', ()=>{
+        setActiveLanguage(option.getAttribute('data-lang'));
+      });
+    });
+
+    selector.addEventListener('keydown', event=>{
+      if(event.key === 'Enter' || event.key === ' '){
+        event.preventDefault();
+        const activeOption = selector.querySelector('.lang-option.active');
+        const nextLang = activeOption?.getAttribute('data-lang') === 'es' ? 'fr' : 'es';
+        setActiveLanguage(nextLang);
+      }
+    });
+  });
 
   navLinks.forEach(link=>{
     link.addEventListener('click', ()=>{
@@ -1124,6 +1180,9 @@
       mainNav.classList.remove('open');
     }
   });
+
+  const initialLang = new URLSearchParams(window.location.search).get('lang') === 'fr' ? 'fr' : 'es';
+  setActiveLanguage(initialLang);
 
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', ()=>{
