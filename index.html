@@ -28,6 +28,9 @@
   *{margin:0;padding:0;box-sizing:border-box;}
 
   html{scroll-behavior:smooth;}
+  .scroll-target{
+    scroll-margin-top:110px;
+  }
 
   body{
     font-family:var(--sans);
@@ -163,6 +166,26 @@
     font-weight:500;
     color:var(--navy);
     border-bottom:1px solid rgba(30,42,69,0.06);
+  }
+  .mobile-submenu{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-top:8px;
+    padding-left:14px;
+  }
+  .mobile-submenu a{
+    padding:0;
+    font-size:12px;
+    letter-spacing:1px;
+    font-weight:400;
+    color:var(--navy);
+    opacity:0.85;
+    border-bottom:none;
+  }
+  .mobile-submenu a:hover{
+    color:var(--rose-dark);
+    background:transparent;
   }
   .dropdown-menu a:last-child{
     border-bottom:none;
@@ -725,6 +748,10 @@
       flex-direction:column;
       gap:16px;
     }
+    .nav-item{
+      display:block;
+      width:100%;
+    }
     .dropdown-menu{
       position:static;
       display:none;
@@ -736,12 +763,11 @@
       box-shadow:none;
       backdrop-filter:none;
     }
-    .nav-item.open .dropdown-menu,
-    .nav-item:hover .dropdown-menu{
+    .nav-item.open .dropdown-menu{
       display:flex;
     }
     .dropdown-menu a{
-      padding:6px 0 0 0;
+      padding:0;
       border-bottom:none;
     }
     .servicios-grid{ grid-template-columns:1fr 1fr; }
@@ -786,8 +812,10 @@
         <li class="nav-item nav-item-services">
           <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">Servicios <span class="caret" aria-hidden="true">▾</span></button>
           <div id="services-menu" class="dropdown-menu" role="menu">
-            <a href="#traduccion-jurada" class="nav-link" role="menuitem">Traducción jurada</a>
-            <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interpretación jurada</a>
+            <div class="mobile-submenu">
+              <a href="#traduccion-jurada" class="nav-link" role="menuitem">Traducción jurada</a>
+              <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interpretación jurada</a>
+            </div>
           </div>
         </li>
         <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
@@ -834,7 +862,7 @@
       <p class="servicios-intro">Traducción jurada de documentos, con validez oficial ante administraciones españolas y francesas.</p>
     </div>
 
-    <div class="servicios-block" id="traduccion-jurada">
+    <div class="servicios-block scroll-target" id="traduccion-jurada">
       <div class="servicios-grid">
         <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/><path d="M8 13h8M8 17h5"/></svg></div>
@@ -869,7 +897,7 @@
       </div>
     </div>
 
-    <div class="servicios-block servicios-division" id="interpretacion-jurada">
+    <div class="servicios-block servicios-division scroll-target" id="interpretacion-jurada">
       <div class="servicios-subtitle">Interpretación jurada</div>
       <p class="servicios-intro">Servicio de interpretación jurada español ⇄ francés para particulares, empresas e instituciones, garantizando una comunicación precisa, confidencial y adaptada a cada situación.</p>
       <div class="servicios-grid">
