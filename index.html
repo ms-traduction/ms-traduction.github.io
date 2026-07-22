@@ -31,6 +31,9 @@
   .scroll-target{
     scroll-margin-top:110px;
   }
+  .section-head-scroll{
+    scroll-margin-top:110px;
+  }
 
   body{
     font-family:var(--sans);
@@ -813,7 +816,7 @@
           <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">Servicios <span class="caret" aria-hidden="true">▾</span></button>
           <div id="services-menu" class="dropdown-menu" role="menu">
             <div class="mobile-submenu">
-              <a href="#traduccion-jurada" class="nav-link" role="menuitem">Traducción jurada</a>
+              <a href="#servicios-heading" class="nav-link" role="menuitem">Traducción jurada</a>
               <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interpretación jurada</a>
             </div>
           </div>
@@ -854,15 +857,17 @@
 
 <section class="servicios" id="servicios">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head section-head-scroll" id="servicios-heading">
       <span class="eyebrow">Servicios</span>
       <div class="divider" style="margin:14px auto 26px;"></div>
       <h2>Cómo puedo ayudarte</h2>
-      <div class="servicios-subtitle">Traducción jurada</div>
-      <p class="servicios-intro">Traducción jurada de documentos, con validez oficial ante administraciones españolas y francesas.</p>
+      <div class="scroll-target" id="traduccion-jurada">
+        <div class="servicios-subtitle">Traducción jurada</div>
+        <p class="servicios-intro">Traducción jurada de documentos, con validez oficial ante administraciones españolas y francesas.</p>
+      </div>
     </div>
 
-    <div class="servicios-block scroll-target" id="traduccion-jurada">
+    <div class="servicios-block">
       <div class="servicios-grid">
         <div class="service-card">
         <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h11l5 5v11H4z"/><path d="M15 4v5h5"/><path d="M8 13h8M8 17h5"/></svg></div>
@@ -897,9 +902,11 @@
       </div>
     </div>
 
-    <div class="servicios-block servicios-division scroll-target" id="interpretacion-jurada">
-      <div class="servicios-subtitle">Interpretación jurada</div>
-      <p class="servicios-intro">Servicio de interpretación jurada español ⇄ francés para particulares, empresas e instituciones, garantizando una comunicación precisa, confidencial y adaptada a cada situación.</p>
+    <div class="servicios-block servicios-division">
+      <div class="scroll-target" id="interpretacion-jurada">
+        <div class="servicios-subtitle">Interpretación jurada</div>
+        <p class="servicios-intro">Servicio de interpretación jurada español ⇄ francés para particulares, empresas e instituciones, garantizando una comunicación precisa, confidencial y adaptada a cada situación.</p>
+      </div>
       <div class="servicios-grid">
         <div class="service-card">
           <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h9l7 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/><path d="M13 4v7h7"/></svg></div>
