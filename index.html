@@ -1738,6 +1738,17 @@
     }
   });
 
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+
+        if (window.innerWidth <= 980) {
+            mainNav.classList.remove('open');
+            closeServicesMenu();
+        }
+
+    });
+  });
+
   document.addEventListener('click', event=>{
     if(!event.target.closest('.nav-item-services')){
       closeServicesMenu();
