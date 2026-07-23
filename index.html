@@ -561,27 +561,22 @@
 
   .sobre-text .eyebrow{
     display:block;
-    position:relative;
-    width:fit-content;
-    margin:0 auto 18px;
-
+    text-align:center;
     color:var(--rose-dark);
     text-transform:uppercase;
     letter-spacing:6px;
     font-size:13px;
     font-weight:600;
-    padding-bottom:14px;
+    margin-bottom:14px;
   }
 
-  .sobre-text .eyebrow::after{
+.sobre-text .eyebrow::after{
     content:"";
-    position:absolute;
-    left:50%;
-    bottom:0;
-    transform:translateX(-50%);
+    display:block;
     width:70px;
     height:2px;
     background:var(--rose);
+    margin:14px auto 0;
   }
 
   .sobre-text h2{
