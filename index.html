@@ -517,7 +517,7 @@
     display:grid;
     grid-template-columns:320px 1fr;
     gap:80px;
-    align-items:center;
+    align-items:start;
   }
   .sobre-photo{
     position:relative;
@@ -527,7 +527,6 @@
 
     width:240px;
     justify-self:center;
-    margin-top:110px;
 
     background:linear-gradient(135deg,#dcd2c4,#c9bda9);
     background-image:url('mariaimage.png');
@@ -1044,7 +1043,32 @@
     .sobre{
         display:block;
     }
+    .sobre-header{
+        text-align:center;
+        margin-bottom:45px;
+    }
 
+    .sobre-header .eyebrow{
+        display:inline-block;
+        position:relative;
+        color:var(--rose-dark);
+        text-transform:uppercase;
+        letter-spacing:6px;
+        font-size:13px;
+        font-weight:600;
+        padding-bottom:14px;
+    }
+
+    .sobre-header .eyebrow::after{
+        content:"";
+        position:absolute;
+        left:50%;
+        bottom:0;
+        transform:translateX(-50%);
+        width:70px;
+        height:2px;
+        background:var(--rose);
+    }
     .sobre-photo{
         float:left;
         width:140px;
@@ -1498,12 +1522,15 @@
 </section>
 
 <section class="sobre-wrap" id="sobre-mi">
-  <div class="container sobre">
+  <div class="container">
+    <div class="sobre-header">
+      <span class="eyebrow">Sobre mí</span>
+    </div>
+    <div class="sobre">
     <div class="sobre-photo">
       <div class="sobre-badge"><strong>Desde</strong><span>2017</span></div>
     </div>
     <div class="sobre-text">
-      <span class="eyebrow">Sobre mí</span>
       <h2>Un documento, una historia</h2>
       <p>Acompaño tanto a particulares como a empresas e instituciones en sus trámites entre España y Francia.</p>
       <p>Ya sea personal, académica o profesional, detrás de cada documento hay una historia. Por eso trabajo con precisión terminológica, confidencialidad absoluta y plazos claros desde el primer contacto.</p>
