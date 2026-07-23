@@ -515,8 +515,8 @@
   /* ---------- SOBRE MÍ ---------- */
   .sobre{
     display:grid;
-    grid-template-columns:320px 1fr;
-    gap:80px;
+    grid-template-columns:260px 1fr;
+    gap:60px;
     align-items:start;
   }
   .sobre-photo{
@@ -558,24 +558,31 @@
   .sobre-badge strong{ font-size:9px; line-height:1; font-weight:500; color:#fff; letter-spacing:0.5px; opacity:0.8; }
   .sobre-badge span{ font-size:18px; line-height:1; font-family:var(--serif); margin-top:4px; color:#fff; font-weight:600; }
 
-  .sobre-text .eyebrow{
-    display:block;
+  .sobre-header{
     text-align:center;
+    margin-bottom:55px;
+  }
+
+  .sobre-header .eyebrow{
+    display:inline-block;
+    position:relative;
     color:var(--rose-dark);
     text-transform:uppercase;
     letter-spacing:6px;
     font-size:13px;
     font-weight:600;
-    margin-bottom:14px;
+    padding-bottom:14px;
   }
 
-.sobre-text .eyebrow::after{
+  .sobre-header .eyebrow::after{
     content:"";
-    display:block;
+    position:absolute;
+    left:50%;
+    bottom:0;
+    transform:translateX(-50%);
     width:70px;
     height:2px;
     background:var(--rose);
-    margin:14px auto 0;
   }
 
   .sobre-text h2{
