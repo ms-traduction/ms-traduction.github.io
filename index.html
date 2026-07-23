@@ -911,6 +911,104 @@
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; }
   }
+/* ==========================
+   Versión móvil
+========================== */
+@media (max-width: 768px) {
+
+    .servicios-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .service-card{
+        padding:18px 14px;
+    }
+
+    .service-icon{
+        width:44px;
+        height:44px;
+        margin:0 auto 12px;
+    }
+
+    .service-icon svg{
+        width:20px;
+        height:20px;
+    }
+
+    .service-card h3{
+        font-size:17px;
+        text-align:center;
+        margin-bottom:0;
+    }
+}
+/* =====================================================
+   TARJETAS GIRATORIAS
+===================================================== */
+
+@media (max-width:768px){
+
+    .service-card{
+        background:transparent;
+        border:none;
+        padding:0;
+        perspective:1000px;
+        min-height:180px;
+        cursor:pointer;
+    }
+
+    .card-inner{
+        position:relative;
+        width:100%;
+        height:180px;
+        transition:transform .6s;
+        transform-style:preserve-3d;
+    }
+
+    .service-card.flipped .card-inner{
+        transform:rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back{
+        position:absolute;
+        inset:0;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        padding:18px;
+
+        background:var(--cream);
+        border:1px solid var(--line);
+        border-radius:6px;
+
+        backface-visibility:hidden;
+        -webkit-backface-visibility:hidden;
+    }
+
+    .card-back{
+        transform:rotateY(180deg);
+    }
+
+    .card-front h3{
+        text-align:center;
+        font-size:17px;
+        margin-top:14px;
+        margin-bottom:0;
+    }
+
+    .card-back p{
+        display:block;
+        text-align:center;
+        font-size:.88rem;
+        line-height:1.4;
+        margin:0;
+    }
+
+}
 </style>
 <script type="application/ld+json">
 {
@@ -1165,38 +1263,80 @@
 
     <div class="servicios-block">
       <div class="servicios-grid">
+
         <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8"/><path d="M8 14h5"/><circle cx="12" cy="7.5" r="2.5"/></svg></div>
-        <h3>Documentos civiles</h3>
-        <p>Partidas de nacimiento, matrimonio, defunción, libros de familia y certificados de antecedentes penales.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 7l10 4 10-4-10-4z"/><path d="M6 10v4a2 2 0 0 0 1 1.7L12 20l5-4.3A2 2 0 0 0 18 14v-4"/><path d="M22 7v6"/></svg></div>
-        <h3>Documentos académicos</h3>
-        <p>Títulos universitarios, certificados de notas, diplomas y expedientes académicos para homologación.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="m8 20-1-7 5-4 5 4-1 7"/><path d="M9 20v-3h6v3"/><path d="m12 9 2-2"/><path d="m10 7 1 2"/></svg></div>
-        <h3>Documentos notariales</h3>
-        <p>Poderes, escrituras, contratos y actas notariales con la validez jurídica que exige cada trámite.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M8 11h8"/></svg></div>
-        <h3>Documentos comerciales</h3>
-        <p>Estatutos de empresa, balances, contratos mercantiles y documentación para operaciones internacionales.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M7 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
-        <h3>Trámites administrativos</h3>
-        <p>Documentación para residencia, nacionalidad, visados y otros procedimientos ante la administración.</p>
-      </div>
-        <div class="service-card">
-          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
-          <h3>Urgencias</h3>
-          <p>Servicio prioritario para plazos ajustados, con entrega digital certificada y envío postal opcional.</p>
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8"/><path d="M8 14h5"/><circle cx="12" cy="7.5" r="2.5"/></svg></div>
+              <h3>Documentos civiles</h3>
+            </div>
+            <div class="card-back">
+              <p>Partidas de nacimiento, matrimonio, defunción, libros de familia y certificados de antecedentes penales.</p>
+            </div>
+          </div>
         </div>
+
+        <div class="service-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 7l10 4 10-4-10-4z"/><path d="M6 10v4a2 2 0 0 0 1 1.7L12 20l5-4.3A2 2 0 0 0 18 14v-4"/><path d="M22 7v6"/></svg></div>
+              <h3>Documentos académicos</h3>
+            </div>
+            <div class="card-back">
+              <p>Títulos universitarios, certificados de notas, diplomas y expedientes académicos para homologación.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="m8 20-1-7 5-4 5 4-1 7"/><path d="M9 20v-3h6v3"/><path d="m12 9 2-2"/><path d="m10 7 1 2"/></svg></div>
+              <h3>Documentos notariales</h3>
+            </div>
+            <div class="card-back">
+              <p>Poderes, escrituras, contratos y actas notariales con la validez jurídica que exige cada trámite.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M8 11h8"/></svg></div>
+              <h3>Documentos comerciales</h3>
+            </div>
+            <div class="card-back">
+              <p>Estatutos de empresa, balances, contratos mercantiles y documentación para operaciones internacionales.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M7 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
+              <h3>Trámites administrativos</h3>
+            </div>
+            <div class="card-back">
+              <p>Documentación para residencia, nacionalidad, visados y otros procedimientos ante la administración.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="card-inner">
+            <div class="card-front">
+              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
+              <h3>Urgencias</h3>
+            </div>
+            <div class="card-back">
+              <p>Servicio prioritario para plazos ajustados, con entrega digital certificada y envío postal opcional.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
 
     <div class="servicios-block servicios-division">
       <div class="scroll-target" id="interpretacion-jurada">
@@ -1490,6 +1630,29 @@
       const href = l.getAttribute('href');
       l.classList.toggle('active', href === '#'+current);
     });
+  });
+  // ==========================================
+  // Tarjetas giratorias (solo móvil)
+  // ==========================================
+  
+  const cards = document.querySelectorAll('.service-card');
+
+  cards.forEach(card => {
+
+      card.addEventListener('click', () => {
+
+          if (window.innerWidth > 768) return;
+
+          cards.forEach(c => {
+              if (c !== card) {
+                  c.classList.remove('flipped');
+              }
+          });
+
+          card.classList.toggle('flipped');
+
+      });
+
   });
 </script>
 
