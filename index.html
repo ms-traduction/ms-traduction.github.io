@@ -795,7 +795,7 @@
     justify-content:space-between;
     align-items:flex-start;
     flex-wrap:wrap;
-    gap:40px;
+    gap:60px;
     padding-bottom:40px;
     border-bottom:1px solid rgba(255,255,255,0.1);
   }
@@ -840,6 +840,9 @@
   .footer-links ul li{ margin-bottom:10px; }
   .footer-links a{ font-size:13.5px; color:rgba(255,255,255,0.6); transition:color .2s ease; }
   .footer-links a:hover{ color:var(--rose-light); }
+  .footer-links{
+    min-width:220px;
+  }
 
   .footer-bottom{
     padding-top:26px;
@@ -910,6 +913,15 @@
     .step:not(:last-child)::after{ display:none; }
     .sobre{ grid-template-columns:1fr; }
     .contacto-wrap{ grid-template-columns:1fr; padding:40px 28px; }
+
+    .footer-top{
+    flex-direction:column;
+    gap:32px;
+  }
+
+    .footer-links{
+    min-width:100%;
+  }
   }
 
   @media (max-width: 768px){
@@ -1671,18 +1683,17 @@
 <footer>
   <div class="container">
     <div class="footer-top">
+
       <div class="footer-brand">
         <div class="footer-brand-inner">
           <img src="logo.webp" alt="Logo María Salmerón" class="logo-small">
           <div>
             <div class="name">MARÍA SALMERÓN</div>
             <div class="role">Traductora-Intérprete Jurada de francés</div>
-            <h4 class="footer-faq-title">
-                <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-            </h4>
           </div>
         </div>
       </div>
+
       <div class="footer-links">
         <h4>Solicitar presupuesto</h4>
         <ul>
@@ -1690,7 +1701,20 @@
           <li><a href="https://wa.me/34644886933">WhatsApp</a></li>
         </ul>
       </div>
+
+      <div class="footer-links">
+        <h4>FAQ</h4>
+        <ul>
+          <li>
+            <a href="preguntas-frecuentes.html">
+              Consulta las preguntas frecuentes
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
+
     <div class="footer-bottom">
       <span>© 2026 María Salmerón — Traductora-Intérprete Jurada. Todos los derechos reservados.</span>
     </div>
