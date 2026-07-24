@@ -1362,15 +1362,15 @@
 
 <header>
   <div class="nav-wrap">
-    <a href="#index.html" class="logo logo-link" aria-label="Ir a la página de inicio">
-      <img src="../logo.webp" alt="Logo María Salmerón" class="logo-img">
+    <a href="index.html" class="logo logo-link" aria-label="Retour à l'accueil">
+      <img src="../logo.webp" alt="Logo de María Salmerón" class="logo-img">
       <div class="logo-text">
         <div class="name">MARÍA SALMERÓN</div>
         <div class="role">Traductrice-Interprète Assermentée Espagnol–Français</div>
       </div>
     </a>
 
-    <nav class="main-nav" aria-label="Navegación principal">
+    <nav class="main-nav" aria-label="Navigation principale">
       <ul>
         <li><a href="#inicio" class="nav-link active">Accueil</a></li>
         <li class="nav-item nav-item-services">
@@ -1378,26 +1378,26 @@
           <div id="services-menu" class="dropdown-menu" role="menu">
             <div class="mobile-submenu">
               <a href="#servicios-heading" class="nav-link" role="menuitem">Traduction assermentée</a>
-              <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interpretation assermentée</a>
+              <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interprétation assermentée</a>
             </div>
           </div>
         </li>
         <li><a href="#sobre-mi" class="nav-link">À propos</a></li>
         <li><a href="#proceso" class="nav-link">Étapes</a></li>
         <li class="mobile-only">
-            <a href="preguntas-frecuentes.html" class="nav-link">Questions fréquentes</a>
+            <a href="preguntas-frecuentes.html" class="nav-link">FAQ</a>
         </li>
         <li><a href="#contacto" class="nav-link">Contact</a></li>
       </ul>
     </nav>
 
     <div class="nav-right">
-      <div class="lang-select" role="group" aria-label="Selector de idioma">
-        <button type="button" class="lang-option active" data-lang="es">ES</button>
+      <div class="lang-select" role="group" aria-label="Sélecteur de langue">
+        <button type="button" class="lang-option" data-lang="es">ES</button>
         <span class="lang-separator">|</span>
-        <button type="button" class="lang-option" data-lang="fr">FR</button>
+        <button type="button" class="lang-option active" data-lang="fr">FR</button>
       </div>
-      <button type="button" class="mobile-lang-toggle" aria-label="Cambiar a francés" title="Cambiar a francés" data-target-lang="fr">
+      <button type="button" class="mobile-lang-toggle" aria-label="Cambiar a español" title="Cambiar a español" data-target-lang="es">
         <svg viewBox="0 0 640 480" aria-hidden="true" role="img">
           <rect width="640" height="480" fill="#fff"/>
           <rect width="213" height="480" fill="#002654"/>
@@ -1405,7 +1405,7 @@
           <rect x="427" width="213" height="480" fill="#ce1126"/>
         </svg>
       </button>
-      <button class="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -1763,18 +1763,13 @@
   }
 
   function setActiveLanguage(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute('data-lang', lang);
-    langSelectors.forEach(selector=>{
-      selector.querySelectorAll('.lang-option').forEach(option=>{
-        const isActive = option.getAttribute('data-lang') === lang;
-        option.classList.toggle('active', isActive);
-      });
-    });
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState({}, '', url.toString());
-    updateMobileLangToggle();
+
+    if(lang === 'fr'){
+        window.location.href = '/fr/';
+    }else{
+        window.location.href = '/';
+    }
+
   }
 
   function closeServicesMenu(){
@@ -1875,8 +1870,8 @@
     }
   });
 
-  const initialLang = new URLSearchParams(window.location.search).get('lang') === 'fr' ? 'fr' : 'es';
-  setActiveLanguage(initialLang);
+  document.documentElement.lang = 'fr';
+  updateMobileLangToggle();
 
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', ()=>{
