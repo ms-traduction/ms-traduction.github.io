@@ -810,25 +810,6 @@
   .footer-brand-inner{ display:flex; gap:14px; align-items:center; margin-bottom:14px; }
   .footer-brand p{ font-size:13.5px; max-width:280px; line-height:1.7; }
 
-  .footer-faq{
-    margin-top:22px;
-    margin-bottom:0;
-    font-family:var(--serif);
-    font-size:14px;
-    font-weight:600;
-    letter-spacing:.5px;
-}
-
-.footer-faq a{
-    color:#fff;
-    text-decoration:none;
-    transition:color .2s ease;
-}
-
-.footer-faq a:hover{
-    color:var(--rose-light);
-}
-
   .footer-links h4{
     color:#fff;
     font-family:var(--serif);
@@ -1160,6 +1141,179 @@
         margin-top:28px;
 }}
 
+/* ==========================
+   FAQ
+========================== */
+
+.faq-page{
+    max-width:900px;
+    margin:0 auto;
+    padding:140px 20px 90px;
+}
+
+.faq-page h1{
+    color:var(--navy);
+    text-align:center;
+    margin-bottom:18px;
+}
+
+.faq-intro{
+    max-width:700px;
+    margin:0 auto 55px;
+    text-align:center;
+    color:var(--ink);
+    line-height:1.8;
+}
+
+.faq-item{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    margin-bottom:18px;
+    overflow:hidden;
+    transition:.3s ease;
+    box-shadow:0 8px 24px rgba(30,42,69,.05);
+}
+
+.faq-item:hover{
+    transform:translateY(-2px);
+    box-shadow:0 14px 32px rgba(30,42,69,.08);
+}
+
+.faq-item summary{
+    list-style:none;
+    cursor:pointer;
+    position:relative;
+    padding:22px 60px 22px 24px;
+    color:var(--navy);
+    font-weight:600;
+    line-height:1.5;
+    transition:.25s;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item summary::after{
+    content:"⌄";
+    position:absolute;
+    right:24px;
+    top:50%;
+    transform:translateY(-50%) rotate(0deg);
+    font-size:1.5rem;
+    color:var(--rose);
+    transition:transform .3s ease;
+}
+
+.faq-item[open]{
+    border-color:var(--rose-light);
+}
+
+.faq-item[open] summary{
+    background:var(--cream);
+}
+
+.faq-item[open] summary::after{
+    transform:translateY(-50%) rotate(180deg);
+}
+
+.faq-item p{
+    margin:0;
+    padding:0 24px 24px;
+    color:var(--ink);
+    line-height:1.9;
+}
+
+.faq-item a{
+    color:var(--rose-dark);
+    font-weight:600;
+    text-decoration:none;
+}
+
+.faq-item a:hover{
+    color:var(--navy);
+    text-decoration:underline;
+}
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:980px){
+
+    .faq-page{
+        padding:120px 24px 80px;
+    }
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .faq-page{
+        padding:105px 18px 60px;
+    }
+
+    .faq-page h1{
+        font-size:2rem;
+    }
+
+    .faq-intro{
+        font-size:.95rem;
+        margin-bottom:35px;
+    }
+
+    .faq-item{
+        border-radius:14px;
+        margin-bottom:14px;
+    }
+
+    .faq-item summary{
+        padding:18px 48px 18px 18px;
+        font-size:1rem;
+    }
+
+    .faq-item summary::after{
+        right:18px;
+        font-size:1.5rem;
+    }
+
+    .faq-item p{
+        padding:0 18px 20px;
+        font-size:.95rem;
+        line-height:1.8;
+    }
+
+}
+
+/* ==========================
+   SMALL MOBILE
+========================== */
+
+@media (max-width:480px){
+
+    .faq-page{
+        padding:95px 15px 50px;
+    }
+
+    .faq-page h1{
+        font-size:1.75rem;
+    }
+
+    .faq-item summary{
+        padding:16px 45px 16px 16px;
+    }
+
+    .faq-item p{
+        padding:0 16px 18px;
+    }
+
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -1338,7 +1492,7 @@
 
 <header>
   <div class="nav-wrap">
-    <a href="#inicio" class="logo logo-link" aria-label="Ir a la página de inicio">
+    <a href="index.html#inicio" class="logo logo-link" aria-label="Ir a la página de inicio"> 
       <img src="logo.webp" alt="Logo María Salmerón" class="logo-img">
       <div class="logo-text">
         <div class="name">MARÍA SALMERÓN</div>
@@ -1348,19 +1502,20 @@
 
     <nav class="main-nav" aria-label="Navegación principal">
       <ul>
-        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="index.html#inicio" class="nav-link active">Inicio</a></li>
         <li class="nav-item nav-item-services">
           <button type="button" class="dropdown-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">Servicios <span class="caret" aria-hidden="true">▾</span></button>
           <div id="services-menu" class="dropdown-menu" role="menu">
             <div class="mobile-submenu">
-              <a href="#servicios-heading" class="nav-link" role="menuitem">Traducción jurada</a>
-              <a href="#interpretacion-jurada" class="nav-link" role="menuitem">Interpretación jurada</a>
+              <a href="index.html#servicios-heading" class="nav-link" role="menuitem">Traducción jurada</a>
+              <a href="index.html#interpretacion-jurada" class="nav-link" role="menuitem">Interpretación jurada</a>
             </div>
           </div>
         </li>
-        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-        <li><a href="#proceso" class="nav-link">Proceso</a></li>
-        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><a href="index.html#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="index.html#proceso" class="nav-link">Proceso</a></li>
+        <li><a href="preguntas-frecuentes.html" class="nav-link active">Preguntas frecuentes</a></li>
+        <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
 
@@ -1383,290 +1538,89 @@
   </div>
 </header>
 
-<section class="hero" id="inicio">
-  <div class="hero-bg"></div>
-  <div class="hero-inner">
-    <div class="hero-content">
-      <span class="eyebrow"></span>
-      <h1>Deja <br>tus traducciones <br>en las mejores manos</h1>
-      <div class="lang-pair">Español <span class="arrow">⟷</span> Francés</div>
-      <div class="divider"></div>
-      <p class="lead">Traductora e Intérprete Jurada de francés nombrada por el <strong>Ministerio de Asuntos Exteriores, Unión Europea y Cooperación</strong>. N° TIJ 11518.</p>
-      <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
-        <a href="#servicios" class="btn btn-outline">Ver servicios</a>
-      </div>
+<main>
+
+<section class="faq-page">
+
+    <div class="container">
+
+        <h1>Preguntas frecuentes</h1>
+
+        <p class="faq-intro">
+            Si no encuentras la respuesta a tu pregunta, no dudes en escribirme.
+        </p>
+
+        <details class="faq-item">
+            <summary><strong>¿Qué es una traducción jurada?</strong></summary>
+            <p>
+                Una traducción jurada es una traducción oficial realizada por un traductor-intérprete jurado nombrado por el Ministerio de Asuntos Exteriores. Lleva firma, sello y certificación, lo que le otorga validez jurídica ante organismos públicos y privados.
+                Puedes consultar el listado oficial de traductores-intérpretes jurados en la
+                <a href="https://www.exteriores.gob.es/es/ServiciosAlCiudadano/Paginas/Traductores-Interpretes-Jurados.aspx"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    página del Ministerio de Asuntos Exteriores
+                </a>. 
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary><strong>¿Cuánto tarda en traducir un documento?</strong></summary>
+            <p>
+                El plazo depende del tipo de documento y de su extensión. Siempre se intenta que las entregas sean razonables, tanto para el cliente como para poder garantizar un buen trabajo. Una traducción urgente puede conllevar un recargo si el volumen exige trabajar fuera del horario laboral habitual.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary><strong>¿Cómo recibiré mi traducción?</strong></summary>
+            <p>
+                La traducción se envía en formato digital, por correo electrónico. Cuando sea necesario, también se podrá enviar en formato impreso mediante correo postal.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary><strong>¿Es válida una traducción jurada firmada electrónicamente?</strong></summary>
+            <p>
+                Sí. Las traducciones juradas firmadas electrónicamente tienen la misma validez jurídica que las emitidas en papel, ya que utilizan un certificado electrónico emitido por la Fábrica Nacional de Moneda y Timbre (FNMT-RCM), de conformidad con la
+                <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2025-4519"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Orden AUC/213/2025, de 26 de febrero
+                </a>.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary><strong>¿Cómo se verifica la firma?</strong></summary>
+            <p>
+                La firma electrónica puede verificarse a través de la plataforma oficial
+                <a href="https://valide.redsara.es/valide/?"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    VALIDe
+                </a>.
+                Una vez en la página, haz clic en <strong>«Validar firma»</strong> y, a continuación, en <strong>«Subir documento»</strong> para seleccionar el archivo PDF de la traducción jurada. El sistema comprobará que la firma electrónica es válida, que el documento no ha sido modificado y que pertenece al traductor-intérprete jurado que la ha emitido.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary><strong>¿Es confidencial la documentación que envío?</strong></summary>
+            <p>
+                Sí. Toda la documentación recibida se trata con absoluta confidencialidad y únicamente se utiliza para realizar la traducción solicitada.
+            </p>
+        </details>
+
+        <details class="faq-item">
+            <summary><strong>¿Qué ocurre si mi documento necesita la Apostilla de La Haya?</strong></summary>
+            <p>
+                Si el organismo destinatario exige que el documento esté apostillado, la <strong>Apostilla de La Haya</strong> debe obtenerse antes de realizar la traducción jurada. De este modo, la traducción incluirá tanto el documento como la apostilla.
+            </p>
+        </details>
+
     </div>
-  </div>
+
 </section>
 
-<section class="servicios" id="servicios">
-  <div class="container">
-    <div class="section-head section-head-scroll" id="servicios-heading">
-      <span class="eyebrow">Servicios</span>
-      <div class="divider" style="margin:14px auto 26px;"></div>
-      <h2>Cómo puedo ayudarte</h2>
-      <div class="scroll-target" id="traduccion-jurada">
-        <div class="servicios-subtitle">Traducción jurada</div>
-        <p class="servicios-intro">Traducción jurada de documentos, válidos ante administraciones españolas y francesas.</p>
-      </div>
-    </div>
-
-    <div class="servicios-block">
-      <div class="servicios-grid">
-
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8"/><path d="M8 14h5"/><circle cx="12" cy="7.5" r="2.5"/></svg></div>
-              <h3>Documentos civiles</h3>
-            </div>
-            <div class="card-back">
-              <p>Certificados de nacimiento, matrimonio, defunción, de soltería o viudedad, fe de vida, libros de familia...</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 7l10 4 10-4-10-4z"/><path d="M6 10v4a2 2 0 0 0 1 1.7L12 20l5-4.3A2 2 0 0 0 18 14v-4"/><path d="M22 7v6"/></svg></div>
-              <h3>Documentos académicos</h3>
-            </div>
-            <div class="card-back">
-              <p>Títulos universitarios, certificados de notas, diplomas y expedientes académicos para homologación.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><path d="m8 20-1-7 5-4 5 4-1 7"/><path d="M9 20v-3h6v3"/><path d="m12 9 2-2"/><path d="m10 7 1 2"/></svg></div>
-              <h3>Documentos notariales y sanitarios</h3>
-            </div>
-            <div class="card-back">
-              <p>Poderes, escrituras, contratos y actas notariales; informes e historiales clínicos.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><rect x="4" y="7" width="16" height="12" rx="2"/><path d="M8 11h8"/></svg></div>
-              <h3>Documentos comerciales y financieros</h3>
-            </div>
-            <div class="card-back">
-              <p>Estatutos de empresa, balances, contratos mercantiles y documentación para operaciones internacionales.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M7 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
-              <h3>Trámites administrativos</h3>
-            </div>
-            <div class="card-back">
-              <p>Documentación para residencia, nacionalidad, visados, carné de conducir, certificado de antecedentes penales.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></div>
-              <h3>Urgencias</h3>
-            </div>
-            <div class="card-back">
-              <p>Servicio prioritario para plazos ajustados, con posibilidad de firma digital.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    <div class="servicios-block servicios-division">
-      <div class="scroll-target" id="interpretacion-jurada">
-        <div class="servicios-subtitle">Interpretación jurada</div>
-        <p class="servicios-intro">Servicio de interpretación jurada español ⇄ francés para particulares, empresas e instituciones, asegurando una comunicación precisa, imparcial, confidencial y adaptada a cada situación.</p>
-      </div>
-      <div class="servicios-grid">
-
-  <div class="service-card">
-    <div class="card-inner">
-
-      <div class="card-front">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h9l7 7v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/>
-            <path d="M13 4v7h7"/>
-          </svg>
-        </div>
-        <h3>Acompañamiento lingüístico</h3>
-      </div>
-
-      <div class="card-back">
-        <p>Ayuntamientos, notarías, administraciones públicas, hospitales, registros civiles y cualquier gestión oficial que requiera asistencia lingüística.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="service-card">
-    <div class="card-inner">
-
-      <div class="card-front">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 7h16"/>
-            <path d="M7 3v4"/>
-            <path d="M17 3v4"/>
-            <rect x="4" y="5" width="16" height="14" rx="2"/>
-            <path d="M8 13h8"/>
-            <path d="M8 17h5"/>
-          </svg>
-        </div>
-        <h3>Eventos y reuniones</h3>
-      </div>
-
-      <div class="card-back">
-        <p>Ferias profesionales, visitas comerciales, reuniones de empresa, negociaciones y encuentros entre clientes españoles y franceses.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="service-card">
-    <div class="card-inner">
-
-      <div class="card-front">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 7h18"/>
-            <path d="M7 3v4"/>
-            <path d="M17 3v4"/>
-            <rect x="5" y="7" width="14" height="12" rx="2"/>
-            <path d="M8 11h8"/>
-            <path d="M8 15h5"/>
-          </svg>
-        </div>
-        <h3>Presencial y en remoto</h3>
-      </div>
-
-      <div class="card-back">
-        <p>Asistencia en presencial o por videoconferencia.</p>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-</section>
-
-<section class="sobre-wrap" id="sobre-mi">
-  <div class="container">
-    <div class="sobre-header">
-      <span class="eyebrow">Sobre mí</span>
-    </div>
-    <div class="sobre">
-    <div class="sobre-photo">
-      <div class="sobre-badge"><strong>Desde</strong><span>2017</span></div>
-    </div>
-    <div class="sobre-text">
-      <h2>Un documento, una historia</h2>
-      <p>Detrás de cada documento hay una historia importante: un proyecto, una nueva etapa o un trámite administrativo.</p>
-      <p>Mi compromiso es que puedas afrontar ese momento con la tranquilidad de saber que tu traducción está en buenas manos. Acompaño a particulares, empresas e instituciones en sus trámites entre España y Francia, ofreciendo traducciones juradas e interpretaciones oficiales con rigor, confidencialidad y un trato completamente personalizado.</p>
-      <ul class="sobre-list">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Nombrada por el MAEC</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Validez oficial en España y Francia</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Confidencialidad y atención personalizada</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="proceso" id="proceso">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Proceso</span>
-      <div class="divider" style="margin:14px auto 26px; background:var(--rose-light);"></div>
-      <h2>Claridad y transparencia</h2>
-      <p>Cuatro pasos sencillos para tener tu traducción jurada lista, sin sorpresas ni tecnicismos.</p>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <h3>Envío del documento</h3>
-        <p>Me envías el documento a traducir por correo electrónico o WhatsApp, en formato PDF preferiblemente.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <h3>Presupuesto</h3>
-        <p>Recibes en pocas horas un presupuesto cerrado, con plazo de entrega y forma de pago.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <h3>Traducción jurada</h3>
-        <p>Realizo la traducción con la certificación, el sello y la firma que le otorgan validez oficial.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <h3>Entrega</h3>
-        <p>Recibes tu traducción en formato digital y, si lo necesitas, también en papel (en mano o por correo postal).</p>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="contacto">
-  <div class="container">
-    <div class="contacto-wrap">
-      <div class="contacto-info">
-        <span class="eyebrow">Contacto</span>
-        <h2>Cuéntame qué necesitas</h2>
-        <p>Cuéntame qué documento necesitas traducir y te responderé con un presupuesto claro en menos de 24 horas.</p>
-
-        <div class="contacto-items-row">
-          <div class="contact-item">
-            <div class="ic">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16v16H4z"/>
-                <path d="M4 6l8 6 8-6"/>
-              </svg>
-            </div>
-
-            <div>
-              <div class="label">Email</div>
-              <div class="val">
-                <a href="mailto:mariasalmeron.trad@gmail.com">
-                  mariasalmeron.trad@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="label">A distancia</div><div class="val">Atención online en Francia y España</div></div>
-          </div>
-          <div class="contact-item">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <div><div class="label">En presencial</div><div class="val">París, Madrid y Murcia (otras ciudades según disponibilidad)</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-cta">
-        <a href="https://wa.me/34644886933" target="_blank" class="btn btn-primary btn-whatsapp">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.6 6.3c-1.4-1.4-3.3-2.2-5.3-2.2-4.1 0-7.5 3.4-7.5 7.5 0 1.3.3 2.6.9 3.8l-1 3.6 3.7-1c1.1.6 2.4.9 3.7.9h.1c4.1 0 7.5-3.4 7.5-7.5 0-2-1-3.9-2.1-5.1zm-5.3 11.4h-.1c-1.1 0-2.2-.3-3.1-.8l-.2-.1-2.1.6.6-2.1-.1-.2c-.6-1-1-2.1-1-3.3 0-3.4 2.8-6.2 6.2-6.2 1.7 0 3.2.7 4.3 1.8 1.1 1.1 1.8 2.6 1.8 4.3 0 3.4-2.8 6.2-6.3 6.2zm3.4-4.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.5.1-.2.2-.7.9-.9 1.1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.3-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.3-.4.1-.1.1-.3.2-.4.1-.2.1-.3 0-.5-.1-.2-.5-1.2-.7-1.6-.2-.4-.3-.3-.5-.3h-.4c-.2 0-.5.1-.8.4-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.5 4.1 3.5.6.3 1 .4 1.3.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
-          Contactar por WhatsApp
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer>
   <div class="container">
@@ -1677,9 +1631,6 @@
           <div>
             <div class="name">MARÍA SALMERÓN</div>
             <div class="role">Traductora-Intérprete Jurada de francés</div>
-            <h4 class="footer-faq-title">
-                <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
-            </h4>
           </div>
         </div>
       </div>
