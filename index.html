@@ -1763,18 +1763,13 @@
   }
 
   function setActiveLanguage(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute('data-lang', lang);
-    langSelectors.forEach(selector=>{
-      selector.querySelectorAll('.lang-option').forEach(option=>{
-        const isActive = option.getAttribute('data-lang') === lang;
-        option.classList.toggle('active', isActive);
-      });
-    });
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState({}, '', url.toString());
-    updateMobileLangToggle();
+
+    if(lang === 'fr'){
+        window.location.href = '/fr/';
+    }else{
+        window.location.href = '/';
+    }
+
   }
 
   function closeServicesMenu(){
@@ -1875,8 +1870,7 @@
     }
   });
 
-  const initialLang = new URLSearchParams(window.location.search).get('lang') === 'fr' ? 'fr' : 'es';
-  setActiveLanguage(initialLang);
+  updateMobileLangToggle();
 
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', ()=>{
