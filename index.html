@@ -534,32 +534,35 @@
     margin-bottom:18px;
   }
 
-  /* ---------- SOBRE MÍ ---------- */
+    /* ---------- SOBRE MÍ ---------- */
+
   .sobre{
     display:grid;
     grid-template-columns:260px 1fr;
     gap:60px;
     align-items:start;
   }
+
   .sobre-photo{
     position:relative;
     border-radius:6px;
     overflow:hidden;
     aspect-ratio:4/5;
-
     width:240px;
     justify-self:center;
-
     background:linear-gradient(135deg,#dcd2c4,#c9bda9);
     background-image:url('mariaimage.webp');
     background-size:cover;
     background-position:center;
   }
+
   .sobre-photo::after{
     content:"";
-    position:absolute;inset:0;
-    border:1px solid rgba(255,255,255,0.4);
+    position:absolute;
+    inset:0;
+    border:1px solid rgba(255,255,255,.4);
   }
+
   .sobre-badge{
     position:absolute;
     bottom:-15px;
@@ -575,10 +578,24 @@
     flex-direction:column;
     text-align:center;
     font-family:var(--serif);
-    box-shadow:0 8px 20px -8px rgba(198,123,129,0.7);
+    box-shadow:0 8px 20px -8px rgba(198,123,129,.7);
   }
-  .sobre-badge strong{ font-size:9px; line-height:1; font-weight:500; color:#fff; letter-spacing:0.5px; opacity:0.8; }
-  .sobre-badge span{ font-size:18px; line-height:1; font-family:var(--serif); margin-top:4px; color:#fff; font-weight:600; }
+
+  .sobre-badge strong{
+    font-size:9px;
+    line-height:1;
+    font-weight:500;
+    letter-spacing:.5px;
+    opacity:.8;
+  }
+
+  .sobre-badge span{
+    font-size:18px;
+    line-height:1;
+    font-family:var(--serif);
+    margin-top:4px;
+    font-weight:600;
+  }
 
   .sobre-header{
     text-align:center;
@@ -614,17 +631,20 @@
     margin:24px 0 22px;
     font-weight:600;
   }
+
   .sobre-text p{
     font-size:15.5px;
     line-height:1.8;
     color:#5a5a5a;
     margin-bottom:18px;
   }
+
   .sobre-list{
     margin-top:28px;
     display:grid;
     gap:14px;
   }
+
   .sobre-list li{
     display:flex;
     align-items:flex-start;
@@ -633,7 +653,149 @@
     color:var(--navy);
     font-weight:500;
   }
-  .sobre-list li svg{ flex-shrink:0; margin-top:2px; stroke:var(--rose-dark); width:16px; height:16px; }
+
+  .sobre-list li svg{
+    flex-shrink:0;
+    margin-top:2px;
+    stroke:var(--rose-dark);
+    width:16px;
+    height:16px;
+  }
+
+
+  /* ---------- INFORMACIÓN ---------- */
+
+  .sobre-infos{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:70px;
+    margin-top:70px;
+  }
+
+  .info-block{
+    border-top:1px solid var(--line);
+    padding-top:35px;
+  }
+
+  .info-title{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:28px;
+  }
+
+  .card-icon{
+    color:var(--rose);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  .card-icon svg{
+    width:24px;
+    height:24px;
+  }
+
+  .info-title h3{
+    margin:0;
+    font-family:var(--serif);
+    font-size:30px;
+    font-weight:600;
+    color:var(--navy);
+  }
+
+  .info-block p{
+    margin-bottom:18px;
+    line-height:1.8;
+    color:#5a5a5a;
+  }
+
+
+  /* ---------- LISTAS ---------- */
+
+  .info-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+
+  .info-list li{
+    position:relative;
+    padding-left:24px;
+    margin-bottom:16px;
+    line-height:1.8;
+    color:#5a5a5a;
+  }
+
+  .info-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:11px;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--rose);
+  }
+
+
+  /* ---------- CABINET TIJ ---------- */
+
+  .cabinet-box{
+    display:flex;
+    gap:14px;
+    margin-top:32px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+
+  .cabinet-icon{
+    color:var(--rose);
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-shrink:0;
+    margin-top:2px;
+  }
+
+  .cabinet-icon svg{
+    width:22px;
+    height:22px;
+  }
+
+  .cabinet-box strong{
+    display:block;
+    margin-bottom:4px;
+  }
+
+  .cabinet-box strong a{
+    color:var(--navy);
+    text-decoration:none;
+    transition:.25s;
+  }
+
+  .cabinet-box strong a:hover{
+    color:var(--rose);
+  }
+
+  .cabinet-box p{
+    margin:0;
+    color:#5a5a5a;
+  }
+
+
+  /* ---------- RESPONSIVE ---------- */
+
+  @media (max-width:900px){
+
+    .sobre-infos{
+      grid-template-columns:1fr;
+      gap:50px;
+      margin-top:45px;
+    }
+
+  }
 
   /* ---------- PROCESO ---------- */
   .proceso{ background:var(--navy); color:#fff; }
@@ -1111,45 +1273,25 @@
     .sobre{
         display:block;
     }
+
     .sobre-header{
         text-align:center;
-        margin-bottom:45px;
+        margin-bottom:40px;
     }
 
-    .sobre-header .eyebrow{
-        display:inline-block;
-        position:relative;
-        color:var(--rose-dark);
-        text-transform:uppercase;
-        letter-spacing:6px;
-        font-size:13px;
-        font-weight:600;
-        padding-bottom:14px;
-    }
-
-    .sobre-header .eyebrow::after{
-        content:"";
-        position:absolute;
-        left:50%;
-        bottom:0;
-        transform:translateX(-50%);
-        width:70px;
-        height:2px;
-        background:var(--rose);
-    }
     .sobre-photo{
         float:left;
-        width:140px;
+        width:135px;
         aspect-ratio:3/4;
-        margin:16px 20px 20px 0;
+        margin:10px 18px 18px 0;
         border-radius:8px;
     }
 
     .sobre-badge{
-        width:68px;
-        height:68px;
-        right:-10px;
-        bottom:-10px;
+        width:62px;
+        height:62px;
+        right:-8px;
+        bottom:-8px;
     }
 
     .sobre-badge strong{
@@ -1157,32 +1299,78 @@
     }
 
     .sobre-badge span{
-        font-size:16px;
-    }
-
-    .sobre-text .eyebrow{
-        margin-top:4px;
+        font-size:15px;
     }
 
     .sobre-text h2{
-        font-size:30px;
-        line-height:1.15;
-        margin:8px 0 0;
+        font-size:28px;
+        line-height:1.2;
+        margin:6px 0 18px;
     }
 
-    .sobre-text p:first-of-type{
-        font-size:15.5px;
-        line-height:1.8;
-        color:var(--navy);
-        font-weight:500;
-        margin-top:18px;
-        margin-bottom:22px;
+    .sobre-text p{
+        font-size:15px;
+        line-height:1.75;
+        margin-bottom:16px;
     }
 
     .sobre-list{
         clear:both;
-        margin-top:28px;
-}}
+        margin-top:24px;
+    }
+
+    .sobre-list li{
+        font-size:14px;
+    }
+
+    /* Bloques Formación / Experiencia */
+
+    .sobre-infos{
+        grid-template-columns:1fr;
+        gap:42px;
+        margin-top:42px;
+    }
+
+    .info-block{
+        padding-top:28px;
+    }
+
+    .info-title{
+        gap:12px;
+        margin-bottom:22px;
+    }
+
+    .info-title h3{
+        font-size:28px;
+    }
+
+    .card-icon svg{
+        width:22px;
+        height:22px;
+    }
+
+    .info-block p{
+        font-size:15px;
+        line-height:1.75;
+        margin-bottom:16px;
+    }
+
+    .info-list li{
+        font-size:15px;
+        margin-bottom:14px;
+        padding-left:22px;
+    }
+
+    .info-list li::before{
+        top:10px;
+    }
+
+    .cabinet-box{
+        margin-top:24px;
+        padding-top:24px;
+    }
+
+}
 
 </style>
 <script type="application/ld+json">
@@ -1611,19 +1799,72 @@
     <div class="sobre-header">
       <span class="eyebrow">Sobre mí</span>
     </div>
-    <div class="sobre">
+  <div class="sobre">
     <div class="sobre-photo">
       <div class="sobre-badge"><strong>Desde</strong><span>2017</span></div>
     </div>
     <div class="sobre-text">
       <h2>Un documento, una historia</h2>
       <p>Detrás de cada documento hay una historia importante: un proyecto, una nueva etapa o un trámite administrativo.</p>
-      <p>Mi compromiso es que puedas afrontar ese momento con la tranquilidad de saber que tu traducción está en buenas manos. Acompaño a particulares, empresas e instituciones en sus trámites entre España y Francia, ofreciendo traducciones juradas e interpretaciones oficiales con rigor, confidencialidad y un trato completamente personalizado.</p>
+      <p>Mi compromiso es que puedas afrontar ese momento con la tranquilidad de saber que tu traducción está en buenas manos.</p> <p>Acompaño a particulares, empresas e instituciones en sus trámites entre España y Francia, ofreciendo traducciones juradas e interpretaciones oficiales con rigor, confidencialidad y un trato completamente personalizado.</p>
       <ul class="sobre-list">
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Nombrada por el MAEC</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Trámites oficiales entre España y Francia</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Confidencialidad y atención personalizada</li>
       </ul>
+    </div>
+  </div>
+    
+    <div class="sobre-infos">
+      <div class="info-block">
+        <div class="info-title">
+          <div class="card-icon">
+            <!-- icono formación -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M2 8l10-5 10 5-10 5L2 8z"/>
+              <path d="M6 10v5c0 2 3 4 6 4s6-2 6-4v-5"/>
+            </svg>
+          </div>
+          <h3>Formación</h3>
+        </div>
+        <ul class="info-list">
+          <li>Graduada en Traducción e Interpretación (Inglés)<br>Universidad de Murcia</li>
+          <li>Máster en Traducción y Nuevas Tecnologías (Inglés-Francés). ISTRAD</li>
+          <li>Diploma de Traducción Comercial, Económica y Jurídica. COCEF</li>
+          <li>Certificado de nivel de francés: DALF C2</li>
+        </ul>
+      </div>
+
+    <div class="info-block">
+    <div class="info-title">
+      <div class="card-icon">
+        <!-- icono experiencia -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="7" width="18" height="13" rx="2"/>
+          <path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/>
+        </svg>
+      </div>
+      <h3>Experiencia</h3>
+    </div>
+      <ul class="info-list">
+        <li>Traductora e intérprete desde 2017</li>
+        <li>Especializada en interpretación judicial</li>
+        <li>Especializada en traducción administrativa y jurídica</li>
+      </ul>
+
+      <div class="cabinet-box">
+        <div class="cabinet-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="4" y="3" width="16" height="18" rx="2"/>
+            <circle cx="12" cy="9" r="2"/>
+            <path d="M8 17c1.5-2 6.5-2 8 0"/>
+          </svg>
+        </div>
+        <div>
+          <strong><a href="https://www.cabinettij.fr" target="_blank" rel="noopener noreferrer">Miembro del Cabinet TIJ</a></strong>
+          <p>Red de Traductores e intérpretes de Francia.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
