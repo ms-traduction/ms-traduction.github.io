@@ -451,11 +451,6 @@
     .dropdown-menu a{ padding:0; border-bottom:none; }
     .mobile-submenu{ gap:10px; padding-left:10px; margin-top:6px; }
     .mobile-submenu a{ font-size:13px; }
-    .servicios-grid{ grid-template-columns:1fr 1fr; }
-    .steps{ grid-template-columns:1fr 1fr; row-gap:50px; }
-    .step:not(:last-child)::after{ display:none; }
-    .sobre{ grid-template-columns:1fr; }
-    .contacto-wrap{ grid-template-columns:1fr; padding:40px 28px; }
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -819,10 +814,98 @@
     },
 
     {
-      "@type":"FAQPage"
+      "@type": "FAQPage",
+      "@id": "https://ms-traduction.com/preguntas-frecuentes.html#faq",
+      "isPartOf": {
+        "@id": "https://ms-traduction.com/#website"
+      },
+      "mainEntity": [
+
+        {
+          "@type": "Question",
+          "name": "¿Qué es una traducción jurada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Una traducción jurada es una traducción oficial realizada por un traductor-intérprete jurado nombrado por el Ministerio de Asuntos Exteriores. Lleva firma, sello y certificación, lo que le otorga validez jurídica ante organismos públicos y privados."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Necesitas presentar una traducción jurada en España?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si el documento va a presentarse ante una administración, universidad, notario, juzgado u otro organismo en España, una traducción realizada por un Traductor-Intérprete Jurado nombrado por el Ministerio de Asuntos Exteriores, Unión Europea y Cooperación tiene plena validez oficial. Todas las traducciones incluyen firma, sello y certificación conforme a la normativa española."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Necesitas presentar una traducción jurada en Francia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si la traducción va a presentarse ante una administración u organismo en Francia, conviene comprobar previamente los requisitos de la entidad destinataria. Muchas administraciones aceptan traducciones realizadas por traductores jurados españoles, aunque determinados procedimientos pueden exigir un traductor experto inscrito ante una Cour d'appel francesa."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Cuánto se tarda en traducir un documento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El plazo depende del tipo de documento y de su extensión. Siempre se busca ofrecer un plazo razonable garantizando la calidad de la traducción. Las traducciones urgentes pueden conllevar un recargo."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Cómo recibiré mi traducción?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La traducción se envía habitualmente en formato digital por correo electrónico. Cuando sea necesario, también puede enviarse una copia impresa mediante correo postal."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Es válida una traducción jurada firmada electrónicamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Las traducciones juradas firmadas electrónicamente tienen la misma validez jurídica que las emitidas en papel cuando utilizan un certificado electrónico reconocido conforme a la normativa vigente."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Cómo se verifica la firma electrónica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La firma electrónica puede verificarse mediante la plataforma oficial VALIDe. El sistema confirma que la firma es válida, que el documento no ha sido modificado y que pertenece al traductor-intérprete jurado que la ha emitido."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Qué ocurre si mi documento necesita la Apostilla de La Haya?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si el organismo destinatario exige la Apostilla de La Haya, esta debe obtenerse antes de realizar la traducción jurada para que la traducción incluya tanto el documento original como la apostilla."
+          }
+        },
+
+        {
+          "@type": "Question",
+          "name": "¿Es confidencial la documentación que envío?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Toda la documentación recibida se trata con absoluta confidencialidad y únicamente se utiliza para realizar la traducción solicitada."
+          }
+        }
+
+      ]
     }
-  ]
-}
+      ]
+    }
 </script>
 </head>
 <body>
@@ -1141,9 +1224,6 @@
       mainNav.classList.remove('open');
     }
   });
-
-  const initialLang = new URLSearchParams(window.location.search).get('lang') === 'fr' ? 'fr' : 'es';
-  setActiveLanguage(initialLang);
 
 </script>
 
