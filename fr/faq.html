@@ -21,17 +21,17 @@
 <meta name="robots" content="index, follow">
 <meta http-equiv="content-language" content="fr">
 <meta name="theme-color" content="#c77b85">
-<link rel="canonical" href="https://ms-traduction.com/fr/faq.html">
-<link rel="alternate" hreflang="es" href="https://ms-traduction.com/preguntas-frecuentes.html">
-<link rel="alternate" hreflang="fr" href="https://ms-traduction.com/fr/faq.html">
-<link rel="alternate" hreflang="x-default" href="https://ms-traduction.com/">
+<link rel="canonical" href="https://www.ms-traduction.com/fr/faq.html">
+<link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/preguntas-frecuentes.html">
+<link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/faq.html">
+<link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="María Salmerón | Traductrice Assermentée Espagnol-Français">
 <meta property="og:description" content="Traductions assermentées espagnol-français reconnues par les administrations espagnoles et françaises.">
-<meta property="og:url" content="https://ms-traduction.com/fr/">
-<meta property="og:image" content="https://ms-traduction.com/og-image.webp">
-<meta name="twitter:image" content="https://ms-traduction.com/og-image.webp">
+<meta property="og:url" content="https://www.ms-traduction.com/fr/faq.html">
+<meta property="og:image" content="https://www.ms-traduction.com/og-image.webp">
+<meta name="twitter:image" content="https://www.ms-traduction.com/og-image.webp">
 <meta property="og:image:type" content="image/webp">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -1348,14 +1348,14 @@
 
     {
       "@type": "Organization",
-      "@id": "https://ms-traduction.com/#organization",
+      "@id": "https://www.ms-traduction.com/#organization",
       "name": "MS Traduction",
-      "url": "https://ms-traduction.com/",
+      "url": "https://www.ms-traduction.com/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ms-traduction.com/logo.webp"
+        "url": "https://www.ms-traduction.com/logo.webp"
       },
-      "image": "https://ms-traduction.com/og-image.webp",
+      "image": "https://www.ms-traduction.com/og-image.webp",
       "email": "mailto:mariasalmeron.trad@gmail.com",
       "telephone": "+34644886933",
       "contactPoint": [
@@ -1389,14 +1389,14 @@
 
     {
       "@type": "Person",
-      "@id": "https://ms-traduction.com/#person",
+      "@id": "https://www.ms-traduction.com/#person",
       "name": "María de Los Ángeles Salmerón Ríos",
       "jobTitle": "Traductora-Intérprete Jurada de Francés",
       "worksFor": {
-        "@id": "https://ms-traduction.com/#organization"
+        "@id": "https://www.ms-traduction.com/#organization"
       },
-      "url": "https://ms-traduction.com/",
-      "image": "https://ms-traduction.com/og-image.webp",
+      "url": "https://www.ms-traduction.com/",
+      "image": "https://www.ms-traduction.com/og-image.webp",
       "email": "mailto:mariasalmeron.trad@gmail.com",
       "telephone": "+34644886933",
       "knowsLanguage": [
@@ -1423,10 +1423,10 @@
 
     {
       "@type": "ProfessionalService",
-      "@id": "https://ms-traduction.com/#service",
+      "@id": "https://www.ms-traduction.com/#service",
       "name": "MS Traduction",
       "description": "Servicio profesional de traducción e interpretación jurada de francés, con atención presencial y a distancia para clientes de España y Francia.",
-      "url": "https://ms-traduction.com/",
+      "url": "https://www.ms-traduction.com/",
       
       "areaServed": [
         {
@@ -1483,30 +1483,30 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://ms-traduction.com/#website",
-      "url": "https://ms-traduction.com/",
+      "@id": "https://www.ms-traduction.com/#website",
+      "url": "https://www.ms-traduction.com/",
       "name": "MS Traduction",
       "publisher": {
-        "@id": "https://ms-traduction.com/#organization"
+        "@id": "https://www.ms-traduction.com/#organization"
       },
       "inLanguage": "es",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://ms-traduction.com/?s={search_term_string}",
+        "target": "https://www.ms-traduction.com/?s={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     },
 
     {
       "@type": "WebPage",
-      "@id": "https://ms-traduction.com/#webpage",
-      "url": "https://ms-traduction.com/",
+      "@id": "https://www.ms-traduction.com/#webpage",
+      "url": "https://www.ms-traduction.com/",
       "name": "Traductora-Intérprete Jurada de Francés | María Salmerón",
       "isPartOf": {
-        "@id": "https://ms-traduction.com/#website"
+        "@id": "https://www.ms-traduction.com/#website"
       },
       "about": {
-        "@id": "https://ms-traduction.com/#person"
+        "@id": "https://www.ms-traduction.com/#person"
       },
       "inLanguage": "es"
     }
@@ -1810,8 +1810,7 @@
     }
   });
 
-  const initialLang = new URLSearchParams(window.location.search).get('lang') === 'fr' ? 'fr' : 'es';
-  setActiveLanguage(initialLang);
+  updateMobileLangToggle();
 
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', ()=>{
