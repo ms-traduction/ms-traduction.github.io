@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-es="/preguntas-frecuentes.html" data-fr="/fr/faq.html">
 <head>
 <meta name="google-site-verification" content="lRTfgOuMp7Y-7YgId1hN1FFCjj8PBIcKukTodqU_nU8" />
 <meta charset="UTF-8">
@@ -1693,19 +1693,14 @@
     mobileLangToggle.innerHTML = flagIcons[targetLang];
   }
 
-  function setActiveLanguage(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.setAttribute('data-lang', lang);
-    langSelectors.forEach(selector=>{
-      selector.querySelectorAll('.lang-option').forEach(option=>{
-        const isActive = option.getAttribute('data-lang') === lang;
-        option.classList.toggle('active', isActive);
-      });
-    });
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', lang);
-    window.history.replaceState({}, '', url.toString());
-    updateMobileLangToggle();
+  function setActiveLanguage(lang) {
+
+    const target = document.documentElement.dataset[lang];
+
+    if (target) {
+        window.location.href = target;
+    }
+
   }
 
   function closeServicesMenu(){
