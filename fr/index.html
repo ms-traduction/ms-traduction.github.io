@@ -787,9 +787,14 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   object-fit:contain;
   }
 
-  .cabinet-icon svg{
-    width:22px;
-    height:22px;
+  .cabinet-icon a{
+    display:inline-block;
+    text-decoration:none;
+  }
+
+  .cabinet-icon a:hover{
+      opacity:.85;
+      transition:opacity .25s ease;
   }
 
   .cabinet-box strong{
@@ -1870,13 +1875,18 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
 
       <div class="cabinet-box">
         <div class="cabinet-icon">
+          <a href="https://www.cabinettij.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Aller sur le site internet du Cabinet TIJ">
           <img src="../logo-cabinet-tij.png"
               alt="Logo Cabinet TIJ"
               class="cabinet-logo">
+          </a>
         </div>
         <div>
           <strong><a href="https://www.cabinettij.fr" target="_blank" rel="noopener noreferrer">Membre du Cabinet TIJ</a></strong>
-          <p>Réseau national de traducteurs et d'interprètes en France.</p>
+          <p>Réseau national de traducteurs et interprètes.</p>
         </div>
       </div>
     </div>
