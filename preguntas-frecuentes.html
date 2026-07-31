@@ -1103,7 +1103,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 MS Traduction. Todos los derechos reservados.</span>
+      <span>© <span id="current-year"></span> MS Traduction. Todos los derechos reservados.</span>
     </div>
   </div>
 </footer>
@@ -1238,6 +1238,7 @@
       mainNav.classList.remove('open');
     }
   });
+document.getElementById("current-year").textContent = new Date().getFullYear();
 
 </script>
 
