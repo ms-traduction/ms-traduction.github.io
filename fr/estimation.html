@@ -1447,6 +1447,8 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   .summary-total{display:block;margin-top:4px;color:#fff;font-family:var(--serif);font-size:42px;font-weight:500;transition:transform .2s ease;}
   .summary-total.is-updated{transform:scale(1.03);}
   .summary-supplements{margin:20px 0 0;color:rgba(255,255,255,.72);font-size:12px;line-height:1.6;}
+  .summary-guidance{margin:10px 0 0;color:var(--rose-light);font-size:12px;line-height:1.6;}
+  .summary-estimate-note{margin:12px 0 0;color:rgba(255,255,255,.62);font-size:11px;line-height:1.55;}
   .summary-tax-note{margin:12px 0 0;color:rgba(255,255,255,.62);font-size:11px;line-height:1.5;}
   .estimate-notes{margin:-54px 0 72px;color:var(--navy-soft);font-size:12px;line-height:1.6;}
   .estimate-notes p{margin:5px 0;}
@@ -1738,13 +1740,13 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
         <div class="estimate-field"><label for="apostille">Apostille</label><select id="apostille"><option value="no">Non</option><option value="yes">Oui</option></select></div>
         <div class="estimate-field"><label for="pages">Nombre de pages *</label><div class="pages-control"><button type="button" data-pages-step="-1" aria-label="Retirer une page">−</button><input id="pages" type="number" min="1" value="1" inputmode="numeric"><button type="button" data-pages-step="1" aria-label="Ajouter une page">+</button></div></div>
         <div class="estimate-field other-document" id="other-document" hidden><label for="other-document-name">Précisez le document</label><input id="other-document-name" type="text"></div>
-        <div class="estimate-field"><label for="deadline">Délai souhaité *</label><select id="deadline"><option value="normal">Délai normal (72h-96h)</option><option value="urgent">Délai urgent (&lt;48h)</option><option value="very_urgent">Délai très urgent (&lt;24h)</option></select></div>
+        <div class="estimate-field"><label for="deadline">Délai souhaité *</label><select id="deadline"><option value="normal">Délai normal</option><option value="urgent">Urgent (&lt;48 h)</option><option value="express">Express (&lt;24 h)</option></select></div>
         <div class="estimate-field"><label for="delivery">Mode de livraison</label><select id="delivery"><option value="email">Envoi par email</option><option value="postal">Envoi postal</option><option value="certified">Envoi recommandé</option><option value="pickup">Retrait en personne</option></select></div>
       </form>
     </div>
-    <aside class="estimate-summary" aria-live="polite"><h2>Résumé de votre estimation</h2><ul class="summary-list"><li><span>Langue source</span><strong id="summary-source"></strong></li><li><span>Langue cible</span><strong id="summary-target"></strong></li><li><span>Document</span><strong id="summary-document"></strong></li><li><span>Apostille</span><strong id="summary-apostille"></strong></li><li><span>Pages</span><strong id="summary-pages"></strong></li><li><span>Délai</span><strong id="summary-deadline"></strong></li><li><span>Livraison</span><strong id="summary-delivery"></strong></li></ul><div class="summary-price"><span class="summary-price-label">Tarif appliqué</span><strong class="summary-rate" id="summary-rate"></strong><span class="summary-total-label">Estimation totale</span><strong class="summary-total" id="summary-total"></strong><p class="summary-supplements" id="summary-supplements"></p><p class="summary-tax-note">TVA non applicable — art. 293 B du CGI</p></div></aside>
+    <aside class="estimate-summary" aria-live="polite"><h2>Résumé de votre estimation</h2><ul class="summary-list"><li><span>Langue source</span><strong id="summary-source"></strong></li><li><span>Langue cible</span><strong id="summary-target"></strong></li><li><span>Document</span><strong id="summary-document"></strong></li><li><span>Apostille</span><strong id="summary-apostille"></strong></li><li><span>Pages</span><strong id="summary-pages"></strong></li><li><span>Délai</span><strong id="summary-deadline"></strong></li><li><span>Livraison</span><strong id="summary-delivery"></strong></li></ul><div class="summary-price"><span class="summary-price-label">Tarif appliqué</span><strong class="summary-rate" id="summary-rate"></strong><span class="summary-total-label">Estimation totale</span><strong class="summary-total" id="summary-total"></strong><p class="summary-supplements" id="summary-supplements"></p><p class="summary-guidance" id="summary-guidance"></p><p class="summary-estimate-note">Cette estimation vous permet de vous faire une première idée du tarif de votre projet. Le montant définitif sera confirmé après examen des documents transmis, afin de tenir compte de leurs spécificités, de leur volume et des éventuelles contraintes de traduction ou de mise en page.</p><p class="summary-tax-note">TVA non applicable — art. 293 B du CGI</p></div></aside>
   </div></section>
-  <section class="estimate-notes" aria-label="Informations importantes"><div class="container"><p><strong>* Nombre de pages :</strong> une page correspond à une seule face d’une feuille de papier. Une feuille imprimée recto verso comprend donc 2 pages.</p><p><strong>* Délai de livraison :</strong> ces délais sont mentionnés à titre indicatif et peuvent varier en fonction du nombre total de pages et de la complexité des documents.</p></div></section>
+  <section class="estimate-notes" aria-label="Informations importantes"><div class="container"><p><strong>* Nombre de pages :</strong> une page correspond à une seule face d’une feuille de papier. Une feuille imprimée recto verso comprend donc 2 pages.</p><p><strong>* Délai de livraison :</strong> ces délais sont mentionnés à titre indicatif et peuvent varier en fonction du nombre total de pages et de la complexité des documents. Les demandes effectuées pendant le week-end peuvent faire l’objet d’un supplément, confirmé lors de la demande de devis.</p><p><strong>* Mode de livraison :</strong> l’envoi postal ou recommandé peut entraîner un supplément selon le mode d’expédition et les tarifs en vigueur, confirmé lors de la demande de devis.</p><p><strong>* Remises sur volume :</strong> elles seront étudiées manuellement lors d’une demande de devis personnalisée.</p></div></section>
   <section class="request-section"><div class="container"><div class="section-head"><span class="eyebrow">Demandez votre devis</span></div><div class="request-card"><form id="request-form" class="request-form"><div class="request-fields"><div class="request-field"><label for="request-name">Nom et prénom *</label><input id="request-name" name="name" required></div><div class="request-field"><label for="request-email">Adresse email *</label><input id="request-email" name="email" type="email" required></div><div class="request-field"><label for="request-phone">Téléphone</label><input id="request-phone" name="phone" type="tel"></div><div class="request-field"><label for="request-deadline">Délai souhaité</label><input id="request-deadline" name="deadline"></div><div class="request-field full"><label for="request-message">Message *</label><textarea id="request-message" name="message" required></textarea></div><div class="request-field full"><label for="document-file">Document à joindre</label><input id="document-file" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><small class="estimate-note">Formats acceptés&nbsp;: PDF, JPG, JPEG, PNG, DOC, DOCX. Taille maximale configurable&nbsp;: 10&nbsp;Mo.</small></div></div><label class="request-checkbox"><input type="checkbox" required> J’accepte le traitement de mes données afin de recevoir une réponse à ma demande. *</label><div class="cf-turnstile" data-sitekey="0x4AAAAAAE45-nP_Ie401yXN" data-theme="light" data-language="es" data-mode="managed"></div><button class="btn btn-primary" type="submit">Envoyer ma demande</button><div class="form-status" id="form-status" role="status"></div></form></div></div></section>
 </main>
 
@@ -1829,31 +1831,28 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
 
 
 <script>
-  // Configuración central de tarifas: sustituye null por tus importes reales.
+  // Configuration centrale des tarifs.
   const pricing = {
     currency: 'EUR',
     fileMaxSizeMb: 10,
-    languagePairs: { 'fr-es': null, 'es-fr': null },
-    rules: [
-      // Exemple configurable : { source: 'fr', target: 'es', document: 'diploma', minPages: 1, maxPages: null, rate: null }
-    ],
-    documents: {
-      birth_certificate: null, marriage_certificate: null, death_certificate: null,
-      diploma: null, academic_degree: null, transcript: null, criminal_record: null,
-      certificate: null, judgment: null, administrative: null, legal: null, other: null
+    documentGroups: {
+      civilStatus: { documents: ['birth_certificate', 'marriage_certificate', 'death_certificate'], rates: { 1: 40, 2: 55, 3: 65 }, unit: 'document' },
+      simple: { documents: ['diploma', 'academic_degree', 'transcript', 'criminal_record', 'certificate'], rate: 45, unit: 'page' },
+      complex: { documents: ['judgment', 'administrative', 'legal'], rate: 50, unit: 'page' },
+      other: { documents: ['other'], minimum: 50, unit: 'project' }
     },
     deadlines: {
-      normal: { label: 'Plazo normal (72h-96h)', supplement: null },
-      urgent: { label: 'Plazo urgente (<48h)', supplement: null },
-      very_urgent: { label: 'Plazo muy urgente (<24h)', supplement: null }
+      normal: { label: 'Délai normal', supplement: 0 },
+      urgent: { label: 'Urgent (<48 h)', supplement: 15 },
+      express: { label: 'Express (<24 h)', supplement: 25 }
     },
     delivery: {
-      email: { label: 'Envío por email', supplement: null },
+      email: { label: 'Envoi par email', supplement: 0 },
       postal: { label: 'Envío postal', supplement: null },
       certified: { label: 'Envío certificado', supplement: null },
       pickup: { label: 'Recogida presencial', supplement: null }
     },
-    apostille: { no: 0, yes: null }
+    apostille: { no: 0, yes: 15 }
   };
 
   const estimateForm = document.getElementById('estimate-form');
@@ -1863,6 +1862,7 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   const summaryTotal = document.getElementById('summary-total');
   const summaryRate = document.getElementById('summary-rate');
   const summarySupplements = document.getElementById('summary-supplements');
+  const summaryGuidance = document.getElementById('summary-guidance');
   const formStatus = document.getElementById('form-status');
   const locale = document.documentElement.lang === 'fr' ? 'fr-FR' : 'es-ES';
   const labels = {
@@ -1874,7 +1874,10 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     noSupplements: 'Aucun supplément configuré',
     formSuccess: 'Formulaire validé. Un service d’envoi doit encore être connecté pour le recevoir par email.',
     formError: 'Vérifiez les champs obligatoires avant l’envoi.',
-    fileError: 'Le fichier dépasse la taille maximale autorisée'
+    fileError: 'Le fichier dépasse la taille maximale autorisée',
+    civilCustom: 'Au-delà de 3 pages : tarif définitif confirmé par un devis personnalisé.',
+    otherCustom: 'À partir de 50 € — devis à étudier.',
+    volumeDiscount: 'Le tarif définitif peut bénéficier d’une remise sur volume après examen du document.'
   };
 
   function formatMoney(value){
@@ -1886,29 +1889,25 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     return select.options[select.selectedIndex].textContent;
   }
 
-  function getRate(pair, pages){
-    const [source, target] = pair.split('-');
-    const matchingRule = pricing.rules.find(rule =>
-      rule.source === source &&
-      rule.target === target &&
-      (!rule.document || rule.document === documentType.value) &&
-      (!rule.minPages || pages >= rule.minPages) &&
-      (!rule.maxPages || pages <= rule.maxPages)
-    );
-    return matchingRule?.rate ?? pricing.languagePairs[pair] ?? pricing.documents[documentType.value];
+  function getDocumentGroup(){
+    return Object.values(pricing.documentGroups).find(group => group.documents.includes(documentType.value));
   }
 
   function updateEstimate(){
     const pages = Math.max(1, Number.parseInt(pagesInput.value, 10) || 1);
     pagesInput.value = pages;
-    const pair = `${document.getElementById('source-language').value}-${document.getElementById('target-language').value}`;
-    const rate = getRate(pair, pages);
+    const group = getDocumentGroup();
+    const civilRate = group?.rates?.[pages];
+    const isCivilCustom = group?.unit === 'document' && typeof civilRate !== 'number';
+    const isOther = group?.unit === 'project';
+    const rate = isCivilCustom || isOther ? null : group?.rate ?? civilRate;
     const deadline = pricing.deadlines[document.getElementById('deadline').value];
     const delivery = pricing.delivery[document.getElementById('delivery').value];
     const apostilleChoice = document.getElementById('apostille').value;
     const supplements = [deadline?.supplement, delivery?.supplement, pricing.apostille[apostilleChoice]].filter(value => typeof value === 'number' && value > 0);
     const supplementTotal = supplements.reduce((sum, value) => sum + value, 0);
-    const total = typeof rate === 'number' ? (rate * pages) + supplementTotal : null;
+    const baseTotal = typeof rate === 'number' ? (group.unit === 'document' ? rate : rate * pages) : null;
+    const total = typeof baseTotal === 'number' ? baseTotal + supplementTotal : null;
 
     document.getElementById('summary-source').textContent = selectedText('source-language');
     document.getElementById('summary-target').textContent = selectedText('target-language');
@@ -1917,8 +1916,11 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     document.getElementById('summary-pages').textContent = `${pages} ${labels.pages}`;
     document.getElementById('summary-deadline').textContent = selectedText('deadline');
     document.getElementById('summary-delivery').textContent = selectedText('delivery');
-    summaryRate.textContent = typeof rate === 'number' ? `${formatMoney(rate)} / ${labels.perPage}` : labels.pending;
+    summaryRate.textContent = typeof rate === 'number'
+      ? `${formatMoney(rate)} / ${group.unit === 'document' ? 'document' : 'page'}${group.unit === 'document' ? ` (${pages} ${pages === 1 ? 'page' : 'pages'})` : ''}`
+      : isOther ? 'À partir de 50 € — devis à étudier' : labels.pending;
     summarySupplements.textContent = supplements.length ? `${labels.supplements}: ${formatMoney(supplementTotal)}` : labels.noSupplements;
+    summaryGuidance.textContent = isCivilCustom ? labels.civilCustom : isOther ? labels.otherCustom : group?.unit === 'page' ? labels.volumeDiscount : '';
     summaryTotal.textContent = formatMoney(total);
     summaryTotal.classList.remove('is-updated');
     requestAnimationFrame(() => summaryTotal.classList.add('is-updated'));
