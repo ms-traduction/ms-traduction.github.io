@@ -1418,7 +1418,7 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   .estimate-hero .eyebrow{display:block;margin-bottom:14px;color:var(--rose-dark);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;}
   .estimate-hero h1{max-width:760px;margin:0;color:var(--navy);font-family:var(--serif);font-size:clamp(34px,5vw,58px);line-height:1.08;font-weight:500;}
   .estimate-hero p{max-width:680px;margin:22px 0 0;color:var(--navy-soft);font-size:15.5px;line-height:1.75;}
-  .estimate-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:26px;align-items:start;padding-bottom:90px;}
+  .estimate-layout{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(300px,.88fr);gap:26px;align-items:start;padding-bottom:64px;}
   .estimate-card,.request-card{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.72);box-shadow:0 18px 45px -34px rgba(30,42,69,.45);}
   .estimate-card{padding:34px;}
   .request-card{padding:34px;}
@@ -1453,7 +1453,7 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   .summary-guidance{margin:10px 0 0;color:var(--rose-light);font-size:12px;line-height:1.6;}
   .summary-estimate-note{margin:12px 0 0;color:rgba(255,255,255,.62);font-size:11px;line-height:1.55;}
   .summary-tax-note{margin:12px 0 0;color:rgba(255,255,255,.62);font-size:11px;line-height:1.5;}
-  .estimate-notes{margin:-54px 0 72px;color:var(--navy-soft);font-size:12px;line-height:1.6;}
+  .estimate-notes{margin:-30px 0 48px;padding:18px 0;color:var(--navy-soft);font-size:12px;line-height:1.6;border-top:1px solid var(--rose-light);border-bottom:1px solid var(--rose-light);}
   .estimate-notes p{margin:5px 0;}
   .estimate-notes strong{color:var(--navy);font-weight:600;}
   .request-section{padding:0 0 100px;}
@@ -1736,7 +1736,7 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
 <main class="estimate-page">
   <section class="estimate-hero"><div class="container"><span class="eyebrow">Estimación online</span><h1>Calcula el precio de tu traducción jurada</h1><p>Obtén un presupuesto estimado de tu proyecto. El precio definitivo se confirmará una vez revisemos tus documentos, teniendo en cuenta sus características, su extensión y cualquier particularidad relacionada con la traducción o la maquetación.</p></div></section>
   <section><div class="container estimate-layout">
-    <div class="estimate-card"><h2>Tu solicitud</h2><p class="card-intro">Indica las características principales de la traducción que necesitas.</p>
+    <div class="estimate-card">
       <form id="estimate-form" class="estimate-fields">
         <div class="estimate-field full"><div class="language-row"><div class="estimate-field"><label for="source-language">Idioma de origen</label><select id="source-language"><option value="fr">Francés</option><option value="es">Español</option></select></div><button class="swap-languages" id="swap-languages" type="button" aria-label="Intercambiar idiomas">⇄</button><div class="estimate-field"><label for="target-language">Idioma de destino</label><select id="target-language"><option value="es">Español</option><option value="fr">Francés</option></select></div></div></div>
         <div class="estimate-field"><label for="document-type">Tipo de documento</label><select id="document-type"><option value="birth_certificate">Acta de nacimiento</option><option value="marriage_certificate">Acta de matrimonio</option><option value="death_certificate">Acta de defunción</option><option value="diploma">Diploma</option><option value="academic_degree">Título académico</option><option value="transcript">Certificado de notas</option><option value="criminal_record">Antecedentes penales</option><option value="certificate">Certificado</option><option value="judgment">Sentencia</option><option value="administrative">Documento administrativo</option><option value="legal">Documento jurídico</option><option value="other">Otro</option></select></div>
