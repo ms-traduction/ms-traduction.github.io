@@ -1134,8 +1134,17 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   }
 
   @media (max-width: 768px){
+    .contacto-wrap{ grid-template-columns:minmax(0,1fr); }
+    .contacto-info,
+    .contacto-items-row,
+    .contact-item{
+      min-width:0;
+      width:100%;
+    }
     .contacto-items-row{ gap:24px; }
-    .contact-item{ min-width:0; flex-basis:100%; }
+    .contact-item{ flex-basis:100%; }
+    .contact-item .val,
+    .contact-item a{ overflow-wrap:anywhere; }
   }
 
   @media (max-width: 640px){
