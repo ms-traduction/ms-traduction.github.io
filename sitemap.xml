@@ -39,4 +39,20 @@
         <lastmod>2026-07-27</lastmod>
     </url>
 
+    <!-- Precios ES -->
+    <url>
+        <loc>https://www.ms-traduction.com/precios.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/precios.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/estimation.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/precios.html" />
+    </url>
+
+    <!-- Estimation FR -->
+    <url>
+        <loc>https://www.ms-traduction.com/fr/estimation.html</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/precios.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/estimation.html" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/precios.html" />
+    </url>
+
 </urlset>
