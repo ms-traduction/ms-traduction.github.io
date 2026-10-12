@@ -1775,7 +1775,7 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     <aside class="estimate-summary" aria-live="polite"><h2>Resumen de tu estimación</h2><ul class="summary-list"><li><span>Idioma de origen</span><strong id="summary-source"></strong></li><li><span>Idioma de destino</span><strong id="summary-target"></strong></li><li><span>Documento</span><strong id="summary-document"></strong></li><li><span>Apostilla</span><strong id="summary-apostille"></strong></li><li><span>Páginas</span><strong id="summary-pages"></strong></li><li><span>Plazo</span><strong id="summary-deadline"></strong></li><li><span>Entrega</span><strong id="summary-delivery"></strong></li></ul><div class="summary-price"><span class="summary-price-label">Tarifa aplicada</span><strong class="summary-rate" id="summary-rate"></strong><span class="summary-total-label">Estimación total</span><strong class="summary-total" id="summary-total"></strong><p class="summary-supplements" id="summary-supplements"></p><p class="summary-guidance" id="summary-guidance"></p><p class="summary-estimate-note">Esta estimación te permite hacerte una primera idea del precio de tu proyecto. El precio definitivo se confirmará una vez revisemos tus documentos, teniendo en cuenta sus características, su extensión y cualquier particularidad relacionada con la traducción o la maquetación.</p><p class="summary-tax-note">TVA non applicable — art. 293 B du CGI</p></div></aside>
   </div></section>
   <section class="estimate-notes" aria-label="Información importante"><div class="container"><p><strong>* Número de páginas:</strong> una página corresponde a una sola cara de una hoja de papel. Una hoja impresa por ambas caras comprende, por tanto, 2 páginas.</p><p><strong>* Plazo de entrega:</strong> estos plazos se indican a título orientativo y pueden variar en función del número total de páginas y de la complejidad de los documentos. Los encargos realizados durante el fin de semana pueden estar sujetos a un recargo, que se confirmará al solicitar el presupuesto.</p><p><strong>* Método de entrega:</strong> el envío postal o certificado puede conllevar un suplemento adicional según la modalidad de envío y las tarifas vigentes del servicio, que se confirmará al solicitar el presupuesto.</p><p><strong>* Descuentos por volumen:</strong> se estudiarán manualmente al solicitar un presupuesto personalizado.</p></div></section>
-  <section class="request-section"><div class="container"><div class="section-head"><span class="eyebrow">Solicita tu presupuesto</span></div><div class="request-card"><form id="request-form" class="request-form"><div class="request-fields"><div class="request-field"><label for="request-name">Nombre y apellidos *</label><input id="request-name" name="name" required></div><div class="request-field"><label for="request-email">Dirección de email *</label><input id="request-email" name="email" type="email" required></div><div class="request-field"><label for="request-phone">Teléfono</label><input id="request-phone" name="phone" type="tel"></div><div class="request-field"><label for="request-deadline">Plazo deseado</label><input id="request-deadline" name="deadline"></div><div class="request-field full"><label for="request-message">Mensaje *</label><textarea id="request-message" name="message" required></textarea></div><div class="request-field full"><label for="document-file">Documento adjunto</label><input id="document-file" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><small class="estimate-note">Formatos permitidos: PDF, JPG, JPEG, PNG, DOC y DOCX. Tamaño máximo configurable: 10 MB.</small></div></div><label class="request-checkbox"><input type="checkbox" required> Acepto el tratamiento de mis datos para responder a mi solicitud. *</label><div class="cf-turnstile" data-sitekey="0x4AAAAAAE45-nP_Ie401yXN" data-theme="light" data-language="es" data-mode="managed"></div><button class="btn btn-primary" type="submit">Enviar solicitud</button><div class="form-status" id="form-status" role="status"></div></form></div></div></section>
+  <section class="request-section"><div class="container"><div class="section-head"><span class="eyebrow">Solicita tu presupuesto</span></div><div class="request-card"><form id="request-form" class="request-form" action="https://formspree.io/f/xgaolpnp" method="POST" enctype="multipart/form-data"><div class="request-fields"><div class="request-field"><label for="request-name">Nombre y apellidos *</label><input id="request-name" name="name" autocomplete="name" required></div><div class="request-field"><label for="request-email">Dirección de email *</label><input id="request-email" name="email" type="email" autocomplete="email" required></div><div class="request-field"><label for="request-phone">Teléfono</label><input id="request-phone" name="phone" type="tel" autocomplete="tel"></div><div class="request-field"><label for="request-deadline">Plazo deseado</label><input id="request-deadline" name="deadline"></div><div class="request-field full"><label for="request-message">Mensaje *</label><textarea id="request-message" name="message" required></textarea></div><div class="request-field full"><label for="document-file">Documentos adjuntos</label><input id="document-file" name="attachment" type="file" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple><small class="estimate-note">Formatos permitidos: PDF, JPG, JPEG, PNG, DOC y DOCX. Máximo 10 MB por archivo, 5 archivos y 25 MB en total.</small></div></div><label class="request-checkbox"><input type="checkbox" name="privacy_consent" value="accepted" required> Acepto el tratamiento de mis datos para responder a mi solicitud. *</label><div class="cf-turnstile" data-sitekey="0x4AAAAAAE45-nP_Ie401yXN" data-theme="light" data-language="es" data-mode="managed"></div><button class="btn btn-primary" type="submit">Enviar solicitud</button><div class="form-status" id="form-status" role="status"></div></form></div></div></section>
 </main>
 
 <footer>
@@ -1863,6 +1863,8 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   const pricing = {
     currency: 'EUR',
     fileMaxSizeMb: 10,
+    fileMaxCount: 5,
+    fileMaxTotalMb: 25,
     documentGroups: {
       civilStatus: { documents: ['birth_certificate', 'marriage_certificate', 'death_certificate'], rates: { 1: 40, 2: 55, 3: 65 }, unit: 'document' },
       simple: { documents: ['diploma', 'academic_degree', 'transcript', 'criminal_record', 'certificate'], rate: 45, unit: 'page' },
@@ -1892,6 +1894,9 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
   const summarySupplements = document.getElementById('summary-supplements');
   const summaryGuidance = document.getElementById('summary-guidance');
   const formStatus = document.getElementById('form-status');
+  const requestForm = document.getElementById('request-form');
+  const documentFiles = document.getElementById('document-file');
+  const submitButton = requestForm.querySelector('button[type="submit"]');
   const locale = document.documentElement.lang === 'fr' ? 'fr-FR' : 'es-ES';
   const labels = {
     pending: 'A COMPLETAR',
@@ -1900,9 +1905,14 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     perPage: 'página',
     supplements: 'Suplementos',
     noSupplements: 'Sin suplementos configurados',
-    formSuccess: 'Formulario validado. Falta conectar un servicio de envío para recibirlo por email.',
+    formSuccess: 'Tu solicitud se ha enviado correctamente. Hemos confirmado la recepción.',
     formError: 'Revisa los campos obligatorios antes de enviar.',
-    fileError: 'El archivo supera el máximo permitido',
+    fileTypeError: 'Solo se permiten archivos PDF, JPG, JPEG, PNG, DOC y DOCX.',
+    fileSizeError: 'Cada archivo debe pesar como máximo',
+    fileCountError: 'Puedes adjuntar como máximo',
+    fileTotalError: 'El tamaño total de los archivos no puede superar',
+    sendError: 'No se pudo confirmar el envío. Revisa tu conexión e inténtalo de nuevo. Tus datos siguen en el formulario.',
+    serverError: 'Formspree no aceptó la solicitud. Revisa los datos e inténtalo de nuevo. Tus datos siguen en el formulario.',
     civilCustom: 'Más de 3 páginas: precio definitivo mediante presupuesto personalizado.',
     otherCustom: 'A partir de 50 € — presupuesto a estudiar.',
     volumeDiscount: 'El precio definitivo podría incluir un descuento por volumen tras estudiar el documento.'
@@ -1972,18 +1982,124 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     updateEstimate();
   }));
 
-  document.getElementById('request-form').addEventListener('submit', event => {
-    event.preventDefault();
-    formStatus.textContent = event.currentTarget.checkValidity() ? labels.formSuccess : labels.formError;
-    if (!event.currentTarget.checkValidity()) event.currentTarget.reportValidity();
+  function validateAttachments(files){
+    const maxFileBytes = pricing.fileMaxSizeMb * 1024 * 1024;
+    const maxTotalBytes = pricing.fileMaxTotalMb * 1024 * 1024;
+    const allowedExtensions = new Set(['pdf', 'jpg', 'jpeg', 'png', 'doc', 'docx']);
+
+    if (files.length > pricing.fileMaxCount) {
+      return `${labels.fileCountError} ${pricing.fileMaxCount}.`;
+    }
+    if (files.some(file => !allowedExtensions.has(file.name.split('.').pop().toLowerCase()))) {
+      return labels.fileTypeError;
+    }
+    if (files.some(file => file.size > maxFileBytes)) {
+      return `${labels.fileSizeError} ${pricing.fileMaxSizeMb} MB.`;
+    }
+    if (files.reduce((total, file) => total + file.size, 0) > maxTotalBytes) {
+      return `${labels.fileTotalError} ${pricing.fileMaxTotalMb} MB.`;
+    }
+    return '';
+  }
+
+  function appendEstimate(formData){
+    const isCustomPrice = summaryTotal.textContent === labels.pending;
+    const pendingReason = documentType.value === 'other'
+      ? 'Pendiente de estudio y confirmación (documento personalizado).'
+      : isCustomPrice
+        ? 'Pendiente de estudio y confirmación (documento civil de más de 3 páginas).'
+        : '';
+    const delivery = pricing.delivery[document.getElementById('delivery').value];
+    const documentName = documentType.value === 'other'
+      ? document.getElementById('other-document-name').value.trim()
+      : '';
+    const appliedRate = isCustomPrice
+      ? 'Pendiente de estudio y confirmación.'
+      : summaryRate.textContent;
+    const supplements = summarySupplements.textContent === labels.noSupplements
+      ? '0 € (sin suplementos configurados).'
+      : summarySupplements.textContent;
+
+    formData.set('_subject', `Solicitud de presupuesto — ${document.getElementById('request-name').value.trim()}`);
+    formData.append('idioma_origen', selectedText('source-language'));
+    formData.append('idioma_destino', selectedText('target-language'));
+    formData.append('tipo_documento', selectedText('document-type'));
+    formData.append('nombre_documento_otro', documentName);
+    formData.append('apostilla', selectedText('apostille'));
+    formData.append('numero_paginas', pagesInput.value);
+    formData.append('plazo_calculadora', selectedText('deadline'));
+    formData.append('metodo_entrega', selectedText('delivery'));
+    formData.append('tarifa_aplicada', appliedRate);
+    formData.append('suplementos_estimados', supplements);
+    formData.append('estimacion_total', isCustomPrice ? 'Pendiente de confirmación.' : summaryTotal.textContent);
+    formData.append('estado_estimacion', pendingReason || 'Estimación calculada; el precio definitivo se confirmará tras revisar los documentos.');
+    if (delivery?.supplement === null) {
+      formData.append('nota_coste_entrega', 'El coste de esta modalidad de entrega está pendiente de confirmación y no se incluye en la estimación.');
+    }
+  }
+
+  function resetTurnstile(){
+    try {
+      window.turnstile?.reset();
+    } catch (error) {
+      console.error('No se pudo reiniciar el widget de Turnstile.', error);
+    }
+  }
+
+  documentFiles.addEventListener('change', () => {
+    formStatus.textContent = validateAttachments(Array.from(documentFiles.files));
   });
 
-  document.getElementById('document-file').addEventListener('change', event => {
-    const file = event.target.files[0];
-    const maxBytes = pricing.fileMaxSizeMb * 1024 * 1024;
-    if (file && file.size > maxBytes) {
-      event.target.value = '';
-      formStatus.textContent = `${labels.fileError} de ${pricing.fileMaxSizeMb} MB.`;
+  requestForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!requestForm.checkValidity()) {
+      formStatus.textContent = labels.formError;
+      requestForm.reportValidity();
+      return;
+    }
+
+    const attachmentError = validateAttachments(Array.from(documentFiles.files));
+    if (attachmentError) {
+      formStatus.textContent = attachmentError;
+      documentFiles.focus();
+      return;
+    }
+
+    const formData = new FormData(requestForm);
+    appendEstimate(formData);
+    submitButton.disabled = true;
+    formStatus.textContent = 'Enviando solicitud…';
+    let received = false;
+
+    try {
+      const response = await fetch(requestForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      });
+      let result;
+      try {
+        result = await response.json();
+      } catch (error) {
+        console.error('Formspree devolvió una respuesta que no se pudo leer.', error);
+      }
+
+      if (!response.ok || result?.ok !== true) {
+        formStatus.textContent = response.ok ? labels.serverError : `${labels.serverError} (HTTP ${response.status}).`;
+        return;
+      }
+
+      received = true;
+      formStatus.textContent = labels.formSuccess;
+      requestForm.reset();
+      resetTurnstile();
+      requestForm.dispatchEvent(new CustomEvent('formspree:success'));
+    } catch (error) {
+      console.error('Error de red al enviar la solicitud a Formspree.', error);
+      formStatus.textContent = labels.sendError;
+    } finally {
+      if (!received) resetTurnstile();
+      submitButton.disabled = false;
     }
   });
 
@@ -2104,14 +2220,12 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     });
   });
 
-  // 5. Formulaire valide, mais pas encore envoyé réellement
-  requestForm.addEventListener('submit', function (event) {
-    if (requestForm.checkValidity()) {
-      trackEvent('quote_submit', {
-        page_language: 'es',
-        submission_status: 'validated_only'
-      });
-    }
+  // 5. Envoi confirmé par Formspree
+  requestForm.addEventListener('formspree:success', function () {
+    trackEvent('quote_submit', {
+      page_language: 'es',
+      submission_status: 'received'
+    });
   });
 
   // 6. Clic sur WhatsApp
