@@ -31,11 +31,36 @@ tarteaucitron.init({
     "removeCredit": true,
     "moreInfoLink": true,
     "useExternalCss": false,
-    "mandatory": true
+    "mandatory": true,
+    "googleConsentMode": true,
+    "softConsentMode": true
 });
 tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
 (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
 </script>
+<script>
+window.dataLayer = window.dataLayer || [];
+(function () {
+    function gtag() { window.dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 800
+    });
+    document.addEventListener('tac.consent_updated', function () {
+        gtag('consent', 'update', {
+            analytics_storage: window.tarteaucitron.state.gtag === true ? 'granted' : 'denied'
+        });
+    });
+})();
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N4ZNNJKW');</script>
 <meta name="google-site-verification" content="lRTfgOuMp7Y-7YgId1hN1FFCjj8PBIcKukTodqU_nU8" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
