@@ -2046,6 +2046,22 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
     }
   }
 
+  function redactResponseBody(body, formData){
+    let safeBody = body;
+    const sensitiveFields = /^(name|email|phone|deadline|message|nombre_documento_otro|cf-turnstile-response|g-recaptcha-response|h-captcha-response)$/i;
+
+    for (const [field, value] of formData.entries()) {
+      const sensitiveValue = value instanceof File
+        ? value.name
+        : sensitiveFields.test(field) ? value : '';
+      if (sensitiveValue) {
+        safeBody = safeBody.split(sensitiveValue).join('[dato omitido]');
+      }
+    }
+
+    return safeBody;
+  }
+
   documentFiles.addEventListener('change', () => {
     formStatus.textContent = validateAttachments(Array.from(documentFiles.files));
   });
@@ -2077,14 +2093,19 @@ tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
         body: formData,
         headers: { Accept: 'application/json' }
       });
+      const responseBody = await response.text();
       let result;
       try {
-        result = await response.json();
-      } catch (error) {
-        console.error('Formspree devolvió una respuesta que no se pudo leer.', error);
+        result = JSON.parse(responseBody);
+      } catch {
+        result = null;
       }
 
       if (!response.ok || result?.ok !== true) {
+        console.error(
+          `[Formspree] HTTP ${response.status}; cuerpo de respuesta (datos del envío ocultos):`,
+          redactResponseBody(responseBody, formData)
+        );
         formStatus.textContent = response.ok ? labels.serverError : `${labels.serverError} (HTTP ${response.status}).`;
         return;
       }
