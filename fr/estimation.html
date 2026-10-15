@@ -1873,7 +1873,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     currency: 'EUR',
     documentGroups: {
       civilStatus: { documents: ['birth_certificate', 'marriage_certificate', 'death_certificate'], rates: { 1: 40, 2: 55, 3: 65 }, unit: 'document' },
-      simple: { documents: ['diploma', 'academic_degree', 'transcript', 'criminal_record'], rate: 35, unit: 'page' },
+      simple: { documents: ['diploma', 'academic_degree', 'transcript'], rate: 40, unit: 'page' },
+      criminalRecord: { documents: ['criminal_record'], rate: 40, unit: 'page' },
       certificate: { documents: ['certificate'], rate: 45, unit: 'page' },
       complex: { documents: ['judgment', 'administrative', 'legal'], rate: 50, unit: 'page' },
       other: { documents: ['other'], minimum: 50, unit: 'project' }
