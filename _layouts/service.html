@@ -1,0 +1,428 @@
+{% assign service = site.data.services[page.service] %}
+{% assign copy = service[page.lang] %}
+{% assign content = site.data.service_page_content[page.service][page.lang] %}
+{% assign ui = site.data.service_ui[page.lang] %}
+{% assign es_url = '/servicios/' | append: service.es.slug | append: '/' %}
+{% assign fr_url = '/fr/services/' | append: service.fr.slug | append: '/' %}
+{% assign home_url = '/' %}
+{% assign quote_url = '/precios/' %}
+{% assign faq_url = '/preguntas-frecuentes/' %}
+{% assign legal_url = '/aviso-legal/' %}
+{% assign privacy_url = '/politica-privacidad/' %}
+{% assign cookies_url = '/politica-cookies/' %}
+{% assign legal_label = 'Aviso legal' %}
+{% assign privacy_label = 'Política de privacidad' %}
+{% assign cookies_label = 'Política de cookies' %}
+{% assign job_label = 'Traductora-Intérprete Jurada de francés' %}
+{% if page.lang == 'fr' %}
+  {% assign home_url = '/fr/' %}
+  {% assign quote_url = '/fr/estimation/' %}
+  {% assign faq_url = '/fr/faq/' %}
+  {% assign legal_url = '/fr/mentions-legales/' %}
+  {% assign privacy_url = '/fr/politique-confidentialite/' %}
+  {% assign cookies_url = '/fr/politique-cookies/' %}
+  {% assign legal_label = 'Mentions légales' %}
+  {% assign privacy_label = 'Politique de confidentialité' %}
+  {% assign cookies_label = 'Politique de cookies' %}
+  {% assign job_label = 'Traductrice-Interprète Assermentée espagnol-français' %}
+{% endif %}
+{% assign canonical_url = 'https://www.ms-traduction.com' | append: page.url %}
+{% assign home_canonical = 'https://www.ms-traduction.com' | append: home_url %}
+{% assign service_canonical = 'https://www.ms-traduction.com' | append: es_url %}
+{% assign services_section_url = home_canonical | append: '#servicios' %}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <title>{{ copy.meta_title }}</title>
+  <meta name="description" content="{{ copy.meta_description }}">
+  <meta name="author" content="María Salmerón">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="content-language" content="{{ page.lang }}">
+  <meta name="theme-color" content="#c77b85">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="alternate" hreflang="es" href="https://www.ms-traduction.com{{ es_url }}">
+  <link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com{{ fr_url }}">
+  <link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com{{ es_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{% if page.lang == 'fr' %}fr_FR{% else %}es_ES{% endif %}">
+  <meta property="og:title" content="{{ copy.meta_title }}">
+  <meta property="og:description" content="{{ copy.meta_description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:image" content="https://www.ms-traduction.com/og-image.webp">
+  <meta property="og:image:type" content="image/webp">
+  <meta property="og:image:alt" content="{% if page.lang == 'fr' %}María Salmerón, traductrice-interprète assermentée espagnol-français{% else %}María Salmerón, traductora-intérprete jurada de francés{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ copy.meta_title }}">
+  <meta name="twitter:description" content="{{ copy.meta_description }}">
+  <meta name="twitter:image" content="https://www.ms-traduction.com/og-image.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="https://www.ms-traduction.com/pexels-picjumbocom-461077.webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/service-pages.css">
+  <script src="/tarteaucitron/tarteaucitron.min.js"></script>
+  <script>
+    tarteaucitron.init({
+      privacyUrl: "{{ privacy_url }}",
+      bodyPosition: "top",
+      hashtag: "#cookies",
+      cookieName: "tarteaucitron",
+      orientation: "bottom",
+      groupServices: true,
+      showDetailsOnClick: true,
+      serviceDefaultState: "wait",
+      showAlertSmall: false,
+      cookieslist: true,
+      closePopup: false,
+      showIcon: true,
+      iconPosition: "BottomRight",
+      adblocker: false,
+      DenyAllCta: true,
+      AcceptAllCta: true,
+      highPrivacy: true,
+      alwaysNeedConsent: true,
+      handleBrowserDNTRequest: false,
+      removeCredit: true,
+      moreInfoLink: true,
+      useExternalCss: false,
+      mandatory: true,
+      googleConsentMode: true,
+      softConsentMode: true
+    });
+    tarteaucitron.user.gtagUa = 'G-MVV4263JYD';
+    (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    (function () {
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        wait_for_update: 800
+      });
+      document.addEventListener('tac.consent_updated', function () {
+        gtag('consent', 'update', {
+          analytics_storage: window.tarteaucitron.state.gtag === true ? 'granted' : 'denied'
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N4ZNNJKW');
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": {{ canonical_url | append: '#service' | jsonify }},
+          "name": {{ copy.title | jsonify }},
+          "description": {{ copy.meta_description | jsonify }},
+          "url": {{ canonical_url | jsonify }},
+          "serviceType": {{ content.keyword | jsonify }},
+          "inLanguage": "{{ page.lang }}",
+          "areaServed": [
+            {"@type": "Country", "name": "Spain"},
+            {"@type": "Country", "name": "France"}
+          ],
+          "provider": {"@id": "https://www.ms-traduction.com/#person"}
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": {{ ui.home_label | jsonify }},
+              "item": {{ home_canonical | jsonify }}
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": {{ ui.services_label | jsonify }},
+              "item": {{ services_section_url | jsonify }}
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": {{ copy.card_title | jsonify }},
+              "item": {{ canonical_url | jsonify }}
+            }
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+          "url": {{ canonical_url | jsonify }},
+          "name": {{ copy.meta_title | jsonify }},
+          "description": {{ copy.meta_description | jsonify }},
+          "inLanguage": "{{ page.lang }}",
+          "isPartOf": {"@id": "https://www.ms-traduction.com/#website"},
+          "about": {"@id": "https://www.ms-traduction.com/#person"},
+          "mainEntity": {"@id": {{ canonical_url | append: '#service' | jsonify }}}
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  {% include service-header.html %}
+  <main>
+    <section class="service-main">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="{{ ui.breadcrumb_label }}">
+          <a href="{{ home_url }}">{{ ui.home_label }}</a>
+          <span aria-hidden="true">/</span>
+          <a href="{{ services_section_url }}">{{ ui.services_label }}</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">{{ copy.card_title }}</span>
+        </nav>
+
+        <section class="service-hero" aria-labelledby="service-title">
+          <div class="service-hero__content">
+            <span class="eyebrow">{{ ui.who_label }}</span>
+            <h1 id="service-title">{{ copy.title }}</h1>
+            <div class="divider"></div>
+            <p class="service-intro">{{ copy.intro }}</p>
+            <a href="{{ quote_url }}" class="btn btn-primary">{{ ui.quote_label }}</a>
+          </div>
+        </section>
+
+        <nav class="service-page-nav" aria-label="{{ ui.jump_nav_label }}">
+          <a href="#presentacion">{{ ui.presentation_nav_label }}</a>
+          <a href="#documentos">{{ ui.documents_nav_label }}</a>
+          <a href="#cuando">{{ ui.situations_nav_label }}</a>
+          <a href="#profesional">{{ ui.professional_nav_label }}</a>
+          <a href="#proceso">{{ ui.process_nav_section_label }}</a>
+          <a href="#preguntas">{{ ui.faq_nav_label }}</a>
+        </nav>
+
+        <section class="service-section" id="presentacion" aria-labelledby="presentation-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">{{ ui.services_label }}</span>
+            <h2 id="presentation-heading">{{ ui.presentation_heading }}</h2>
+          </div>
+          <div class="service-copy">
+            {% for paragraph in content.presentation %}
+              <p>{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="service-section service-section--soft" id="documentos" aria-labelledby="documents-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">{{ ui.services_label }}</span>
+            <h2 id="documents-heading">{{ copy.list_title }}</h2>
+          </div>
+          <ul class="document-grid">
+            {% for document in copy.documents %}
+              <li class="document-item">
+                <span class="document-item__mark" aria-hidden="true">✓</span>
+                <span>{{ document }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="service-section" id="cuando" aria-labelledby="situations-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">{{ ui.services_label }}</span>
+            <h2 id="situations-heading">{{ ui.situations_heading }}</h2>
+          </div>
+          <div class="service-copy">
+            <p>{{ content.when_intro }}</p>
+          </div>
+          <ul class="situation-list">
+            {% for situation in content.situations %}
+              <li>{{ situation }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="service-section service-section--soft" id="profesional" aria-labelledby="professional-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">María Salmerón</span>
+            <h2 id="professional-heading">{{ ui.professional_heading }}</h2>
+          </div>
+          <ul class="profile-grid">
+            {% for point in ui.profile_points %}
+              <li class="profile-card">
+                <span class="profile-card__mark" aria-hidden="true">✦</span>
+                <p>{{ point }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+
+        <section class="service-section" id="proceso" aria-labelledby="process-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">{{ ui.services_label }}</span>
+            <h2 id="process-heading">{{ ui.process_heading }}</h2>
+          </div>
+          <ol class="process-grid">
+            {% for step in ui.process_steps %}
+              <li class="process-card">
+                <span class="process-card__number" aria-hidden="true">{{ forloop.index }}</span>
+                <h3>{{ step.title }}</h3>
+                <p>{{ step.text }}</p>
+              </li>
+            {% endfor %}
+          </ol>
+        </section>
+
+        <section class="service-section service-section--soft" id="preguntas" aria-labelledby="faq-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">{{ ui.services_label }}</span>
+            <h2 id="faq-heading">{{ ui.faq_heading }}</h2>
+          </div>
+          <div class="faq-list">
+            {% for item in content.faqs %}
+              <details class="faq-item">
+                <summary>{{ item.question }}</summary>
+                <p>{{ item.answer }}</p>
+              </details>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="service-section related-services" aria-labelledby="related-heading">
+          <div class="service-section__heading">
+            <span class="eyebrow">{{ ui.services_label }}</span>
+            <h2 id="related-heading">{{ ui.related_heading }}</h2>
+            <p>{{ ui.related_intro }}</p>
+          </div>
+          <div class="related-grid">
+            {% for related_key in content.related %}
+              {% assign related_service = site.data.services[related_key] %}
+              {% assign related_copy = related_service[page.lang] %}
+              {% assign related_url = '/servicios/' | append: related_service.es.slug | append: '/' %}
+              {% if page.lang == 'fr' %}
+                {% assign related_url = '/fr/services/' | append: related_service.fr.slug | append: '/' %}
+              {% endif %}
+              <a class="related-link" href="{{ related_url }}">{{ related_copy.card_title }} <span aria-hidden="true">→</span></a>
+            {% endfor %}
+          </div>
+          <a class="services-index-link" href="{{ home_url }}#servicios">{{ ui.services_index_cta }}</a>
+        </section>
+
+        <section class="service-cta" aria-labelledby="service-cta-heading">
+          <div>
+            <span class="eyebrow">{{ ui.who_label }}</span>
+            <h2 id="service-cta-heading">{{ copy.cta_title }}</h2>
+            <p>{{ copy.cta_text }}</p>
+          </div>
+          <a href="{{ quote_url }}" class="btn btn-primary">{{ ui.quote_label }}</a>
+        </section>
+      </div>
+    </section>
+  </main>
+  {% include service-footer.html %}
+
+  <div class="ms-contact-widget" id="ms-contact-widget" aria-live="polite">
+    <div class="ms-contact-widget__wrapper">
+      <div class="ms-contact-widget__menu" id="ms-contact-widget-menu" aria-label="{{ ui.contact_menu_label }}">
+        <a class="ms-contact-widget__action" href="https://wa.me/34644886933" target="_blank" rel="noopener noreferrer" aria-label="{{ ui.whatsapp_label }}" title="WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+            <path d="M17.6 6.3c-1.4-1.4-3.3-2.2-5.3-2.2-4.1 0-7.5 3.4-7.5 7.5 0 1.3.3 2.6.9 3.8L4.7 19l3.7-1c1.1.6 2.4.9 3.7.9h.1c4.1 0 7.5-3.4 7.5-7.5 0-2-1-3.9-2.1-5.1zm-5.3 11.4h-.1c-1.1 0-2.2-.3-3.1-.8l-.2-.1-2.1.6.6-2.1-.1-.2c-.6-1-1-2.1-1-3.3 0-3.4 2.8-6.2 6.2-6.2 1.7 0 3.2.7 4.3 1.8 1.1 1.1 1.8 2.6 1.8 4.3 0 3.4-2.8 6.2-6.3 6.2zm3.4-4.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.5.1-.2.2-.7.9-.9 1.1-.1.2-.3.2-.5.1-.1-.1-1-.4-1.9-1.2-.7-.6-1.2-1.3-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.3-.4.1-.1.1-.3.2-.4.1-.2.1-.3 0-.5-.1-.2-.5-1.2-.7-1.6-.2-.4-.3-.3-.5-.3h-.4c-.2 0-.5.1-.8.4-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.5 4.1 3.5.6.3 1 .4 1.3.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"></path>
+          </svg>
+        </a>
+        <a class="ms-contact-widget__action" href="mailto:mariasalmeron.trad@gmail.com" aria-label="{{ ui.email_label }}" title="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16v12H4z"></path>
+            <path d="M4 7l8 6 8-6"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="ms-contact-widget__bubble" aria-hidden="false">{{ ui.contact_bubble }}</div>
+      <button class="ms-contact-widget__toggle" type="button" aria-expanded="false" aria-controls="ms-contact-widget-menu" aria-label="{{ ui.contact_open_label }}">
+        <span class="ms-contact-widget__icon" aria-hidden="true">
+          <svg class="plane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2L11 13"></path>
+            <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+          </svg>
+          <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M5 5L19 19"></path>
+            <path d="M19 5L5 19"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <script>
+    const mainNav = document.querySelector('.main-nav');
+    const burger = document.querySelector('.burger');
+    const servicesItem = document.querySelector('.nav-item-services');
+    const servicesTrigger = document.querySelector('.dropdown-trigger');
+    const contactWidget = document.getElementById('ms-contact-widget');
+    const contactToggle = contactWidget.querySelector('.ms-contact-widget__toggle');
+    const contactBubble = contactWidget.querySelector('.ms-contact-widget__bubble');
+
+    function closeServicesMenu() {
+      servicesItem.classList.remove('open');
+      servicesTrigger.setAttribute('aria-expanded', 'false');
+    }
+
+    servicesTrigger.addEventListener('click', event => {
+      event.stopPropagation();
+      const isOpen = servicesItem.classList.toggle('open');
+      servicesTrigger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    burger.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+      if (!isOpen) closeServicesMenu();
+    });
+
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.nav-item-services')) closeServicesMenu();
+      if (window.innerWidth <= 980 && !event.target.closest('.main-nav') && !event.target.closest('.burger')) {
+        mainNav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    function setContactWidgetState(isOpen) {
+      contactWidget.classList.toggle('is-open', isOpen);
+      contactToggle.setAttribute('aria-expanded', String(isOpen));
+      contactToggle.setAttribute('aria-label', isOpen ? '{{ ui.contact_close_label }}' : '{{ ui.contact_open_label }}');
+      contactBubble.setAttribute('aria-hidden', String(isOpen));
+    }
+
+    contactToggle.addEventListener('click', () => {
+      setContactWidgetState(!contactWidget.classList.contains('is-open'));
+    });
+
+    document.addEventListener('click', event => {
+      if (!contactWidget.contains(event.target)) setContactWidgetState(false);
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') {
+        closeServicesMenu();
+        mainNav.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        setContactWidgetState(false);
+      }
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

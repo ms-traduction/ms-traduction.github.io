@@ -1,0 +1,39 @@
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-inner">
+          <img src="/logo.webp" alt="Logo María Salmerón" class="logo-small" loading="lazy" decoding="async">
+          <div>
+            <div class="name">MARÍA SALMERÓN</div>
+            <div class="role">{{ job_label }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>{{ ui.footer_quote_label }}</h4>
+        <ul>
+          <li><a href="mailto:mariasalmeron.trad@gmail.com">mariasalmeron.trad@gmail.com</a></li>
+          <li><a href="https://wa.me/34644886933">WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>{{ ui.footer_faq_title }}</h4>
+        <ul>
+          <li><a href="{{ faq_url }}">{{ ui.faq_label }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year"></span> María Salmerón. {{ ui.rights_label }}</span><div class="footer-links">
+      <a href="{{ legal_url }}">{{ legal_label }}</a> ·
+      <a href="{{ privacy_url }}">{{ privacy_label }}</a> ·
+      <a href="{{ cookies_url }}">{{ cookies_label }}</a> ·
+      <a href="javascript:tarteaucitron.userInterface.openPanel();">{{ ui.cookie_settings_label }}</a>
+      </div>
+    </div>
+  </div>
+</footer>

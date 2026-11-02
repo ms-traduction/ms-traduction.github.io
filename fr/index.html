@@ -66,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no">
 <title>Traductrice Assermentée Espagnol-Français | María Salmerón | Traductions Officielles</title>
-<meta name="description" content="Traductrice-interprète assermentée espagnol-français. Traductions officielles de documents administratifs, académiques, notariés, commerciaux et d'état civil, reconnue par les autorités espagnoles.">
+<meta name="description" content="Traductrice-interprète assermentée espagnol-français. Traductions officielles de documents d’état civil, académiques, juridiques, médicaux, commerciaux et administratifs.">
 <meta name="author" content="María Salmerón">
 <meta name="robots" content="index, follow">
 <meta http-equiv="content-language" content="fr">
@@ -1241,6 +1241,57 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (prefers-reduced-motion: reduce){
     *{ transition:none !important; animation:none !important; }
   }
+  .servicios-grid.translation-service-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:stretch;
+  }
+  .service-card-link{
+    display:flex;
+    flex-direction:column;
+    color:inherit;
+  }
+  .service-card-link h3{ margin-bottom:12px; }
+  .service-card-link p{
+    font-size:14.5px;
+    line-height:1.7;
+    color:#6b6b6b;
+  }
+  .service-card-link .service-card-cta{
+    margin-top:auto;
+    padding-top:16px;
+    color:var(--rose-dark);
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.4px;
+  }
+  .service-card-link:hover .service-card-cta,
+  .service-card-link:focus-visible .service-card-cta{ color:var(--navy); }
+  .service-card-link:focus-visible{
+    outline:3px solid var(--rose-dark);
+    outline-offset:4px;
+  }
+  @media (max-width:980px){
+    .servicios-grid.translation-service-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+  @media (max-width:768px){
+    .translation-service-grid .service-card-link{
+      min-height:0;
+      padding:22px 18px;
+      border:1px solid var(--line);
+      background:var(--cream);
+      perspective:none;
+      cursor:pointer;
+    }
+    .translation-service-grid .service-card-link .service-icon{ margin:0 0 12px; }
+    .translation-service-grid .service-card-link h3{
+      text-align:left;
+      margin-bottom:12px;
+    }
+    .translation-service-grid .service-card-link p{ text-align:left; }
+  }
+  @media (max-width:640px){
+    .servicios-grid.translation-service-grid{ grid-template-columns:1fr; gap:14px; }
+  }
 /* ==========================
    Versión móvil
 ========================== */
@@ -1724,8 +1775,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "Interpretación jurada",
         "Documentos civiles",
         "Documentos académicos",
-        "Documentos notariales",
-        "Documentos comerciales",
+        "Documentos notariales y jurídicos",
+        "Documentos médicos y sanitarios",
+        "Documentos comerciales y financieros",
         "Documentación administrativa",
         "Extranjería",
         "Nacionalidad española",
@@ -1906,79 +1958,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 
     <div class="servicios-block">
-      <div class="servicios-grid">
+      <div class="servicios-grid translation-service-grid">
 
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8"/><path d="M8 14h5"/><circle cx="12" cy="7.5" r="2.5"/></svg></div>
-              <h3>Documents d'état civil</h3>
-            </div>
-            <div class="card-back">
-              <p>Actes de naissance, de mariage et de décès, certificats de célibat ou de veuvage, certificats de vie, livrets de famille...</p>
-            </div>
-          </div>
-        </div>
+        <a class="service-card service-card-link" href="/fr/services/documents-etat-civil/" aria-label="Voir la traduction assermentée de documents d’état civil">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 10h8"/><path d="M8 14h5"/><circle cx="12" cy="7.5" r="2.5"/></svg></div>
+          <h3>Documents d’état civil</h3>
+          <p>Actes de naissance, de mariage ou de décès, certificats de célibat ou de veuvage, certificats de vie, livrets de famille et autres documents d’état civil.</p>
+          <span class="service-card-cta">Découvrir le service <span aria-hidden="true">→</span></span>
+        </a>
 
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
-              <h3>Documents académiques</h3>
-            </div>
-            <div class="card-back">
-              <p>Diplômes universitaires, relevés de notes, certificats et dossiers académiques.</p>
-            </div>
-          </div>
-        </div>
+        <a class="service-card service-card-link" href="/fr/services/documents-academiques/" aria-label="Voir la traduction assermentée de documents académiques">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></div>
+          <h3>Documents académiques</h3>
+          <p>Diplômes universitaires, relevés de notes, certificats, dossiers académiques et documents nécessaires aux demandes d’équivalence ou de reconnaissance des études.</p>
+          <span class="service-card-cta">Découvrir le service <span aria-hidden="true">→</span></span>
+        </a>
 
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scale-icon lucide-scale"><path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M7 21h10"/></svg></div>
-              <h3>Documents notariés et médicaux</h3>
-            </div>
-            <div class="card-back">
-              <p>Procurations, actes notariés, contrats, rapports et dossiers médicaux.</p>
-            </div>
-          </div>
-        </div>
+        <a class="service-card service-card-link" href="/fr/services/documents-notariaux-juridiques/" aria-label="Voir la traduction assermentée de documents notariés et juridiques">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M5 7h14"/><path d="m5 7-3 6h6L5 7Z"/><path d="m19 7-3 6h6l-3-6Z"/><path d="M7 21h10"/></svg></div>
+          <h3>Documents notariés et juridiques</h3>
+          <p>Procurations, actes notariés, contrats, testaments, procès-verbaux notariés, décisions de justice et documents liés aux successions ou aux procédures judiciaires.</p>
+          <span class="service-card-cta">Découvrir le service <span aria-hidden="true">→</span></span>
+        </a>
 
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
-              <h3>Documents commerciaux et financiers</h3>
-            </div>
-            <div class="card-back">
-              <p>Statuts de société, bilans financiers, contrats commerciaux et documents destinés aux opérations internationales.</p>
-            </div>
-          </div>
-        </div>
+        <a class="service-card service-card-link" href="/fr/services/documents-medicaux-sanitaires/" aria-label="Voir la traduction assermentée de documents médicaux et de santé">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-3"/><path d="M9 3h6v4H9z"/><path d="M12 10v8M8 14h8"/></svg></div>
+          <h3>Documents médicaux et sanitaires</h3>
+          <p>Rapports médicaux, dossiers médicaux, certificats médicaux, comptes rendus hospitaliers, résultats d’examens et autres documents de santé.</p>
+          <span class="service-card-cta">Découvrir le service <span aria-hidden="true">→</span></span>
+        </a>
 
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M7 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
-              <h3>Démarches administratives</h3>
-            </div>
-            <div class="card-back">
-              <p>Extrait de casier judiciare, permis de conduire ou toute démarche liée à la résidence, à la nationalité, aux visas...</p>
-            </div>
-          </div>
-        </div>
+        <a class="service-card service-card-link" href="/fr/services/documents-commerciaux-financiers/" aria-label="Voir la traduction assermentée de documents commerciaux et financiers">
+          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
+          <h3>Documents commerciaux et financiers</h3>
+          <p>Statuts de sociétés, bilans, comptes annuels, contrats commerciaux, documents bancaires et dossiers liés aux opérations internationales.</p>
+          <span class="service-card-cta">Découvrir le service <span aria-hidden="true">→</span></span>
+        </a>
 
-        <div class="service-card">
-          <div class="card-inner">
-            <div class="card-front">
-              <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hourglass-icon lucide-hourglass"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg></div>
-              <h3>Service prioritaire</h3>
-            </div>
-            <div class="card-back">
-              <p>Traitement prioritaire des demandes urgentes.</p>
-            </div>
-          </div>
-        </div>
+        <a class="service-card service-card-link" href="/fr/services/demarches-administratives/" aria-label="Voir la traduction assermentée pour les démarches administratives">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="3" width="8" height="4" rx="1"/><path d="M7 7H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/><path d="M9 13h6"/><path d="M9 17h4"/></svg></div>
+          <h3>Démarches administratives</h3>
+          <p>Documents pour les demandes de résidence, de nationalité ou de visa, permis de conduire, extraits de casier judiciaire et autres démarches administratives.</p>
+          <span class="service-card-cta">Découvrir le service <span aria-hidden="true">→</span></span>
+        </a>
 
       </div>
 
@@ -2440,7 +2462,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   // Tarjetas giratorias (solo móvil)
   // ==========================================
   
-  const cards = document.querySelectorAll('.service-card');
+  const cards = document.querySelectorAll('.service-card:not(.service-card-link)');
 
   cards.forEach(card => {
 

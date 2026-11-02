@@ -1,0 +1,56 @@
+<header>
+  <div class="nav-wrap">
+    <a href="{{ home_url }}" class="logo logo-link" aria-label="{{ ui.home_aria_label }}">
+      <img src="/logo.webp" alt="Logo María Salmerón" class="logo-img">
+      <div class="logo-text">
+        <div class="name">MARÍA SALMERÓN</div>
+        <div class="role">{{ job_label }}</div>
+      </div>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="{{ ui.nav_aria_label }}">
+      <ul>
+        <li><a href="{{ home_url }}#inicio" class="nav-link">{{ ui.home_label }}</a></li>
+        <li class="nav-item nav-item-services">
+          <button type="button" class="dropdown-trigger active" aria-expanded="false" aria-haspopup="true" aria-controls="services-menu">{{ ui.services_label }} <span class="caret" aria-hidden="true">▾</span></button>
+          <div id="services-menu" class="dropdown-menu" role="menu">
+            <div class="mobile-submenu">
+              <a href="{{ home_url }}#servicios-heading" class="nav-link" role="menuitem">{{ ui.sworn_translation_label }}</a>
+              <a href="{{ home_url }}#interpretacion-jurada" class="nav-link" role="menuitem">{{ ui.interpreting_label }}</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="{{ home_url }}#sobre-mi" class="nav-link">{{ ui.about_label }}</a></li>
+        <li><a href="{{ home_url }}#proceso" class="nav-link">{{ ui.process_nav_label }}</a></li>
+        <li class="mobile-only">
+          <a href="{{ faq_url }}" class="nav-link">{{ ui.faq_label }}</a>
+        </li>
+        <li><a href="{{ home_url }}#contacto" class="nav-link">{{ ui.contact_label }}</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <div class="lang-select" role="group" aria-label="{{ ui.language_label }}">
+        <a href="{{ es_url }}" class="lang-option{% if page.lang == 'es' %} active{% endif %}" lang="es" hreflang="es">ES</a>
+        <span class="lang-separator">|</span>
+        <a href="{{ fr_url }}" class="lang-option{% if page.lang == 'fr' %} active{% endif %}" lang="fr" hreflang="fr">FR</a>
+      </div>
+      <a href="{% if page.lang == 'es' %}{{ fr_url }}{% else %}{{ es_url }}{% endif %}" class="mobile-lang-toggle" aria-label="{{ ui.switch_language_label }}" title="{{ ui.switch_language_label }}">
+        {% if page.lang == 'es' %}
+          <svg viewBox="0 0 640 480" aria-hidden="true" role="img">
+            <rect width="640" height="480" fill="#fff"/>
+            <rect width="213" height="480" fill="#002654"/>
+            <rect x="213" width="214" height="480" fill="#fff"/>
+            <rect x="427" width="213" height="480" fill="#ce1126"/>
+          </svg>
+        {% else %}
+          <svg viewBox="0 0 640 480" aria-hidden="true" role="img">
+            <rect width="640" height="480" fill="#c60b1e"/>
+            <rect y="160" width="640" height="160" fill="#ffc400"/>
+          </svg>
+        {% endif %}
+      </a>
+      <button class="burger" type="button" aria-label="{{ ui.menu_label }}" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>

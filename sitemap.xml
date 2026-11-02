@@ -21,6 +21,92 @@
         <lastmod>2026-07-27</lastmod>
     </url>
 
+    <!-- Servicios ES/FR -->
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/documentos-civiles/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-civiles/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-etat-civil/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-civiles/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/documents-etat-civil/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-civiles/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-etat-civil/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-civiles/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/documentos-academicos/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-academicos/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-academiques/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-academicos/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/documents-academiques/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-academicos/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-academiques/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-academicos/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/documentos-notariales-juridicos/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-notariales-juridicos/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-notariaux-juridiques/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-notariales-juridicos/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/documents-notariaux-juridiques/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-notariales-juridicos/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-notariaux-juridiques/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-notariales-juridicos/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/documentos-medicos-sanitarios/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-medicos-sanitarios/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-medicaux-sanitaires/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-medicos-sanitarios/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/documents-medicaux-sanitaires/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-medicos-sanitarios/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-medicaux-sanitaires/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-medicos-sanitarios/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/documentos-comerciales-financieros/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-comerciales-financieros/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-commerciaux-financiers/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-comerciales-financieros/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/documents-commerciaux-financiers/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/documentos-comerciales-financieros/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/documents-commerciaux-financiers/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/documentos-comerciales-financieros/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/tramites-administrativos/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/tramites-administrativos/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/demarches-administratives/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/tramites-administrativos/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/demarches-administratives/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/tramites-administrativos/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/demarches-administratives/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/tramites-administrativos/" />
+        <lastmod>2026-11-02</lastmod>
+    </url>
+
     <!-- FAQ ES -->
     <url>
         <loc>https://www.ms-traduction.com/preguntas-frecuentes/</loc>
