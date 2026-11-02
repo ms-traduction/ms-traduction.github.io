@@ -41,7 +41,6 @@ es:
   faq_button_label: Consultar preguntas frecuentes
   related_label: Servicios
   related_heading: Otros servicios relacionados
-  related_intro: Descubre las demás categorías de traducción jurada
   services_index_cta: Ver todos los servicios
   contact_button_label: Solicitar presupuesto
 fr:
@@ -87,6 +86,5 @@ fr:
   faq_button_label: Consulter la FAQ
   related_label: Services
   related_heading: Autres services associés
-  related_intro: Découvrez les autres catégories de traduction assermentée
   services_index_cta: Tous les services
   contact_button_label: Contacter María
