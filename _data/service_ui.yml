@@ -12,14 +12,8 @@ es:
   nav_aria_label: Navegación principal
   menu_label: Menú
   switch_language_label: Cambiar a francés
-  quote_nav_label: Presupuesto
-  quote_label: Solicitar presupuesto
   footer_quote_label: Solicitar presupuesto
   footer_faq_title: FAQ
-  footer_legal_label: Aviso legal
-  footer_privacy_label: Política de privacidad
-  footer_cookies_label: Política de cookies
-  cookie_settings_label: Configuración de cookies
   rights_label: Todos los derechos reservados.
   contact_menu_label: Opciones de contacto
   whatsapp_label: Contactar por WhatsApp
@@ -28,42 +22,27 @@ es:
   contact_close_label: Cerrar opciones de contacto
   contact_bubble: 👋 ¡Hola!
   breadcrumb_label: Ruta de navegación
-  services_index_label: Todos los servicios de traducción jurada
-  presentation_nav_label: El servicio
-  documents_nav_label: Documentos
-  situations_nav_label: Cuándo la necesitas
-  professional_nav_label: Sobre María
-  process_nav_section_label: Proceso
-  faq_nav_label: Preguntas frecuentes
-  presentation_heading: Traducción jurada especializada para tu trámite
-  documents_heading: Documentos que puedo traducir
-  situations_heading: ¿Cuándo necesitas una traducción jurada?
-  professional_heading: ¿Por qué confiar en María Salmerón?
-  process_heading: Cómo funciona el proceso
-  faq_heading: Preguntas frecuentes
-  related_heading: Otros servicios relacionados
-  who_label: María Salmerón · Traductora-Intérprete Jurada de Francés
-  profile_points:
-    - Traductora-Intérprete Jurada de francés nombrada por el Ministerio de Asuntos Exteriores, Unión Europea y Cooperación de España.
-    - Atención personalizada para conocer el documento, el idioma de destino y los requisitos de presentación.
-    - Especialización en traducciones entre francés y español.
-    - Servicio a distancia para clientes en España y Francia.
-    - Presupuesto personalizado según el documento, su extensión y las necesidades del encargo.
-    - Entrega digital o en papel, según las necesidades del cliente y los requisitos del organismo destinatario.
+  estimate_label: Obtén una estimación
+  process_label: Proceso
+  process_heading: Claridad y transparencia
+  process_intro: Cuatro pasos sencillos para tener tu traducción jurada lista, sin sorpresas ni tecnicismos.
   process_steps:
     - title: Envío del documento
-      text: Comparte una copia legible del documento y, si lo sabes, indica el organismo y el trámite para el que lo necesitas.
-    - title: Análisis y presupuesto
-      text: Revisaré el contenido, la extensión y las particularidades del documento para preparar un presupuesto.
-    - title: Confirmación del encargo
-      text: Antes de empezar, confirmaremos el alcance del trabajo, el plazo y la modalidad de entrega.
-    - title: Realización de la traducción
-      text: Una vez confirmado el encargo, realizaré la traducción jurada entre francés y español.
-    - title: Entrega al cliente
-      text: Recibirás la traducción en formato digital o en papel, según lo acordado y lo que requiera el organismo destinatario.
-  related_intro: Consulta otros tipos de traducción jurada o vuelve a la página general de servicios.
+      text: Me envías el documento a traducir por correo electrónico o WhatsApp, en formato PDF preferiblemente.
+    - title: Presupuesto
+      text: Recibes en pocas horas un presupuesto cerrado, con plazo de entrega y forma de pago.
+    - title: Traducción jurada
+      text: Realizo la traducción jurada, que incluye la certificación, el sello y la firma correspondientes.
+    - title: Entrega
+      text: Recibes tu traducción en formato digital y, si lo necesitas, también en papel (en mano o por correo postal).
+  faq_heading: ¿Tienes alguna duda?
+  faq_intro: Consulta las preguntas frecuentes para obtener más información sobre las traducciones juradas, el proceso, los plazos y las condiciones del servicio.
+  faq_button_label: Consultar preguntas frecuentes
+  related_label: Servicios
+  related_heading: Otros servicios relacionados
+  related_intro: Descubre las demás categorías de traducción jurada.
   services_index_cta: Ver todos los servicios
-  jump_nav_label: En esta página
+  contact_button_label: Contactar con María
 fr:
   home_label: Accueil
   services_label: Services
@@ -78,14 +57,8 @@ fr:
   nav_aria_label: Navigation principale
   menu_label: Menu
   switch_language_label: Passer en espagnol
-  quote_nav_label: Devis
-  quote_label: Demander un devis
   footer_quote_label: Demander un devis
   footer_faq_title: FAQ
-  footer_legal_label: Mentions légales
-  footer_privacy_label: Politique de confidentialité
-  footer_cookies_label: Politique de cookies
-  cookie_settings_label: Paramètres des cookies
   rights_label: Tous droits réservés.
   contact_menu_label: Options de contact
   whatsapp_label: Contacter par WhatsApp
@@ -94,39 +67,24 @@ fr:
   contact_close_label: Fermer les options de contact
   contact_bubble: 👋 Bonjour !
   breadcrumb_label: Fil d’Ariane
-  services_index_label: Tous les services de traduction assermentée
-  presentation_nav_label: Le service
-  documents_nav_label: Documents
-  situations_nav_label: Quand en avez-vous besoin ?
-  professional_nav_label: À propos de María
-  process_nav_section_label: Étapes
-  faq_nav_label: FAQ
-  presentation_heading: Une traduction assermentée adaptée à votre démarche
-  documents_heading: Documents que je peux traduire
-  situations_heading: Dans quels cas faut-il une traduction assermentée ?
-  professional_heading: Pourquoi faire appel à María Salmerón ?
-  process_heading: Comment se déroule la traduction ?
-  faq_heading: Questions fréquentes
-  related_heading: Autres services de traduction
-  who_label: María Salmerón · Traductrice-Interprète Assermentée espagnol-français
-  profile_points:
-    - Traductrice-Interprète Assermentée de français nommée par le ministère espagnol des Affaires étrangères.
-    - Un accompagnement personnalisé selon le document, la langue cible et les exigences de l’organisme destinataire.
-    - Une spécialisation dans les traductions entre le français et l’espagnol.
-    - Un service à distance pour les clients en Espagne et en France.
-    - Un devis personnalisé selon le document, son volume et les besoins de la mission.
-    - Une remise numérique ou sur papier, selon vos besoins et les exigences de l’organisme destinataire.
+  estimate_label: Obtenir une estimation
+  process_label: Étapes
+  process_heading: Comment ça fonctionne ?
+  process_intro: Quatre étapes pour obtenir votre traduction certifiée, en toute simplicité.
   process_steps:
-    - title: Envoi du document
-      text: Transmettez une copie lisible du document et, si vous le connaissez, précisez l’organisme et la démarche concernés.
-    - title: Analyse et devis
-      text: J’examine le contenu, le volume et les particularités du document afin d’établir un devis.
-    - title: Confirmation de la commande
-      text: Avant de commencer, nous confirmons le périmètre, le délai et le mode de remise.
-    - title: Réalisation de la traduction
-      text: Une fois la commande confirmée, je réalise la traduction assermentée entre le français et l’espagnol.
-    - title: Remise au client
-      text: Vous recevez la traduction au format numérique ou sur papier, selon ce qui a été convenu et les exigences de l’organisme destinataire.
-  related_intro: Découvrez d’autres traductions assermentées ou consultez la page générale des services.
+    - title: Envoyez vos documents
+      text: Vous m'envoyez vos documents par e-mail ou par WhatsApp, de préférence au format PDF.
+    - title: Recevez votre devis
+      text: Vous recevez rapidement un devis détaillé, précisant le tarif, le délai de réalisation et les modalités de paiement.
+    - title: Je réalise votre traduction
+      text: Je réalise votre traduction certifiée, revêtue de ma certification, de mon sceau et de ma signature.
+    - title: Recevez votre traduction
+      text: Vous recevez votre traduction au format numérique ou, sur demande, en version papier, remise en main propre ou envoyée par courrier.
+  faq_heading: Vous avez une question ?
+  faq_intro: Consultez la FAQ pour en savoir plus sur les traductions assermentées, les étapes, les délais et les conditions du service.
+  faq_button_label: Consulter la FAQ
+  related_label: Services
+  related_heading: Autres services associés
+  related_intro: Découvrez les autres catégories de traduction assermentée.
   services_index_cta: Tous les services
-  jump_nav_label: Sur cette page
+  contact_button_label: Contacter María

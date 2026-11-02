@@ -1,6 +1,5 @@
 {% assign service = site.data.services[page.service] %}
 {% assign copy = service[page.lang] %}
-{% assign content = site.data.service_page_content[page.service][page.lang] %}
 {% assign ui = site.data.service_ui[page.lang] %}
 {% assign es_url = '/servicios/' | append: service.es.slug | append: '/' %}
 {% assign fr_url = '/fr/services/' | append: service.fr.slug | append: '/' %}
@@ -28,7 +27,6 @@
 {% endif %}
 {% assign canonical_url = 'https://www.ms-traduction.com' | append: page.url %}
 {% assign home_canonical = 'https://www.ms-traduction.com' | append: home_url %}
-{% assign service_canonical = 'https://www.ms-traduction.com' | append: es_url %}
 {% assign services_section_url = home_canonical | append: '#servicios' %}
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
@@ -135,7 +133,7 @@
           "name": {{ copy.title | jsonify }},
           "description": {{ copy.meta_description | jsonify }},
           "url": {{ canonical_url | jsonify }},
-          "serviceType": {{ content.keyword | jsonify }},
+          "serviceType": {{ copy.title | jsonify }},
           "inLanguage": "{{ page.lang }}",
           "areaServed": [
             {"@type": "Country", "name": "Spain"},
@@ -193,122 +191,54 @@
           <span aria-hidden="true">/</span>
           <span aria-current="page">{{ copy.card_title }}</span>
         </nav>
+      </div>
 
-        <section class="service-hero" aria-labelledby="service-title">
-          <div class="service-hero__content">
-            <span class="eyebrow">{{ ui.who_label }}</span>
-            <h1 id="service-title">{{ copy.title }}</h1>
-            <div class="divider"></div>
-            <p class="service-intro">{{ copy.intro }}</p>
-            <a href="{{ quote_url }}" class="btn btn-primary">{{ ui.quote_label }}</a>
-          </div>
-        </section>
+      <section class="service-hero" aria-labelledby="service-title">
+        <div class="service-hero__content">
+          <h1 id="service-title">{{ copy.title }}</h1>
+          <a href="{{ quote_url }}" class="btn btn-primary">{{ ui.estimate_label }}</a>
+        </div>
+      </section>
 
-        <nav class="service-page-nav" aria-label="{{ ui.jump_nav_label }}">
-          <a href="#presentacion">{{ ui.presentation_nav_label }}</a>
-          <a href="#documentos">{{ ui.documents_nav_label }}</a>
-          <a href="#cuando">{{ ui.situations_nav_label }}</a>
-          <a href="#profesional">{{ ui.professional_nav_label }}</a>
-          <a href="#proceso">{{ ui.process_nav_section_label }}</a>
-          <a href="#preguntas">{{ ui.faq_nav_label }}</a>
-        </nav>
-
-        <section class="service-section" id="presentacion" aria-labelledby="presentation-heading">
+      <section class="service-process" id="proceso" aria-labelledby="process-heading">
+        <div class="container">
           <div class="service-section__heading">
-            <span class="eyebrow">{{ ui.services_label }}</span>
-            <h2 id="presentation-heading">{{ ui.presentation_heading }}</h2>
-          </div>
-          <div class="service-copy">
-            {% for paragraph in content.presentation %}
-              <p>{{ paragraph }}</p>
-            {% endfor %}
-          </div>
-        </section>
-
-        <section class="service-section service-section--soft" id="documentos" aria-labelledby="documents-heading">
-          <div class="service-section__heading">
-            <span class="eyebrow">{{ ui.services_label }}</span>
-            <h2 id="documents-heading">{{ copy.list_title }}</h2>
-          </div>
-          <ul class="document-grid">
-            {% for document in copy.documents %}
-              <li class="document-item">
-                <span class="document-item__mark" aria-hidden="true">✓</span>
-                <span>{{ document }}</span>
-              </li>
-            {% endfor %}
-          </ul>
-        </section>
-
-        <section class="service-section" id="cuando" aria-labelledby="situations-heading">
-          <div class="service-section__heading">
-            <span class="eyebrow">{{ ui.services_label }}</span>
-            <h2 id="situations-heading">{{ ui.situations_heading }}</h2>
-          </div>
-          <div class="service-copy">
-            <p>{{ content.when_intro }}</p>
-          </div>
-          <ul class="situation-list">
-            {% for situation in content.situations %}
-              <li>{{ situation }}</li>
-            {% endfor %}
-          </ul>
-        </section>
-
-        <section class="service-section service-section--soft" id="profesional" aria-labelledby="professional-heading">
-          <div class="service-section__heading">
-            <span class="eyebrow">María Salmerón</span>
-            <h2 id="professional-heading">{{ ui.professional_heading }}</h2>
-          </div>
-          <ul class="profile-grid">
-            {% for point in ui.profile_points %}
-              <li class="profile-card">
-                <span class="profile-card__mark" aria-hidden="true">✦</span>
-                <p>{{ point }}</p>
-              </li>
-            {% endfor %}
-          </ul>
-        </section>
-
-        <section class="service-section" id="proceso" aria-labelledby="process-heading">
-          <div class="service-section__heading">
-            <span class="eyebrow">{{ ui.services_label }}</span>
+            <span class="eyebrow">{{ ui.process_label }}</span>
             <h2 id="process-heading">{{ ui.process_heading }}</h2>
+            <p>{{ ui.process_intro }}</p>
           </div>
-          <ol class="process-grid">
+          <div class="steps">
             {% for step in ui.process_steps %}
-              <li class="process-card">
-                <span class="process-card__number" aria-hidden="true">{{ forloop.index }}</span>
+              <article class="step">
+                <div class="step-num" aria-hidden="true">{{ forloop.index }}</div>
                 <h3>{{ step.title }}</h3>
                 <p>{{ step.text }}</p>
-              </li>
+              </article>
             {% endfor %}
-          </ol>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="service-section service-section--soft" id="preguntas" aria-labelledby="faq-heading">
-          <div class="service-section__heading">
-            <span class="eyebrow">{{ ui.services_label }}</span>
+      <div class="container">
+        <section class="service-faq" aria-labelledby="faq-heading">
+          <div>
+            <span class="eyebrow">{{ ui.faq_label }}</span>
             <h2 id="faq-heading">{{ ui.faq_heading }}</h2>
+            <p>{{ ui.faq_intro }}</p>
           </div>
-          <div class="faq-list">
-            {% for item in content.faqs %}
-              <details class="faq-item">
-                <summary>{{ item.question }}</summary>
-                <p>{{ item.answer }}</p>
-              </details>
-            {% endfor %}
-          </div>
+          <a href="{{ faq_url }}" class="btn btn-primary">{{ ui.faq_button_label }}</a>
         </section>
 
         <section class="service-section related-services" aria-labelledby="related-heading">
           <div class="service-section__heading">
-            <span class="eyebrow">{{ ui.services_label }}</span>
+            <span class="eyebrow">{{ ui.related_label }}</span>
             <h2 id="related-heading">{{ ui.related_heading }}</h2>
             <p>{{ ui.related_intro }}</p>
           </div>
           <div class="related-grid">
-            {% for related_key in content.related %}
+            {% for related_pair in site.data.services %}
+              {% assign related_key = related_pair[0] %}
+              {% unless related_key == page.service %}
               {% assign related_service = site.data.services[related_key] %}
               {% assign related_copy = related_service[page.lang] %}
               {% assign related_url = '/servicios/' | append: related_service.es.slug | append: '/' %}
@@ -316,6 +246,7 @@
                 {% assign related_url = '/fr/services/' | append: related_service.fr.slug | append: '/' %}
               {% endif %}
               <a class="related-link" href="{{ related_url }}">{{ related_copy.card_title }} <span aria-hidden="true">→</span></a>
+              {% endunless %}
             {% endfor %}
           </div>
           <a class="services-index-link" href="{{ home_url }}#servicios">{{ ui.services_index_cta }}</a>
@@ -323,11 +254,10 @@
 
         <section class="service-cta" aria-labelledby="service-cta-heading">
           <div>
-            <span class="eyebrow">{{ ui.who_label }}</span>
             <h2 id="service-cta-heading">{{ copy.cta_title }}</h2>
             <p>{{ copy.cta_text }}</p>
           </div>
-          <a href="{{ quote_url }}" class="btn btn-primary">{{ ui.quote_label }}</a>
+          <a href="mailto:mariasalmeron.trad@gmail.com?subject={{ copy.cta_email_subject | uri_escape }}" class="btn btn-primary">{{ ui.contact_button_label }}</a>
         </section>
       </div>
     </section>
