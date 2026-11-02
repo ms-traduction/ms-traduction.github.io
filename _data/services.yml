@@ -12,7 +12,6 @@ civil:
       - Certificados de soltería, viudedad y fe de vida
       - Libros de familia y otros documentos del registro civil
     cta_title: ¿Necesitas traducir un documento civil?
-    cta_text: Cuéntame qué documento necesitas y para qué trámite; te indicaré cómo solicitar tu presupuesto
     cta_email_subject: Solicitud de traducción jurada – Documentos civiles
   fr:
     slug: documents-etat-civil
@@ -27,7 +26,6 @@ civil:
       - Certificats de célibat, de veuvage et de vie
       - Livrets de famille et autres documents d’état civil
     cta_title: Besoin de traduire un document d’état civil ?
-    cta_text: Indiquez-moi le document à traduire et votre démarche ; je vous expliquerai comment obtenir un devis
     cta_email_subject: Demande de traduction assermentée – Documents d’état civil
 
 academic:
@@ -45,7 +43,6 @@ academic:
       - Programas y planes de estudios
       - Documentación para homologaciones y equivalencias
     cta_title: ¿Vas a presentar documentación académica?
-    cta_text: Envíame una copia de los documentos y el destino del trámite para solicitar tu presupuesto
     cta_email_subject: Solicitud de traducción jurada – Documentos académicos
   fr:
     slug: documents-academiques
@@ -61,7 +58,6 @@ academic:
       - Programmes et descriptifs de cours
       - Documents pour les demandes d’équivalence et d’homologation
     cta_title: Vous devez présenter des documents académiques ?
-    cta_text: Envoyez-moi une copie des documents et précisez votre démarche afin de demander un devis
     cta_email_subject: Demande de traduction assermentée – Documents académiques
 
 legal:
@@ -80,7 +76,6 @@ legal:
       - Sentencias judiciales
       - Documentación de herencias y sucesiones
     cta_title: ¿Tienes documentación notarial o jurídica?
-    cta_text: Indícame qué documentos necesitas traducir y el organismo destinatario para recibir un presupuesto
     cta_email_subject: Solicitud de traducción jurada – Documentos notariales y jurídicos
   fr:
     slug: documents-notariaux-juridiques
@@ -97,7 +92,6 @@ legal:
       - Jugements
       - Documents relatifs aux successions
     cta_title: Vous avez des documents notariés ou juridiques ?
-    cta_text: Précisez les documents à traduire et l’organisme destinataire pour recevoir un devis
     cta_email_subject: Demande de traduction assermentée – Documents notariés et juridiques
 
 medical:
@@ -115,7 +109,6 @@ medical:
       - Resultados de pruebas médicas
       - Certificados de discapacidad
     cta_title: ¿Necesitas traducir un informe médico?
-    cta_text: Cuéntame qué documentación sanitaria necesitas traducir y para qué trámite
     cta_email_subject: Solicitud de traducción jurada – Documentos médicos y sanitarios
   fr:
     slug: documents-medicaux-sanitaires
@@ -131,7 +124,6 @@ medical:
       - Résultats d’examens médicaux
       - Certificats de handicap
     cta_title: Vous devez faire traduire un rapport médical ?
-    cta_text: Indiquez-moi les documents de santé à traduire et la démarche concernée
     cta_email_subject: Demande de traduction assermentée – Documents médicaux et sanitaires
 
 commercial:
@@ -150,7 +142,6 @@ commercial:
       - Documentación empresarial
       - Documentos para operaciones internacionales
     cta_title: ¿Tu empresa necesita una traducción jurada?
-    cta_text: Comparte los documentos y el contexto de la operación para recibir un presupuesto adaptado
     cta_email_subject: Solicitud de traducción jurada – Documentos comerciales y financieros
   fr:
     slug: documents-commerciaux-financiers
@@ -167,7 +158,6 @@ commercial:
       - Documents d’entreprise
       - Documents pour les opérations internationales
     cta_title: Votre entreprise a besoin d’une traduction assermentée ?
-    cta_text: Transmettez les documents et le contexte de l’opération pour recevoir un devis adapté
     cta_email_subject: Demande de traduction assermentée – Documents commerciaux et financiers
 
 administrative:
@@ -185,7 +175,6 @@ administrative:
       - Certificados de antecedentes penales
       - Documentación para administraciones públicas
     cta_title: ¿Tienes un trámite administrativo pendiente?
-    cta_text: Indícame el trámite y los documentos que te han solicitado para recibir un presupuesto
     cta_email_subject: Solicitud de traducción jurada – Trámites administrativos
   fr:
     slug: demarches-administratives
@@ -201,5 +190,4 @@ administrative:
       - Extraits de casier judiciaire
       - Documents pour les administrations publiques
     cta_title: Vous avez une démarche administrative en cours ?
-    cta_text: Indiquez-moi la démarche et les documents demandés afin de recevoir un devis
     cta_email_subject: Demande de traduction assermentée – Démarches administratives
