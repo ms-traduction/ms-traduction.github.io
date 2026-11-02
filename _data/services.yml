@@ -4,18 +4,30 @@ civil:
     card_title: Documentos civiles
     title: Traducción jurada de documentos civiles
     meta_title: Traducción jurada de documentos civiles | María Salmerón
-    meta_description: Traduce actas de nacimiento, matrimonio y otros documentos civiles del francés al español o viceversa. Solicita presupuesto a María Salmerón.
+    meta_description: Traduce actas de nacimiento, matrimonio y otros documentos civiles del francés al español o viceversa. Solicita presupuesto a María Salmerón
+    documents:
+      - Certificados y actas de nacimiento
+      - Certificados y actas de matrimonio
+      - Certificados y actas de defunción
+      - Certificados de soltería, viudedad y fe de vida
+      - Libros de familia y otros documentos del registro civil
     cta_title: ¿Necesitas traducir un documento civil?
-    cta_text: Cuéntame qué documento necesitas y para qué trámite; te indicaré cómo solicitar tu presupuesto.
+    cta_text: Cuéntame qué documento necesitas y para qué trámite; te indicaré cómo solicitar tu presupuesto
     cta_email_subject: Solicitud de traducción jurada – Documentos civiles
   fr:
     slug: documents-etat-civil
     card_title: Documents d’état civil
     title: Traduction assermentée de documents d’état civil
     meta_title: Traduction d’acte de naissance espagnol | María Salmerón
-    meta_description: Traduction assermentée d’actes de naissance, mariage et autres documents d’état civil entre l’espagnol et le français. Demandez votre devis.
+    meta_description: Traduction assermentée d’actes de naissance, mariage et autres documents d’état civil entre l’espagnol et le français. Demandez votre devis
+    documents:
+      - Actes et certificats de naissance
+      - Actes et certificats de mariage
+      - Actes et certificats de décès
+      - Certificats de célibat, de veuvage et de vie
+      - Livrets de famille et autres documents d’état civil
     cta_title: Besoin de traduire un document d’état civil ?
-    cta_text: Indiquez-moi le document à traduire et votre démarche ; je vous expliquerai comment obtenir un devis.
+    cta_text: Indiquez-moi le document à traduire et votre démarche ; je vous expliquerai comment obtenir un devis
     cta_email_subject: Demande de traduction assermentée – Documents d’état civil
 
 academic:
@@ -24,18 +36,32 @@ academic:
     card_title: Documentos académicos
     title: Traducción jurada de documentos académicos
     meta_title: Traducción jurada de títulos universitarios | María Salmerón
-    meta_description: Traducción jurada francés-español de títulos, diplomas y expedientes académicos para estudios, equivalencias y homologaciones.
+    meta_description: Traducción jurada francés-español de títulos, diplomas y expedientes académicos para estudios, equivalencias y homologaciones
+    documents:
+      - Títulos universitarios y diplomas
+      - Certificados de notas
+      - Expedientes académicos
+      - Certificados de estudios
+      - Programas y planes de estudios
+      - Documentación para homologaciones y equivalencias
     cta_title: ¿Vas a presentar documentación académica?
-    cta_text: Envíame una copia de los documentos y el destino del trámite para solicitar tu presupuesto.
+    cta_text: Envíame una copia de los documentos y el destino del trámite para solicitar tu presupuesto
     cta_email_subject: Solicitud de traducción jurada – Documentos académicos
   fr:
     slug: documents-academiques
     card_title: Documents académiques
     title: Traduction assermentée de documents académiques
     meta_title: Traduction de diplôme espagnol | María Salmerón
-    meta_description: Traduction assermentée de diplômes espagnols, relevés de notes et dossiers universitaires vers le français. Demandez un devis personnalisé.
+    meta_description: Traduction assermentée de diplômes espagnols, relevés de notes et dossiers universitaires vers le français. Demandez un devis personnalisé
+    documents:
+      - Diplômes universitaires et autres diplômes
+      - Relevés de notes
+      - Dossiers universitaires
+      - Certificats de scolarité
+      - Programmes et descriptifs de cours
+      - Documents pour les demandes d’équivalence et d’homologation
     cta_title: Vous devez présenter des documents académiques ?
-    cta_text: Envoyez-moi une copie des documents et précisez votre démarche afin de demander un devis.
+    cta_text: Envoyez-moi une copie des documents et précisez votre démarche afin de demander un devis
     cta_email_subject: Demande de traduction assermentée – Documents académiques
 
 legal:
@@ -44,18 +70,34 @@ legal:
     card_title: Documentos notariales y jurídicos
     title: Traducción jurada de documentos notariales y jurídicos
     meta_title: Traducción jurada notarial y jurídica | María Salmerón
-    meta_description: Traducción jurada francés-español de poderes, escrituras, contratos, testamentos y sentencias para trámites legales y notariales.
+    meta_description: Traducción jurada francés-español de poderes, escrituras, contratos, testamentos y sentencias para trámites legales y notariales
+    documents:
+      - Poderes notariales
+      - Escrituras públicas
+      - Contratos
+      - Testamentos
+      - Actas notariales
+      - Sentencias judiciales
+      - Documentación de herencias y sucesiones
     cta_title: ¿Tienes documentación notarial o jurídica?
-    cta_text: Indícame qué documentos necesitas traducir y el organismo destinatario para recibir un presupuesto.
+    cta_text: Indícame qué documentos necesitas traducir y el organismo destinatario para recibir un presupuesto
     cta_email_subject: Solicitud de traducción jurada – Documentos notariales y jurídicos
   fr:
     slug: documents-notariaux-juridiques
     card_title: Documents notariés et juridiques
     title: Traduction assermentée de documents notariés et juridiques
     meta_title: Traduction de documents notariés espagnols | María Salmerón
-    meta_description: Traduction assermentée de procurations, actes notariés, contrats et décisions de justice espagnols vers le français.
+    meta_description: Traduction assermentée de procurations, actes notariés, contrats et décisions de justice espagnols vers le français
+    documents:
+      - Procurations notariées
+      - Actes authentiques
+      - Contrats
+      - Testaments
+      - Actes notariés
+      - Jugements
+      - Documents relatifs aux successions
     cta_title: Vous avez des documents notariés ou juridiques ?
-    cta_text: Précisez les documents à traduire et l’organisme destinataire pour recevoir un devis.
+    cta_text: Précisez les documents à traduire et l’organisme destinataire pour recevoir un devis
     cta_email_subject: Demande de traduction assermentée – Documents notariés et juridiques
 
 medical:
@@ -64,18 +106,32 @@ medical:
     card_title: Documentos médicos y sanitarios
     title: Traducción jurada de documentos médicos y sanitarios
     meta_title: Traducción jurada de documentos médicos | María Salmerón
-    meta_description: Traducción jurada francés-español de informes médicos, historiales clínicos y certificados sanitarios. Atención a distancia y presupuesto personalizado.
+    meta_description: Traducción jurada francés-español de informes médicos, historiales clínicos y certificados sanitarios. Atención a distancia y presupuesto personalizado
+    documents:
+      - Informes médicos
+      - Historiales clínicos
+      - Certificados médicos
+      - Informes hospitalarios
+      - Resultados de pruebas médicas
+      - Certificados de discapacidad
     cta_title: ¿Necesitas traducir un informe médico?
-    cta_text: Cuéntame qué documentación sanitaria necesitas traducir y para qué trámite.
+    cta_text: Cuéntame qué documentación sanitaria necesitas traducir y para qué trámite
     cta_email_subject: Solicitud de traducción jurada – Documentos médicos y sanitarios
   fr:
     slug: documents-medicaux-sanitaires
     card_title: Documents médicaux et sanitaires
     title: Traduction assermentée de documents médicaux et sanitaires
     meta_title: Traduction de documents médicaux espagnols | María Salmerón
-    meta_description: Traduction assermentée de rapports médicaux et dossiers de santé espagnols vers le français, avec devis adapté à vos documents.
+    meta_description: Traduction assermentée de rapports médicaux et dossiers de santé espagnols vers le français, avec devis adapté à vos documents
+    documents:
+      - Rapports médicaux
+      - Dossiers médicaux
+      - Certificats médicaux
+      - Comptes rendus hospitaliers
+      - Résultats d’examens médicaux
+      - Certificats de handicap
     cta_title: Vous devez faire traduire un rapport médical ?
-    cta_text: Indiquez-moi les documents de santé à traduire et la démarche concernée.
+    cta_text: Indiquez-moi les documents de santé à traduire et la démarche concernée
     cta_email_subject: Demande de traduction assermentée – Documents médicaux et sanitaires
 
 commercial:
@@ -84,18 +140,34 @@ commercial:
     card_title: Documentos comerciales y financieros
     title: Traducción jurada de documentos comerciales y financieros
     meta_title: Traducción jurada de documentos comerciales | María Salmerón
-    meta_description: Traducción jurada francés-español de estatutos, cuentas anuales, contratos mercantiles y documentos bancarios para empresas.
+    meta_description: Traducción jurada francés-español de estatutos, cuentas anuales, contratos mercantiles y documentos bancarios para empresas
+    documents:
+      - Estatutos de sociedades
+      - Balances y cuentas anuales
+      - Contratos mercantiles
+      - Documentación bancaria
+      - Certificados fiscales
+      - Documentación empresarial
+      - Documentos para operaciones internacionales
     cta_title: ¿Tu empresa necesita una traducción jurada?
-    cta_text: Comparte los documentos y el contexto de la operación para recibir un presupuesto adaptado.
+    cta_text: Comparte los documentos y el contexto de la operación para recibir un presupuesto adaptado
     cta_email_subject: Solicitud de traducción jurada – Documentos comerciales y financieros
   fr:
     slug: documents-commerciaux-financiers
     card_title: Documents commerciaux et financiers
     title: Traduction assermentée de documents commerciaux et financiers
     meta_title: Traduction de documents commerciaux espagnols | María Salmerón
-    meta_description: Traduction assermentée de statuts, comptes annuels, contrats commerciaux et documents bancaires espagnols vers le français.
+    meta_description: Traduction assermentée de statuts, comptes annuels, contrats commerciaux et documents bancaires espagnols vers le français
+    documents:
+      - Statuts de sociétés
+      - Bilans et comptes annuels
+      - Contrats commerciaux
+      - Documents bancaires
+      - Certificats fiscaux
+      - Documents d’entreprise
+      - Documents pour les opérations internationales
     cta_title: Votre entreprise a besoin d’une traduction assermentée ?
-    cta_text: Transmettez les documents et le contexte de l’opération pour recevoir un devis adapté.
+    cta_text: Transmettez les documents et le contexte de l’opération pour recevoir un devis adapté
     cta_email_subject: Demande de traduction assermentée – Documents commerciaux et financiers
 
 administrative:
@@ -104,16 +176,30 @@ administrative:
     card_title: Trámites administrativos
     title: Traducción jurada para trámites administrativos
     meta_title: Traducción jurada para trámites administrativos | María Salmerón
-    meta_description: Traducción jurada francés-español de antecedentes penales y documentos para residencia, nacionalidad, visados y permisos de conducir.
+    meta_description: Traducción jurada francés-español de antecedentes penales y documentos para residencia, nacionalidad, visados y permisos de conducir
+    documents:
+      - Documentación para solicitudes de nacionalidad
+      - Documentos para permisos de residencia
+      - Documentación para visados
+      - Permisos de conducir
+      - Certificados de antecedentes penales
+      - Documentación para administraciones públicas
     cta_title: ¿Tienes un trámite administrativo pendiente?
-    cta_text: Indícame el trámite y los documentos que te han solicitado para recibir un presupuesto.
+    cta_text: Indícame el trámite y los documentos que te han solicitado para recibir un presupuesto
     cta_email_subject: Solicitud de traducción jurada – Trámites administrativos
   fr:
     slug: demarches-administratives
     card_title: Démarches administratives
     title: Traduction assermentée pour les démarches administratives
     meta_title: Traduction administrative espagnol-français | María Salmerón
-    meta_description: Traduction assermentée de documents espagnols pour séjour, nationalité, visa, permis de conduire et casier judiciaire.
+    meta_description: Traduction assermentée de documents espagnols pour séjour, nationalité, visa, permis de conduire et casier judiciaire
+    documents:
+      - Documents pour les demandes de nationalité
+      - Documents pour les titres de séjour
+      - Documents pour les demandes de visa
+      - Permis de conduire
+      - Extraits de casier judiciaire
+      - Documents pour les administrations publiques
     cta_title: Vous avez une démarche administrative en cours ?
-    cta_text: Indiquez-moi la démarche et les documents demandés afin de recevoir un devis.
+    cta_text: Indiquez-moi la démarche et les documents demandés afin de recevoir un devis
     cta_email_subject: Demande de traduction assermentée – Démarches administratives

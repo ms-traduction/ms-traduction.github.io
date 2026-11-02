@@ -14,7 +14,7 @@ es:
   switch_language_label: Cambiar a francés
   footer_quote_label: Solicitar presupuesto
   footer_faq_title: FAQ
-  rights_label: Todos los derechos reservados.
+  rights_label: Todos los derechos reservados
   contact_menu_label: Opciones de contacto
   whatsapp_label: Contactar por WhatsApp
   email_label: Enviar un email
@@ -23,26 +23,27 @@ es:
   contact_bubble: 👋 ¡Hola!
   breadcrumb_label: Ruta de navegación
   estimate_label: Obtén una estimación
+  documents_heading: ¿Qué documentos necesitas traducir?
   process_label: Proceso
   process_heading: Claridad y transparencia
-  process_intro: Cuatro pasos sencillos para tener tu traducción jurada lista, sin sorpresas ni tecnicismos.
+  process_intro: Cuatro pasos sencillos para tener tu traducción jurada lista, sin sorpresas ni tecnicismos
   process_steps:
     - title: Envío del documento
-      text: Me envías el documento a traducir por correo electrónico o WhatsApp, en formato PDF preferiblemente.
+      text: Me envías el documento a traducir por correo electrónico o WhatsApp, en formato PDF preferiblemente
     - title: Presupuesto
-      text: Recibes en pocas horas un presupuesto cerrado, con plazo de entrega y forma de pago.
+      text: Recibes en pocas horas un presupuesto cerrado, con plazo de entrega y forma de pago
     - title: Traducción jurada
-      text: Realizo la traducción jurada, que incluye la certificación, el sello y la firma correspondientes.
+      text: Realizo la traducción jurada, que incluye la certificación, el sello y la firma correspondientes
     - title: Entrega
-      text: Recibes tu traducción en formato digital y, si lo necesitas, también en papel (en mano o por correo postal).
+      text: Recibes tu traducción en formato digital y, si lo necesitas, también en papel (en mano o por correo postal)
   faq_heading: ¿Tienes alguna duda?
-  faq_intro: Consulta las preguntas frecuentes para obtener más información sobre las traducciones juradas, el proceso, los plazos y las condiciones del servicio.
+  faq_intro: Consulta las preguntas frecuentes para obtener más información sobre las traducciones juradas, el proceso, los plazos y las condiciones del servicio
   faq_button_label: Consultar preguntas frecuentes
   related_label: Servicios
   related_heading: Otros servicios relacionados
-  related_intro: Descubre las demás categorías de traducción jurada.
+  related_intro: Descubre las demás categorías de traducción jurada
   services_index_cta: Ver todos los servicios
-  contact_button_label: Contactar con María
+  contact_button_label: Solicitar presupuesto
 fr:
   home_label: Accueil
   services_label: Services
@@ -59,7 +60,7 @@ fr:
   switch_language_label: Passer en espagnol
   footer_quote_label: Demander un devis
   footer_faq_title: FAQ
-  rights_label: Tous droits réservés.
+  rights_label: Tous droits réservés
   contact_menu_label: Options de contact
   whatsapp_label: Contacter par WhatsApp
   email_label: Envoyer un e-mail
@@ -68,23 +69,24 @@ fr:
   contact_bubble: 👋 Bonjour !
   breadcrumb_label: Fil d’Ariane
   estimate_label: Obtenir une estimation
+  documents_heading: Quels documents souhaitez-vous faire traduire ?
   process_label: Étapes
   process_heading: Comment ça fonctionne ?
-  process_intro: Quatre étapes pour obtenir votre traduction certifiée, en toute simplicité.
+  process_intro: Quatre étapes pour obtenir votre traduction certifiée, en toute simplicité
   process_steps:
     - title: Envoyez vos documents
-      text: Vous m'envoyez vos documents par e-mail ou par WhatsApp, de préférence au format PDF.
+      text: Vous m'envoyez vos documents par e-mail ou par WhatsApp, de préférence au format PDF
     - title: Recevez votre devis
-      text: Vous recevez rapidement un devis détaillé, précisant le tarif, le délai de réalisation et les modalités de paiement.
+      text: Vous recevez rapidement un devis détaillé, précisant le tarif, le délai de réalisation et les modalités de paiement
     - title: Je réalise votre traduction
-      text: Je réalise votre traduction certifiée, revêtue de ma certification, de mon sceau et de ma signature.
+      text: Je réalise votre traduction certifiée, revêtue de ma certification, de mon sceau et de ma signature
     - title: Recevez votre traduction
-      text: Vous recevez votre traduction au format numérique ou, sur demande, en version papier, remise en main propre ou envoyée par courrier.
+      text: Vous recevez votre traduction au format numérique ou, sur demande, en version papier, remise en main propre ou envoyée par courrier
   faq_heading: Vous avez une question ?
-  faq_intro: Consultez la FAQ pour en savoir plus sur les traductions assermentées, les étapes, les délais et les conditions du service.
+  faq_intro: Consultez la FAQ pour en savoir plus sur les traductions assermentées, les étapes, les délais et les conditions du service
   faq_button_label: Consulter la FAQ
   related_label: Services
   related_heading: Autres services associés
-  related_intro: Découvrez les autres catégories de traduction assermentée.
+  related_intro: Découvrez les autres catégories de traduction assermentée
   services_index_cta: Tous les services
   contact_button_label: Contacter María

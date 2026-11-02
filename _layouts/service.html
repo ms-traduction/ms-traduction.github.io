@@ -200,6 +200,22 @@
         </div>
       </section>
 
+      <section class="service-documents" aria-labelledby="documents-heading">
+        <div class="container">
+          <div class="service-section__heading">
+            <h2 id="documents-heading">{{ ui.documents_heading }}</h2>
+          </div>
+          <ul class="document-grid">
+            {% for document in copy.documents %}
+              <li class="document-item">
+                <span class="document-item__mark" aria-hidden="true">✓</span>
+                <span>{{ document }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+
       <section class="service-process" id="proceso" aria-labelledby="process-heading">
         <div class="container">
           <div class="service-section__heading">
