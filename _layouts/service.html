@@ -197,10 +197,8 @@
       <section class="interpreting-intro interpreting-intro--support" aria-labelledby="service-title">
         <div class="container interpreting-intro__grid">
           <div class="interpreting-intro__copy">
-            <span class="eyebrow">{{ copy.section_label }}</span>
-            <h1 id="service-title">{{ copy.title }}</h1>
-            <p>{{ copy.intro }}</p>
-            <a class="interpreting-text-link" href="{{ home_url }}#interpretacion-jurada">{{ ui.services_index_cta }} <span aria-hidden="true">→</span></a>
+            <h1 id="service-title">{{ copy.hero_title }}</h1>
+            <a class="interpreting-text-link" href="#support-offerings">{{ copy.hero_cta }} <span aria-hidden="true">→</span></a>
           </div>
           <div class="support-photo-layout" role="group" aria-label="{{ copy.photo_label }}">
             <div class="photo-placeholder photo-placeholder--portrait" aria-hidden="true"><span></span></div>
@@ -210,22 +208,18 @@
         </div>
       </section>
 
-      <section class="interpreting-offerings" aria-labelledby="offerings-heading">
+      <section class="interpreting-offerings" id="support-offerings" aria-labelledby="offerings-heading">
         <div class="container">
           <div class="interpreter-section-heading">
-            <span class="eyebrow">{{ copy.section_label }}</span>
             <h2 id="offerings-heading">{{ copy.section_title }}</h2>
-            <p>{{ copy.section_intro }}</p>
           </div>
           <div class="support-offering-list">
             {% for item in copy.services %}
               <article class="support-offering">
-                <span class="support-offering__number">0{{ forloop.index }}</span>
                 <div>
                   <h3>{{ item.title }}</h3>
                   <p>{{ item.text }}</p>
                 </div>
-                <span class="support-offering__mark" aria-hidden="true">↗</span>
               </article>
             {% endfor %}
           </div>
