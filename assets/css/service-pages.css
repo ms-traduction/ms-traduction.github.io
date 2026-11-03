@@ -1649,8 +1649,12 @@ footer {
   border-radius: 50%;
   color: var(--rose-dark);
   background: rgba(198, 123, 129, 0.12);
-  font-family: var(--serif);
-  font-size: 13px;
+}
+
+.modality-icon svg {
+  display: block;
+  width: 21px;
+  height: 21px;
 }
 
 .events-intro {
