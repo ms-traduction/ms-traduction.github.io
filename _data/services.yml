@@ -132,15 +132,21 @@ commercial:
     card_title: Documentos comerciales y financieros
     title: Traducción jurada de documentos comerciales y financieros
     meta_title: Traducción jurada de documentos comerciales | María Salmerón
-    meta_description: Traducción jurada francés-español de estatutos, cuentas anuales, contratos y documentos bancarios para operaciones de empresa
-    documents:
-      - Estatutos de sociedades
-      - Balances y cuentas anuales
-      - Contratos mercantiles
-      - Documentación bancaria
-      - Certificados fiscales
-      - Documentación empresarial
-      - Documentos para operaciones internacionales
+    meta_description: Traducción jurada francés-español de extractos Kbis, documentos de empresa, estatutos sociales, balances contables y documentación fiscal y financiera, incluidas facturas y contratos comerciales.
+    document_groups:
+      - title: Documentos empresariales
+        documents:
+          - Extractos Kbis y justificantes de inscripción en el RNE
+          - Estatutos sociales
+          - Escrituras de constitución de sociedades
+          - Certificados de inscripción o de modificación de sociedades
+          - Certificados de situación jurídica de empresas
+          - Actas y contratos
+      - title: Documentos contables y financieros
+        documents:
+          - Balances contables
+          - Cuentas anuales y de resultados
+          - Informes y documentación tributaria
     cta_title: ¿Tu empresa necesita una traducción jurada?
     cta_email_subject: Solicitud de traducción jurada – Documentos comerciales y financieros
   fr:
@@ -148,15 +154,21 @@ commercial:
     card_title: Documents commerciaux et financiers
     title: Traduction certifiée de documents commerciaux et financiers
     meta_title: Traduction de documents commerciaux espagnols | María Salmerón
-    meta_description: Traduction assermentée espagnol-français de statuts, comptes annuels, contrats commerciaux et documents bancaires pour votre entreprise
-    documents:
-      - Statuts de sociétés
-      - Bilans et comptes annuels
-      - Contrats commerciaux
-      - Documents bancaires
-      - Certificats fiscaux
-      - Documents d’entreprise
-      - Documents pour les opérations internationales
+    meta_description: Traduction assermentée espagnol-français d’extraits Kbis, de documents d’entreprise, de statuts, de bilans comptables et de documents fiscaux et financiers, dont factures et contrats commerciaux.
+    document_groups:
+      - title: Documents relatifs aux entreprises
+        documents:
+          - Extraits Kbis et justificatifs d’immatriculation au RNE
+          - Statuts de société
+          - Actes constitutifs de sociétés
+          - Certificats d’immatriculation ou de modification de sociétés
+          - Attestations relatives à la situation juridique des entreprises
+          - Procès-verbaux et contrats
+      - title: Documents comptables et financiers
+        documents:
+          - Bilans comptables
+          - Comptes annuels et comptes de résultat
+          - Rapports et documents fiscaux
     cta_title: Votre entreprise a besoin d’une traduction assermentée ?
     cta_email_subject: Demande de traduction assermentée – Documents commerciaux et financiers
 

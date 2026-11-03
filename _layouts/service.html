@@ -212,14 +212,32 @@
           <div class="service-section__heading">
             <h2 id="documents-heading">{{ ui.documents_heading }}</h2>
           </div>
-          <ul class="document-grid">
-            {% for document in copy.documents %}
-              <li class="document-item">
-                <span class="document-item__mark" aria-hidden="true">✓</span>
-                <span>{{ document }}</span>
-              </li>
-            {% endfor %}
-          </ul>
+          {% if copy.document_groups %}
+            <div class="document-categories">
+              {% for group in copy.document_groups %}
+                <section class="document-category" aria-labelledby="document-category-{{ forloop.index }}">
+                  <h3 id="document-category-{{ forloop.index }}">{{ group.title }}</h3>
+                  <ul class="document-grid">
+                    {% for document in group.documents %}
+                      <li class="document-item">
+                        <span class="document-item__mark" aria-hidden="true">✓</span>
+                        <span>{{ document }}</span>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </section>
+              {% endfor %}
+            </div>
+          {% else %}
+            <ul class="document-grid">
+              {% for document in copy.documents %}
+                <li class="document-item">
+                  <span class="document-item__mark" aria-hidden="true">✓</span>
+                  <span>{{ document }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
       </section>
 
