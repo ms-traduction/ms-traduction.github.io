@@ -1500,17 +1500,22 @@ footer {
 }
 
 .photo-placeholder--portrait {
+  display: block;
   width: 76%;
   height: 420px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .photo-placeholder--detail {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 42%;
-  height: 190px;
+  width: 48%;
+  height: 240px;
   border: 10px solid var(--cream);
+  object-fit: cover;
+  object-position: center;
 }
 
 .photo-layout-note {
@@ -1841,7 +1846,7 @@ footer {
   }
 
   .photo-placeholder--detail {
-    height: 160px;
+    height: 190px;
   }
 
   .events-offerings__grid {
@@ -1885,8 +1890,8 @@ footer {
   }
 
   .photo-placeholder--detail {
-    width: 44%;
-    height: 125px;
+    width: 48%;
+    height: 150px;
     border-width: 7px;
   }
 
