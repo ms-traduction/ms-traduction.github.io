@@ -42,8 +42,8 @@ es:
   related_label: Servicios
   related_heading: Otros servicios relacionados
   services_index_cta: Ver todos los servicios
-  cta_whatsapp_label: WhatsApp
-  cta_mail_label: Correo electrónico
+  cta_whatsapp_label: WHATSAPP
+  cta_mail_label: MAIL
 fr:
   home_label: Accueil
   services_label: Services
@@ -88,5 +88,5 @@ fr:
   related_label: Services
   related_heading: Autres services associés
   services_index_cta: Tous les services
-  cta_whatsapp_label: WhatsApp
-  cta_mail_label: Mail
+  cta_whatsapp_label: WHATSAPP
+  cta_mail_label: MAIL

@@ -303,6 +303,21 @@ nav.main-nav a.active,
   gap: 12px;
 }
 
+.service-cta__actions .btn {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  gap: 10px;
+  padding: 12px 14px;
+  white-space: nowrap;
+}
+
+.service-cta__actions .btn svg {
+  flex-basis: 24px;
+  width: 24px;
+  height: 24px;
+}
+
 .btn-faq {
   flex: 0 0 auto;
   width: fit-content;
