@@ -22,7 +22,7 @@ es:
   contact_close_label: Cerrar opciones de contacto
   contact_bubble: 👋 ¡Hola!
   breadcrumb_label: Ruta de navegación
-  estimate_label: Obtén una estimación
+  estimate_label: Calcular presupuesto
   documents_heading: ¿Qué documentos necesitas traducir?
   process_label: Proceso
   process_heading: Claridad y transparencia
@@ -82,9 +82,10 @@ fr:
     - title: Recevez votre traduction
       text: Vous recevez votre traduction au format numérique ou, sur demande, en version papier, remise en main propre ou envoyée par courrier
   faq_heading: Vous avez une question ?
-  faq_intro: Consultez la FAQ pour en savoir plus sur les traductions assermentées, les étapes, les délais et les conditions du service
+  faq_intro: Consultez la FAQ pour en savoir plus sur les traductions certifiées, les étapes et les délais, ou contactez-moi directement
   faq_button_label: Consulter la FAQ
   related_label: Services
   related_heading: Autres services associés
   services_index_cta: Tous les services
-  contact_button_label: Contacter María
+  cta_whatsapp_label: WhatsApp
+  cta_mail_label: Mail

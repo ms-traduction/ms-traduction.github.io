@@ -283,6 +283,20 @@ nav.main-nav a.active,
   white-space: nowrap;
 }
 
+.btn-estimate,
+.service-cta__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.service-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .btn-primary {
   color: #fff;
   background: var(--rose);

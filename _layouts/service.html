@@ -196,7 +196,14 @@
       <section class="service-hero" aria-labelledby="service-title">
         <div class="service-hero__content">
           <h1 id="service-title">{{ copy.title }}</h1>
-          <a href="{{ quote_url }}" class="btn btn-primary">{{ ui.estimate_label }}</a>
+          <a href="{{ quote_url }}" class="btn btn-primary btn-estimate">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="5" y="2.5" width="14" height="19" rx="2"></rect>
+              <path d="M8 6.5h8"></path>
+              <path d="M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h.01M12 19h.01M16 19h.01"></path>
+            </svg>
+            {{ ui.estimate_label }}
+          </a>
         </div>
       </section>
 
@@ -272,7 +279,25 @@
           <div>
             <h2 id="service-cta-heading">{{ copy.cta_title }}</h2>
           </div>
-          <a href="mailto:mariasalmeron.trad@gmail.com?subject={{ copy.cta_email_subject | uri_escape }}" class="btn btn-primary">{{ ui.contact_button_label }}</a>
+          {% if page.lang == 'fr' %}
+            <div class="service-cta__actions">
+              <a href="https://wa.me/34644886933" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+                  <path d="M17.6 6.3c-1.4-1.4-3.3-2.2-5.3-2.2-4.1 0-7.5 3.4-7.5 7.5 0 1.3.3 2.6.9 3.8l-1 3.6 3.7-1c1.1.6 2.4.9 3.7.9h.1c4.1 0 7.5-3.4 7.5-7.5 0-2-1-3.9-2.1-5.1zm-5.3 11.4h-.1c-1.1 0-2.2-.3-3.1-.8l-.2-.1-2.1.6.6-2.1-.1-.2c-.6-1-1-2.1-1-3.3 0-3.4 2.8-6.2 6.2-6.2 1.7 0 3.2.7 4.3 1.8 1.1 1.1 1.8 2.6 1.8 4.3 0 3.4-2.8 6.2-6.3 6.2zm3.4-4.7c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.5.1-.2.2-.7.9-.9 1.1-.1.2-.3.2-.5.1-.1-.1-1-.4-1.9-1.2-.7-.6-1.2-1.3-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.3-.4.1-.1.1-.3.2-.4.1-.2.1-.3 0-.5-.1-.2-.5-1.2-.7-1.6-.2-.4-.3-.3-.5-.3h-.4c-.2 0-.5.1-.8.4-.2.3-.9.9-.9 2.1 0 1.2.9 2.4 1 2.6.1.2 1.7 2.5 4.1 3.5.6.3 1 .4 1.3.5.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.5-.3z"></path>
+                </svg>
+                {{ ui.cta_whatsapp_label }}
+              </a>
+              <a href="mailto:mariasalmeron.trad@gmail.com?subject={{ copy.cta_email_subject | uri_escape }}" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 6h16v12H4z"></path>
+                  <path d="m4 7 8 6 8-6"></path>
+                </svg>
+                {{ ui.cta_mail_label }}
+              </a>
+            </div>
+          {% else %}
+            <a href="mailto:mariasalmeron.trad@gmail.com?subject={{ copy.cta_email_subject | uri_escape }}" class="btn btn-primary">{{ ui.contact_button_label }}</a>
+          {% endif %}
         </section>
       </div>
     </section>
