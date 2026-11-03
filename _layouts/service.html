@@ -193,6 +193,117 @@
         </nav>
       </div>
 
+      {% if page.service == 'interpreting_support' %}
+      <section class="interpreting-intro interpreting-intro--support" aria-labelledby="service-title">
+        <div class="container interpreting-intro__grid">
+          <div class="interpreting-intro__copy">
+            <span class="eyebrow">{{ copy.section_label }}</span>
+            <h1 id="service-title">{{ copy.title }}</h1>
+            <p>{{ copy.intro }}</p>
+            <a class="interpreting-text-link" href="{{ home_url }}#interpretacion-jurada">{{ ui.services_index_cta }} <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="support-photo-layout" role="group" aria-label="{{ copy.photo_label }}">
+            <div class="photo-placeholder photo-placeholder--portrait" aria-hidden="true"><span></span></div>
+            <div class="photo-placeholder photo-placeholder--detail" aria-hidden="true"><span></span></div>
+            <p class="photo-layout-note">{{ copy.photo_label }}</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="interpreting-offerings" aria-labelledby="offerings-heading">
+        <div class="container">
+          <div class="interpreter-section-heading">
+            <span class="eyebrow">{{ copy.section_label }}</span>
+            <h2 id="offerings-heading">{{ copy.section_title }}</h2>
+            <p>{{ copy.section_intro }}</p>
+          </div>
+          <div class="support-offering-list">
+            {% for item in copy.services %}
+              <article class="support-offering">
+                <span class="support-offering__number">0{{ forloop.index }}</span>
+                <div>
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.text }}</p>
+                </div>
+                <span class="support-offering__mark" aria-hidden="true">↗</span>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="interpreting-modality" aria-labelledby="modality-heading">
+        <div class="container modality-panel">
+          <div class="modality-panel__intro">
+            <span class="eyebrow">{{ copy.modality_label }}</span>
+            <h2 id="modality-heading">{{ copy.modality_title }}</h2>
+            <p>{{ copy.modality_intro }}</p>
+          </div>
+          <div class="modality-options">
+            <article>
+              <span class="modality-icon" aria-hidden="true">01</span>
+              <h3>{{ copy.in_person_title }}</h3>
+              <p>{{ copy.in_person_text }}</p>
+            </article>
+            <article>
+              <span class="modality-icon" aria-hidden="true">02</span>
+              <h3>{{ copy.remote_title }}</h3>
+              <p>{{ copy.remote_text }}</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      {% elsif page.service == 'interpreting_events' %}
+      <section class="events-intro" aria-labelledby="service-title">
+        <div class="container">
+          <div class="events-intro__heading">
+            <span class="eyebrow">{{ copy.section_label }}</span>
+            <h1 id="service-title">{{ copy.title }}</h1>
+            <p>{{ copy.intro }}</p>
+            <a class="interpreting-text-link" href="{{ home_url }}#interpretacion-jurada">{{ ui.services_index_cta }} <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="editorial-gallery" aria-label="{% if page.lang == 'fr' %}Galerie photo, espaces réservés{% else %}Galería fotográfica, espacios reservados{% endif %}">
+            {% for label in copy.photo_labels %}
+              <figure class="editorial-photo editorial-photo--{{ forloop.index }}" aria-label="{{ label }}">
+                <div class="photo-placeholder" aria-hidden="true"><span></span></div>
+                <figcaption><span>0{{ forloop.index }}</span>{{ label }}</figcaption>
+              </figure>
+            {% endfor %}
+            <span class="editorial-gallery__caption">{% if page.lang == 'fr' %}Regards croisés, projets partagés{% else %}Miradas que se encuentran, proyectos que avanzan{% endif %}</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="events-offerings" aria-labelledby="offerings-heading">
+        <div class="container events-offerings__grid">
+          <div class="events-offerings__heading">
+            <span class="eyebrow">{{ copy.section_label }}</span>
+            <h2 id="offerings-heading">{{ copy.section_title }}</h2>
+            <p>{{ copy.section_intro }}</p>
+          </div>
+          <div class="events-service-list">
+            {% for item in copy.services %}
+              <article>
+                <span aria-hidden="true">0{{ forloop.index }}</span>
+                <div>
+                  <h3>{{ item.title }}</h3>
+                  <p>{{ item.text }}</p>
+                </div>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      <section class="events-value" aria-labelledby="events-value-heading">
+        <div class="container">
+          <span class="eyebrow">{{ copy.value_label }}</span>
+          <h2 id="events-value-heading">{{ copy.value_title }}</h2>
+          <p>{{ copy.value_text }}</p>
+          <span class="events-value__ornament" aria-hidden="true">“</span>
+        </div>
+      </section>
+      {% else %}
       <section class="service-hero" aria-labelledby="service-title">
         <div class="service-hero__content">
           <h1 id="service-title">{{ copy.title }}</h1>
@@ -259,6 +370,7 @@
           </div>
         </div>
       </section>
+      {% endif %}
 
       <div class="container">
         <section class="service-faq" aria-labelledby="faq-heading">

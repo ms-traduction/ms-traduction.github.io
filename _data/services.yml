@@ -209,3 +209,129 @@ administrative:
       - Documents pour les administrations publiques
     cta_title: Vous avez une démarche administrative en cours ?
     cta_email_subject: Demande de traduction assermentée – Démarches administratives
+
+interpreting_support:
+  es:
+    slug: acompanamiento-linguistico
+    card_title: Acompañamiento lingüístico
+    title: Acompañamiento lingüístico e interpretación
+    meta_title: Acompañamiento lingüístico e interpretación | María Salmerón
+    meta_description: Interpretación español-francés para ayuntamientos, notarías, hospitales, registros civiles y gestiones oficiales, presencial o por videoconferencia.
+    intro: Te acompaño en español y francés en gestiones importantes para que puedas comunicarte con claridad, comprender cada paso y sentirte respaldado durante todo el proceso.
+    photo_label: Espacio para fotografía de acompañamiento
+    section_label: A tu lado
+    section_title: Apoyo lingüístico en momentos importantes
+    section_intro: Una comunicación clara y fiel ayuda a que cada persona participe con confianza en sus gestiones.
+    services:
+      - title: Ayuntamientos y actos oficiales
+        text: Acompañamiento en ceremonias, bodas civiles, actos oficiales y encuentros con representantes municipales.
+      - title: Notarías y gestiones oficiales
+        text: Interpretación en notarías y otras situaciones oficiales que requieren una comunicación precisa entre español y francés.
+      - title: Hospitales y centros sanitarios
+        text: Asistencia lingüística para facilitar el intercambio de información entre pacientes, familiares y profesionales sanitarios.
+      - title: Registros civiles y trámites administrativos
+        text: Acompañamiento en registros civiles y gestiones administrativas para comprender y transmitir correctamente cada información.
+      - title: Comunicación entre francófonos e hispanohablantes
+        text: Apoyo personalizado en gestiones y conversaciones en las que las diferencias lingüísticas pueden dificultar el entendimiento.
+    modality_label: A tu medida
+    modality_title: Presencial o por videoconferencia
+    modality_intro: La modalidad se adapta al tipo de gestión, a las personas participantes y a las condiciones del servicio.
+    in_person_title: Acompañamiento presencial
+    in_person_text: Para citas, ceremonias y gestiones en las que la presencia de la intérprete facilita la comunicación directa.
+    remote_title: Videoconferencia
+    remote_text: Una alternativa práctica cuando el contexto permite interpretar a distancia y las personas disponen de una conexión adecuada.
+    cta_title: ¿Necesitas acompañamiento lingüístico?
+    cta_email_subject: Solicitud de acompañamiento lingüístico
+  fr:
+    slug: accompagnement-linguistique
+    card_title: Accompagnement linguistique
+    title: Accompagnement linguistique et interprétation
+    meta_title: Accompagnement linguistique et interprétation | María Salmerón
+    meta_description: Interprétation français-espagnol en mairie, chez le notaire, à l’hôpital, à l’état civil et lors de démarches officielles, en présentiel ou en visioconférence.
+    intro: Je vous accompagne en français et en espagnol lors de démarches importantes, afin que vous puissiez communiquer clairement, comprendre chaque étape et vous sentir soutenu tout au long du parcours.
+    photo_label: Espace photo pour l’accompagnement linguistique
+    section_label: À vos côtés
+    section_title: Un soutien linguistique dans les moments importants
+    section_intro: Une communication claire et fidèle permet à chacun de participer en confiance à ses démarches.
+    services:
+      - title: Mairies et actes officiels
+        text: Accompagnement lors de cérémonies, mariages civils, actes officiels et échanges avec les représentants municipaux.
+      - title: Études notariales et démarches officielles
+        text: Interprétation chez le notaire et dans les situations officielles qui exigent une communication précise entre le français et l’espagnol.
+      - title: Hôpitaux et centres de santé
+        text: Assistance linguistique pour faciliter les échanges entre les patients, leurs proches et les professionnels de santé.
+      - title: État civil et démarches administratives
+        text: Accompagnement auprès des services d’état civil et lors de démarches administratives pour comprendre et transmettre chaque information correctement.
+      - title: Échanges entre francophones et hispanophones
+        text: Un soutien adapté lorsque les différences linguistiques peuvent compliquer les démarches et la compréhension mutuelle.
+    modality_label: Selon vos besoins
+    modality_title: En présentiel ou en visioconférence
+    modality_intro: La modalité dépend du type de démarche, des personnes présentes et des conditions de la prestation.
+    in_person_title: Accompagnement en présentiel
+    in_person_text: Pour les rendez-vous, cérémonies et démarches où la présence de l’interprète facilite les échanges directs.
+    remote_title: Visioconférence
+    remote_text: Une solution pratique lorsque le contexte se prête à l’interprétation à distance et que chacun dispose d’une connexion adaptée.
+    cta_title: Vous avez besoin d’un accompagnement linguistique ?
+    cta_email_subject: Demande d’accompagnement linguistique
+
+interpreting_events:
+  es:
+    slug: eventos-reuniones
+    card_title: Eventos y reuniones
+    title: Interpretación para eventos y reuniones
+    meta_title: Interpretación para eventos y reuniones | María Salmerón
+    meta_description: Interpretación español-francés para ferias profesionales, visitas comerciales, reuniones de empresa, negociaciones y encuentros empresariales.
+    intro: Facilito la comunicación entre empresas, clientes y profesionales de España y Francia en encuentros donde cada detalle puede abrir nuevas oportunidades.
+    photo_labels:
+      - Conversación entre profesionales
+      - Encuentro empresarial
+      - Feria o salón profesional
+    section_label: Contextos profesionales
+    section_title: Comunicación que acompaña cada encuentro
+    section_intro: Interpreto de forma cercana y rigurosa para que las ideas, los matices y los objetivos de cada parte lleguen con claridad.
+    services:
+      - title: Ferias y salones profesionales
+        text: Acompañamiento lingüístico en stands, presentaciones y conversaciones con visitantes, clientes potenciales y socios.
+      - title: Visitas comerciales y encuentros empresariales
+        text: Interpretación durante visitas a empresas, presentaciones de producto y reuniones con clientes o proveedores.
+      - title: Reuniones de empresa
+        text: Apoyo en reuniones de trabajo para facilitar la participación de equipos francófonos e hispanohablantes.
+      - title: Negociaciones comerciales
+        text: Interpretación precisa de propuestas, acuerdos y matices durante conversaciones comerciales.
+      - title: Relaciones entre empresas españolas y francesas
+        text: Acompañamiento en encuentros entre clientes, proveedores y empresas de ambos países.
+    value_label: Relaciones internacionales
+    value_title: Entenderse bien también es hacer negocio
+    value_text: Una comunicación fluida y precisa reduce malentendidos, transmite confianza y ayuda a construir relaciones comerciales duraderas entre Francia y España.
+    cta_title: ¿Preparas un evento o una reunión internacional?
+    cta_email_subject: Solicitud de interpretación para eventos y reuniones
+  fr:
+    slug: evenements-reunions
+    card_title: Événements et réunions
+    title: Interprétation pour les événements et les réunions
+    meta_title: Interprétation pour événements et réunions | María Salmerón
+    meta_description: Interprétation français-espagnol pour salons professionnels, visites commerciales, réunions d’entreprise, négociations et rencontres d’affaires.
+    intro: Je facilite les échanges entre entreprises, clients et professionnels français et espagnols lors de rencontres où chaque détail peut ouvrir de nouvelles perspectives.
+    photo_labels:
+      - Échange entre professionnels
+      - Rencontre d’affaires
+      - Salon ou foire professionnelle
+    section_label: Contextes professionnels
+    section_title: Une communication au cœur de chaque rencontre
+    section_intro: J’interprète avec attention et rigueur pour que les idées, les nuances et les objectifs de chacun soient transmis avec clarté.
+    services:
+      - title: Salons et foires professionnelles
+        text: Accompagnement linguistique sur les stands, lors de présentations et d’échanges avec les visiteurs, clients potentiels et partenaires.
+      - title: Visites commerciales et rencontres d’affaires
+        text: Interprétation lors de visites d’entreprises, de présentations de produits et de rendez-vous avec des clients ou fournisseurs.
+      - title: Réunions d’entreprise
+        text: Un appui lors des réunions de travail pour faciliter la participation des équipes francophones et hispanophones.
+      - title: Négociations commerciales
+        text: Interprétation précise des propositions, accords et nuances au fil des échanges commerciaux.
+      - title: Relations entre entreprises françaises et espagnoles
+        text: Accompagnement lors de rencontres entre clients, fournisseurs et entreprises des deux pays.
+    value_label: Relations internationales
+    value_title: Bien se comprendre, c’est aussi faire avancer les affaires
+    value_text: Une communication fluide et précise limite les malentendus, inspire confiance et contribue à construire des relations commerciales durables entre la France et l’Espagne.
+    cta_title: Vous préparez un événement ou une réunion internationale ?
+    cta_email_subject: Demande d’interprétation pour événements et réunions

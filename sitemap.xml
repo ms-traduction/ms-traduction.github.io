@@ -106,6 +106,34 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/tramites-administrativos/" />
         <lastmod>2026-11-02</lastmod>
     </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/acompanamiento-linguistico/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/acompanamiento-linguistico/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/accompagnement-linguistique/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/acompanamiento-linguistico/" />
+        <lastmod>2026-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/accompagnement-linguistique/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/acompanamiento-linguistico/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/accompagnement-linguistique/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/acompanamiento-linguistico/" />
+        <lastmod>2026-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/servicios/eventos-reuniones/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/eventos-reuniones/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/evenements-reunions/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/eventos-reuniones/" />
+        <lastmod>2026-11-03</lastmod>
+    </url>
+    <url>
+        <loc>https://www.ms-traduction.com/fr/services/evenements-reunions/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/servicios/eventos-reuniones/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/services/evenements-reunions/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/servicios/eventos-reuniones/" />
+        <lastmod>2026-11-03</lastmod>
+    </url>
 
     <!-- FAQ ES -->
     <url>
