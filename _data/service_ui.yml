@@ -38,11 +38,12 @@ es:
       text: Recibes tu traducción en formato digital y, si lo necesitas, también en papel (en mano o por correo postal)
   faq_heading: ¿Tienes alguna duda?
   faq_intro: Consulta las preguntas frecuentes para obtener más información sobre las traducciones juradas, el proceso, los plazos y las condiciones del servicio
-  faq_button_label: Consultar preguntas frecuentes
+  faq_button_label: Consultar FAQ
   related_label: Servicios
   related_heading: Otros servicios relacionados
   services_index_cta: Ver todos los servicios
-  contact_button_label: Solicitar presupuesto
+  cta_whatsapp_label: WhatsApp
+  cta_mail_label: Correo electrónico
 fr:
   home_label: Accueil
   services_label: Services

@@ -272,29 +272,40 @@ nav.main-nav a.active,
 }
 
 .btn {
-  display: inline-block;
-  padding: 13px 28px;
-  border-radius: 30px;
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  transition: all 0.25s ease;
-  white-space: nowrap;
-}
-
-.btn-estimate,
-.service-cta__actions .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn svg {
+  display: block;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .service-cta__actions {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  flex: 0 1 420px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+}
+
+.btn-faq {
+  flex: 0 0 auto;
+  width: fit-content;
 }
 
 .btn-primary {
@@ -305,7 +316,13 @@ nav.main-nav a.active,
 
 .btn-primary:hover {
   background: var(--rose-dark);
-  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -8px rgba(30, 42, 69, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--rose-dark);
+  outline-offset: 3px;
 }
 
 .burger {
@@ -1172,10 +1189,18 @@ footer {
     padding: 26px 22px;
   }
 
-  .service-faq .btn,
-  .service-cta .btn {
+  .service-faq .btn-faq,
+  .service-cta__actions {
     width: 100%;
-    text-align: center;
+  }
+
+  .service-cta__actions {
+    grid-template-columns: 1fr;
+    flex-basis: auto;
+  }
+
+  .service-cta__actions .btn {
+    width: 100%;
   }
 
   .service-faq .btn {
