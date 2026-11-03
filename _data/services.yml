@@ -221,7 +221,7 @@ interpreting_support:
     meta_description: Interpretación español-francés para ayuntamientos, notarías, hospitales, registros civiles y gestiones oficiales, presencial o por videoconferencia.
     intro: Te acompaño en español y francés en gestiones importantes para que puedas comunicarte con claridad, comprender cada paso y sentirte respaldado durante todo el proceso.
     photo_label: Espacio para fotografía de acompañamiento
-    section_title: Neutralidad, imparcialidad y confianza
+    section_title: Neutralidad, imparcialidad, confianza
     services:
       - title: Ayuntamientos y actos oficiales
         text: Acompañamiento en ceremonias, bodas civiles, actos oficiales y encuentros con representantes municipales
@@ -233,11 +233,11 @@ interpreting_support:
         text: Acompañamiento en registros civiles durante gestiones administrativas
     modality_label: A tu medida
     modality_title: Presencial o por videoconferencia
-    modality_intro: La modalidad se adapta al tipo de gestión, a las personas participantes y a las condiciones del servicio
+    modality_intro: 
     in_person_title: Acompañamiento presencial
     in_person_text: Para citas, ceremonias y gestiones en las que la presencia de la intérprete facilita la comunicación directa
     remote_title: Videoconferencia
-    remote_text: Una alternativa práctica cuando el contexto permite interpretar a distancia y las personas disponen de una conexión adecuada
+    remote_text: Una alternativa práctica cuando el contexto permite interpretar a distancia y se dispone de una conexión adecuada
     cta_title: ¿Necesitas acompañamiento lingüístico?
     cta_email_subject: Solicitud de acompañamiento lingüístico
   fr:
@@ -250,7 +250,7 @@ interpreting_support:
     meta_description: Interprétation français-espagnol en mairie, chez le notaire, à l’hôpital, à l’état civil et lors de démarches officielles, en présentiel ou en visioconférence.
     intro: Je vous accompagne en français et en espagnol lors de démarches importantes, afin que vous puissiez communiquer clairement, comprendre chaque étape et vous sentir soutenu tout au long du parcours.
     photo_label: Espace photo pour l’accompagnement linguistique
-    section_title: Neutralité, impartialité et confiance
+    section_title: Neutralité, impartialité, confiance
     services:
       - title: Mairies et actes officiels
         text: Accompagnement lors de cérémonies, mariages civils, actes officiels et échanges avec les représentants municipaux
@@ -262,7 +262,7 @@ interpreting_support:
         text: Accompagnement auprès des services d’état civil lors des démarches administratives
     modality_label: Selon vos besoins
     modality_title: En présentiel ou en visioconférence
-    modality_intro: La modalité dépend du type de démarche, des personnes présentes et des conditions de la prestation
+    modality_intro: 
     in_person_title: Accompagnement en présentiel
     in_person_text: Pour les rendez-vous, cérémonies et démarches où la présence de l’interprète facilite les échanges directs
     remote_title: Visioconférence
