@@ -1986,13 +1986,20 @@ footer {
 
   .support-photo-layout {
     width: min(100%, 620px);
-    min-height: 390px;
+    min-height: 0;
     margin: 0 auto;
+    padding: 0;
   }
 
-  .photo-placeholder--portrait,
-  .support-carousel {
+  .photo-placeholder--portrait {
     height: 340px;
+  }
+
+  .support-carousel {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    aspect-ratio: 1;
   }
 
   .photo-placeholder--detail {
@@ -2047,13 +2054,7 @@ footer {
     font-size: clamp(32px, 9vw, 42px);
   }
 
-  .support-photo-layout {
-    min-height: 300px;
-    padding: 22px 22px 24px 0;
-  }
-
-  .photo-placeholder--portrait,
-  .support-carousel {
+  .photo-placeholder--portrait {
     width: 82%;
     height: 265px;
   }
