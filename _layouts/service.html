@@ -265,26 +265,44 @@
       </section>
       {% elsif page.service == 'interpreting_events' %}
       <section class="events-intro" aria-labelledby="service-title">
-        <div class="container">
+        <div class="container events-intro__grid">
           <div class="events-intro__heading">
             <span class="eyebrow">{{ copy.section_label }}</span>
             <h1 id="service-title">{{ copy.title }}</h1>
-            <p>{{ copy.intro }}</p>
-            <a class="interpreting-text-link" href="{{ home_url }}#interpretacion-jurada">{{ ui.services_index_cta }} <span aria-hidden="true">→</span></a>
+            <a class="interpreting-text-link" href="#events-offerings">{{ copy.hero_cta }} <span aria-hidden="true">→</span></a>
           </div>
-          <div class="editorial-gallery" aria-label="{% if page.lang == 'fr' %}Galerie photo, espaces réservés{% else %}Galería fotográfica, espacios reservados{% endif %}">
-            {% for label in copy.photo_labels %}
-              <figure class="editorial-photo editorial-photo--{{ forloop.index }}" aria-label="{{ label }}">
-                <div class="photo-placeholder" aria-hidden="true"><span></span></div>
-                <figcaption><span>0{{ forloop.index }}</span>{{ label }}</figcaption>
+          <div class="events-carousel" data-events-carousel role="region" aria-roledescription="{% if page.lang == 'fr' %}carrousel{% else %}carrusel{% endif %}" aria-label="{{ copy.carousel_label }}">
+            <div class="events-carousel__viewport">
+              {% for label in copy.photo_labels %}
+              {% assign photo_src = '/sial2024.webp' %}
+              {% if forloop.index == 2 %}
+                {% assign photo_src = '/SIAL2026.webp' %}
+              {% elsif forloop.index == 3 %}
+                {% assign photo_src = '/inter.webp' %}
+              {% endif %}
+              <figure class="events-carousel__slide{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="{% if page.lang == 'fr' %}diapositive{% else %}diapositiva{% endif %}" aria-label="{{ copy.carousel_slide }} {{ forloop.index }} / {{ forloop.length }}" aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}">
+                <img src="{{ photo_src }}" alt="{{ label }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
               </figure>
             {% endfor %}
-            <span class="editorial-gallery__caption">{% if page.lang == 'fr' %}Regards croisés, projets partagés{% else %}Miradas que se encuentran, proyectos que avanzan{% endif %}</span>
+            </div>
+            <div class="events-carousel__controls">
+            <button class="events-carousel__arrow" type="button" data-carousel-previous aria-label="{{ copy.carousel_previous }}">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </button>
+              <div class="events-carousel__indicators" role="group" aria-label="{% if page.lang == 'fr' %}Choisir une photographie{% else %}Elegir una fotografía{% endif %}">
+              {% for label in copy.photo_labels %}
+                <button class="events-carousel__indicator{% if forloop.first %} is-active{% endif %}" type="button" data-carousel-slide="{{ forloop.index0 }}" aria-label="{{ copy.carousel_slide }} {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+              {% endfor %}
+              </div>
+              <button class="events-carousel__arrow" type="button" data-carousel-next aria-label="{{ copy.carousel_next }}">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="events-offerings" aria-labelledby="offerings-heading">
+      <section class="events-offerings" id="events-offerings" aria-labelledby="offerings-heading">
         <div class="container events-offerings__grid">
           <div class="events-offerings__heading">
             <span class="eyebrow">{{ copy.section_label }}</span>
@@ -293,8 +311,12 @@
           </div>
           <div class="events-service-list">
             {% for item in copy.services %}
-              <article>
-                <span aria-hidden="true">0{{ forloop.index }}</span>
+              <article class="support-offering">
+                <span class="support-offering__mark" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="m5.5 10.2 3 3 6-6.4" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
                 <div>
                   <h3>{{ item.title }}</h3>
                   <p>{{ item.text }}</p>
@@ -309,7 +331,6 @@
         <div class="container">
           <span class="eyebrow">{{ copy.value_label }}</span>
           <h2 id="events-value-heading">{{ copy.value_title }}</h2>
-          <p>{{ copy.value_text }}</p>
           <span class="events-value__ornament" aria-hidden="true">“</span>
         </div>
       </section>
@@ -527,6 +548,64 @@
         setContactWidgetState(false);
       }
     });
+
+    const eventsCarousel = document.querySelector('[data-events-carousel]');
+    if (eventsCarousel) {
+      const slides = Array.from(eventsCarousel.querySelectorAll('.events-carousel__slide'));
+      const indicators = Array.from(eventsCarousel.querySelectorAll('[data-carousel-slide]'));
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let activeSlide = 0;
+      let autoplay;
+
+      function showSlide(index) {
+        activeSlide = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === activeSlide;
+          slide.classList.toggle('is-active', isActive);
+          slide.setAttribute('aria-hidden', String(!isActive));
+          indicators[slideIndex].classList.toggle('is-active', isActive);
+          indicators[slideIndex].setAttribute('aria-current', String(isActive));
+        });
+      }
+
+      function stopAutoplay() {
+        window.clearInterval(autoplay);
+        autoplay = undefined;
+      }
+
+      function startAutoplay() {
+        if (!reducedMotion.matches && !autoplay && slides.length > 1 && !document.hidden) {
+          autoplay = window.setInterval(() => showSlide(activeSlide + 1), 6500);
+        }
+      }
+
+      eventsCarousel.querySelector('[data-carousel-previous]').addEventListener('click', () => {
+        showSlide(activeSlide - 1);
+      });
+      eventsCarousel.querySelector('[data-carousel-next]').addEventListener('click', () => {
+        showSlide(activeSlide + 1);
+      });
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSlide(index));
+      });
+      eventsCarousel.addEventListener('mouseenter', stopAutoplay);
+      eventsCarousel.addEventListener('mouseleave', startAutoplay);
+      eventsCarousel.addEventListener('focusin', stopAutoplay);
+      eventsCarousel.addEventListener('focusout', event => {
+        if (!eventsCarousel.contains(event.relatedTarget) && !eventsCarousel.matches(':hover')) {
+          startAutoplay();
+        }
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopAutoplay();
+        else startAutoplay();
+      });
+      reducedMotion.addEventListener('change', () => {
+        if (reducedMotion.matches) stopAutoplay();
+        else startAutoplay();
+      });
+      startAutoplay();
+    }
 
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>

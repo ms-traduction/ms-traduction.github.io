@@ -277,14 +277,18 @@ interpreting_events:
     title: Interpretación para eventos y reuniones
     meta_title: Interpretación para eventos y reuniones | María Salmerón
     meta_description: Interpretación español-francés para ferias profesionales, visitas comerciales, reuniones de empresa, negociaciones y encuentros empresariales.
-    intro: Facilito la comunicación entre empresas, clientes y profesionales de España y Francia en encuentros donde cada detalle puede abrir nuevas oportunidades.
+    hero_cta: Descubrir más
+    carousel_label: Fotografías de eventos y reuniones profesionales
+    carousel_previous: Fotografía anterior
+    carousel_next: Fotografía siguiente
+    carousel_slide: Fotografía
     photo_labels:
-      - Conversación entre profesionales
-      - Encuentro empresarial
-      - Feria o salón profesional
+      - Feria profesional SIAL 2024
+      - Feria profesional SIAL 2026
+      - Cabina de interpretación en un evento
     section_label: Contextos profesionales
-    section_title: Comunicación que acompaña cada encuentro
-    section_intro: Interpreto de forma cercana y rigurosa para que las ideas, los matices y los objetivos de cada parte lleguen con claridad.
+    section_title: Conecta con tu interlocutor
+    section_intro: Mi objetivo es ayudarte a sacar el máximo partido de tus encuentros profesionales
     services:
       - title: Ferias y salones profesionales
         text: Acompañamiento lingüístico en stands, presentaciones y conversaciones con visitantes, clientes potenciales y socios.
@@ -294,11 +298,8 @@ interpreting_events:
         text: Apoyo en reuniones de trabajo para facilitar la participación de equipos francófonos e hispanohablantes.
       - title: Negociaciones comerciales
         text: Interpretación precisa de propuestas, acuerdos y matices durante conversaciones comerciales.
-      - title: Relaciones entre empresas españolas y francesas
-        text: Acompañamiento en encuentros entre clientes, proveedores y empresas de ambos países.
-    value_label: Relaciones internacionales
+    value_label: Contextos profesionales
     value_title: Entenderse bien también es hacer negocio
-    value_text: Una comunicación fluida y precisa reduce malentendidos, transmite confianza y ayuda a construir relaciones comerciales duraderas entre Francia y España.
     cta_title: ¿Preparas un evento o una reunión internacional?
     cta_email_subject: Solicitud de interpretación para eventos y reuniones
   fr:
@@ -307,14 +308,18 @@ interpreting_events:
     title: Interprétation pour les événements et les réunions
     meta_title: Interprétation pour événements et réunions | María Salmerón
     meta_description: Interprétation français-espagnol pour salons professionnels, visites commerciales, réunions d’entreprise, négociations et rencontres d’affaires.
-    intro: Je facilite les échanges entre entreprises, clients et professionnels français et espagnols lors de rencontres où chaque détail peut ouvrir de nouvelles perspectives.
+    hero_cta: Découvrir davantage
+    carousel_label: Photographies d’événements et de réunions professionnelles
+    carousel_previous: Photographie précédente
+    carousel_next: Photographie suivante
+    carousel_slide: Photographie
     photo_labels:
-      - Échange entre professionnels
-      - Rencontre d’affaires
-      - Salon ou foire professionnelle
+      - Salon professionnel SIAL 2024
+      - Salon professionnel SIAL 2026
+      - Cabine d’interprétation lors d’un événement
     section_label: Contextes professionnels
-    section_title: Une communication au cœur de chaque rencontre
-    section_intro: J’interprète avec attention et rigueur pour que les idées, les nuances et les objectifs de chacun soient transmis avec clarté.
+    section_title: La communication au cœur de chaque rencontre
+    section_intro: Mon rôle est de faciliter les échanges professionnels et de vous aider à connecter avec votre interlocuteur
     services:
       - title: Salons et foires professionnelles
         text: Accompagnement linguistique sur les stands, lors de présentations et d’échanges avec les visiteurs, clients potentiels et partenaires.
@@ -324,10 +329,7 @@ interpreting_events:
         text: Un appui lors des réunions de travail pour faciliter la participation des équipes francophones et hispanophones.
       - title: Négociations commerciales
         text: Interprétation précise des propositions, accords et nuances au fil des échanges commerciaux.
-      - title: Relations entre entreprises françaises et espagnoles
-        text: Accompagnement lors de rencontres entre clients, fournisseurs et entreprises des deux pays.
-    value_label: Relations internationales
-    value_title: Bien se comprendre, c’est aussi faire avancer les affaires
-    value_text: Une communication fluide et précise limite les malentendus, inspire confiance et contribue à construire des relations commerciales durables entre la France et l’Espagne.
+    value_label: Contextes professionnels
+    value_title: Parler la même langue pour faire avancer vos affaires
     cta_title: Vous préparez un événement ou une réunion internationale ?
     cta_email_subject: Demande d’interprétation pour événements et réunions
