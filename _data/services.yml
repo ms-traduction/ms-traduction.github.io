@@ -221,6 +221,15 @@ interpreting_support:
     meta_description: Interpretación español-francés para ayuntamientos, notarías, hospitales, registros civiles y gestiones oficiales, presencial o por videoconferencia.
     intro: Te acompaño en español y francés en gestiones importantes para que puedas comunicarte con claridad, comprender cada paso y sentirte respaldado durante todo el proceso.
     photo_label: Fotografías de un ayuntamiento
+    photo_carousel_label: Fotografías de acompañamiento lingüístico
+    photo_carousel_slide: Fotografía
+    photo_carousel_previous: Fotografía anterior
+    photo_carousel_next: Fotografía siguiente
+    photo_carousel_choose: Elegir una fotografía
+    photos:
+      - src: /mairie1.webp
+      - src: /mairie2.webp
+      - src: /PJ.webp
     section_title: Neutralidad, imparcialidad, confianza
     services:
       - title: Ayuntamientos y actos oficiales
@@ -231,6 +240,8 @@ interpreting_support:
         text: Asistencia lingüística para facilitar el intercambio de información entre pacientes, familiares y profesionales sanitarios
       - title: Registros civiles y trámites administrativos
         text: Acompañamiento en registros civiles durante gestiones administrativas
+      - title: Servicios públicos
+        text: "Interpretación en procedimientos judiciales y administrativos: comisarías, gendarmerías, tribunales, peritajes médico-legales y evaluaciones psicológicas"
     modality_label: A tu medida
     modality_title: Presencial o por videoconferencia
     modality_intro: 
@@ -250,6 +261,15 @@ interpreting_support:
     meta_description: Interprétation français-espagnol en mairie, chez le notaire, à l’hôpital, à l’état civil et lors de démarches officielles, en présentiel ou en visioconférence.
     intro: Je vous accompagne en français et en espagnol lors de démarches importantes, afin que vous puissiez communiquer clairement, comprendre chaque étape et vous sentir soutenu tout au long du parcours.
     photo_label: Photographies d’une mairie
+    photo_carousel_label: Photographies d’accompagnement linguistique
+    photo_carousel_slide: Photographie
+    photo_carousel_previous: Photographie précédente
+    photo_carousel_next: Photographie suivante
+    photo_carousel_choose: Choisir une photographie
+    photos:
+      - src: /mairie1.webp
+      - src: /mairie2.webp
+      - src: /PJ.webp
     section_title: Neutralité, impartialité, confiance
     services:
       - title: Mairies et actes officiels
@@ -260,6 +280,8 @@ interpreting_support:
         text: Assistance linguistique pour faciliter les échanges entre les patients, leurs proches et les professionnels de santé
       - title: État civil et démarches administratives
         text: Accompagnement auprès des services d’état civil lors des démarches administratives
+      - title: Services publics (COSP)
+        text: "Accompagnement linguistique dans le cadre de procédures judiciaires et administratives : commissariats, gendarmeries, tribunaux, expertises médico-légales et expertises psychologiques"
     modality_label: Selon vos besoins
     modality_title: En présentiel ou en visioconférence
     modality_intro: 

@@ -200,9 +200,29 @@
             <h1 id="service-title">{{ copy.hero_title }}</h1>
             <a class="interpreting-text-link" href="#support-offerings">{{ copy.hero_cta }} <span aria-hidden="true">→</span></a>
           </div>
-          <div class="support-photo-layout" role="group" aria-label="{{ copy.photo_label }}">
-            <img class="photo-placeholder photo-placeholder--portrait" src="/mairie1.webp" alt="">
-            <img class="photo-placeholder photo-placeholder--detail" src="/mairie2.webp" alt="">
+          <div class="support-photo-layout">
+            <div class="support-carousel" data-support-carousel role="region" aria-roledescription="{% if page.lang == 'fr' %}carrousel{% else %}carrusel{% endif %}" aria-label="{{ copy.photo_carousel_label }}">
+              <div class="support-carousel__viewport">
+                {% for photo in copy.photos %}
+                  <figure class="support-carousel__slide{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="{% if page.lang == 'fr' %}diapositive{% else %}diapositiva{% endif %}" aria-label="{{ copy.photo_carousel_slide }} {{ forloop.index }} / {{ forloop.length }}" aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}">
+                    <img src="{{ photo.src }}" alt="" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+                  </figure>
+                {% endfor %}
+                <div class="support-carousel__controls">
+                  <button class="support-carousel__arrow" type="button" data-support-previous aria-label="{{ copy.photo_carousel_previous }}">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m0 0 6 6m-6-6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                  <div class="support-carousel__indicators" role="group" aria-label="{{ copy.photo_carousel_choose }}">
+                    {% for photo in copy.photos %}
+                      <button class="support-carousel__indicator{% if forloop.first %} is-active{% endif %}" type="button" data-support-slide="{{ forloop.index0 }}" aria-label="{{ copy.photo_carousel_slide }} {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>
+                    {% endfor %}
+                  </div>
+                  <button class="support-carousel__arrow" type="button" data-support-next aria-label="{{ copy.photo_carousel_next }}">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -605,6 +625,64 @@
         else startAutoplay();
       });
       startAutoplay();
+    }
+
+    const supportCarousel = document.querySelector('[data-support-carousel]');
+    if (supportCarousel) {
+      const slides = Array.from(supportCarousel.querySelectorAll('.support-carousel__slide'));
+      const indicators = Array.from(supportCarousel.querySelectorAll('[data-support-slide]'));
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let activeSlide = 0;
+      let autoplay;
+
+      function showSupportSlide(index) {
+        activeSlide = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === activeSlide;
+          slide.classList.toggle('is-active', isActive);
+          slide.setAttribute('aria-hidden', String(!isActive));
+          indicators[slideIndex].classList.toggle('is-active', isActive);
+          indicators[slideIndex].setAttribute('aria-current', String(isActive));
+        });
+      }
+
+      function stopSupportAutoplay() {
+        window.clearInterval(autoplay);
+        autoplay = undefined;
+      }
+
+      function startSupportAutoplay() {
+        if (!reducedMotion.matches && !autoplay && slides.length > 1 && !document.hidden) {
+          autoplay = window.setInterval(() => showSupportSlide(activeSlide + 1), 6500);
+        }
+      }
+
+      supportCarousel.querySelector('[data-support-previous]').addEventListener('click', () => {
+        showSupportSlide(activeSlide - 1);
+      });
+      supportCarousel.querySelector('[data-support-next]').addEventListener('click', () => {
+        showSupportSlide(activeSlide + 1);
+      });
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSupportSlide(index));
+      });
+      supportCarousel.addEventListener('mouseenter', stopSupportAutoplay);
+      supportCarousel.addEventListener('mouseleave', startSupportAutoplay);
+      supportCarousel.addEventListener('focusin', stopSupportAutoplay);
+      supportCarousel.addEventListener('focusout', event => {
+        if (!supportCarousel.contains(event.relatedTarget) && !supportCarousel.matches(':hover')) {
+          startSupportAutoplay();
+        }
+      });
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopSupportAutoplay();
+        else startSupportAutoplay();
+      });
+      reducedMotion.addEventListener('change', () => {
+        if (reducedMotion.matches) stopSupportAutoplay();
+        else startSupportAutoplay();
+      });
+      startSupportAutoplay();
     }
 
     document.getElementById('current-year').textContent = new Date().getFullYear();
