@@ -63,7 +63,9 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {% unless page.service == 'interpreting_support' or page.service == 'interpreting_events' %}
   <link rel="preload" as="image" href="https://www.ms-traduction.com/pexels-picjumbocom-461077.webp" fetchpriority="high">
+  {% endunless %}
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Pinyon+Script&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/service-pages.css">
   <script src="/tarteaucitron/tarteaucitron.min.js"></script>
@@ -136,7 +138,7 @@
           "serviceType": {{ copy.title | jsonify }},
           "inLanguage": "{{ page.lang }}",
           "areaServed": [
-            {"@type": "Country", "name": "Spain"},
+            {"@type": "Country", "name": {% if page.lang == 'fr' %}"Espagne"{% else %}"España"{% endif %}},
             {"@type": "Country", "name": "France"}
           ],
           "provider": {"@id": "https://www.ms-traduction.com/#person"}
@@ -205,7 +207,7 @@
               <div class="support-carousel__viewport">
                 {% for photo in copy.photos %}
                   <figure class="support-carousel__slide{% if forloop.first %} is-active{% endif %}" role="group" aria-roledescription="{% if page.lang == 'fr' %}diapositive{% else %}diapositiva{% endif %}" aria-label="{{ copy.photo_carousel_slide }} {{ forloop.index }} / {{ forloop.length }}" aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}">
-                    <img src="{{ photo.src }}" alt="" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+                    <img src="{{ photo.src }}" alt="{{ photo.alt }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
                   </figure>
                 {% endfor %}
                 <div class="support-carousel__controls">

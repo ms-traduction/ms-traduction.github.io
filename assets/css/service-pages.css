@@ -753,7 +753,7 @@ footer {
   letter-spacing: 2px;
 }
 
-.footer-links h4 {
+.footer-links h2 {
   color: #fff;
   font-family: var(--serif);
   font-size: 14px;
@@ -771,7 +771,7 @@ footer {
   min-width: 220px;
 }
 
-.footer-links h4 {
+.footer-links h2 {
   margin: 0 0 16px;
   letter-spacing: 0.5px;
 }

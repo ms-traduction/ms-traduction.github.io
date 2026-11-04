@@ -132,7 +132,7 @@ commercial:
     card_title: Documentos comerciales y financieros
     title: Traducción jurada de documentos comerciales y financieros
     meta_title: Traducción jurada de documentos comerciales | María Salmerón
-    meta_description: Traducción jurada francés-español de extractos Kbis, documentos de empresa, estatutos sociales, balances contables y documentación fiscal y financiera, incluidas facturas y contratos comerciales.
+    meta_description: "Traducción jurada francés-español para empresas: estatutos, balances, documentos fiscales, facturas y contratos comerciales. Solicita presupuesto"
     document_groups:
       - title: Documentos empresariales
         documents:
@@ -157,7 +157,7 @@ commercial:
     card_title: Documents commerciaux et financiers
     title: Traduction certifiée de documents commerciaux et financiers
     meta_title: Traduction de documents commerciaux espagnols | María Salmerón
-    meta_description: Traduction assermentée espagnol-français d’extraits Kbis, de documents d’entreprise, de statuts, de bilans comptables et de documents fiscaux et financiers, dont factures et contrats commerciaux.
+    meta_description: "Traduction certifiée espagnol-français de documents d’entreprise : statuts, bilans, pièces fiscales, factures et contrats commerciaux. Demandez un devis"
     document_groups:
       - title: Documents relatifs aux entreprises
         documents:
@@ -228,8 +228,11 @@ interpreting_support:
     photo_carousel_choose: Elegir una fotografía
     photos:
       - src: /mairie1.webp
+        alt: Ayuntamiento francés con la inscripción Hôtel de Ville y una fuente frente a la entrada
       - src: /mairie2.webp
+        alt: Fachada de un ayuntamiento francés decorada para Navidad
       - src: /PJ.webp
+        alt: Fachada de la Prefectura de Policía con su rótulo
     section_title: Neutralidad, imparcialidad, confianza
     services:
       - title: Ayuntamientos y actos oficiales
@@ -268,8 +271,11 @@ interpreting_support:
     photo_carousel_choose: Choisir une photographie
     photos:
       - src: /mairie1.webp
+        alt: Mairie avec l’inscription Hôtel de Ville et une fontaine devant l’entrée
       - src: /mairie2.webp
+        alt: Façade d’une mairie française décorée pour Noël
       - src: /PJ.webp
+        alt: Façade de la Préfecture de police avec son enseigne
     section_title: Neutralité, impartialité, confiance
     services:
       - title: Mairies et actes officiels
