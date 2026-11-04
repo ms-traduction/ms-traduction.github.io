@@ -1569,15 +1569,37 @@ footer {
 .support-offering-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 48px;
+  column-gap: 60px;
 }
 
 .support-offering {
-  display: block;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 17px;
   width: 100%;
   min-width: 0;
-  padding: 26px 0;
+  padding: 28px 0 30px;
   border-top: 1px solid var(--line);
+  transition: border-color 0.25s ease;
+}
+
+.support-offering__mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  margin-top: 1px;
+  place-items: center;
+  border: 1px solid rgba(181, 100, 105, 0.32);
+  border-radius: 50%;
+  color: var(--rose-dark);
+  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.support-offering__mark svg {
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
 .support-offering > div,
@@ -1601,6 +1623,10 @@ footer {
   line-height: 1.35;
 }
 
+.support-offering h3 {
+  transition: color 0.25s ease;
+}
+
 .support-offering p,
 .modality-options p,
 .events-service-list p {
@@ -1608,6 +1634,20 @@ footer {
   color: #626262;
   font-size: 14px;
   line-height: 1.75;
+}
+
+.support-offering:hover {
+  border-top-color: rgba(181, 100, 105, 0.45);
+}
+
+.support-offering:hover .support-offering__mark {
+  border-color: rgba(181, 100, 105, 0.58);
+  color: var(--rose-dark);
+  background-color: rgba(198, 123, 129, 0.08);
+}
+
+.support-offering:hover h3 {
+  color: var(--rose-dark);
 }
 
 #support-offerings {

@@ -215,6 +215,11 @@
           <div class="support-offering-list">
             {% for item in copy.services %}
               <article class="support-offering">
+                <span class="support-offering__mark" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none">
+                    <path d="m5.5 10.2 3 3 6-6.4" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
                 <div>
                   <h3>{{ item.title }}</h3>
                   <p>{{ item.text }}</p>
