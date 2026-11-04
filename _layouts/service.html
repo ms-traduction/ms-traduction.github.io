@@ -294,9 +294,9 @@
           <div class="events-carousel" data-events-carousel role="region" aria-roledescription="{% if page.lang == 'fr' %}carrousel{% else %}carrusel{% endif %}" aria-label="{{ copy.carousel_label }}">
             <div class="events-carousel__viewport">
               {% for label in copy.photo_labels %}
-              {% assign photo_src = '/sial2024.webp' %}
+              {% assign photo_src = '/SIAL2026.webp' %}
               {% if forloop.index == 2 %}
-                {% assign photo_src = '/SIAL2026.webp' %}
+                {% assign photo_src = '/sial2024.webp' %}
               {% elsif forloop.index == 3 %}
                 {% assign photo_src = '/inter.webp' %}
               {% endif %}
