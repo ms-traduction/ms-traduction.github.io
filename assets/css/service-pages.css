@@ -1708,9 +1708,9 @@ footer {
 
 .events-intro__grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
   align-items: center;
-  gap: clamp(40px, 7vw, 92px);
+  gap: clamp(32px, 4vw, 56px);
 }
 
 .events-intro__heading {
@@ -1718,7 +1718,6 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   min-width: 0;
-  max-width: 460px;
 }
 
 .events-intro__heading .eyebrow {
@@ -1740,7 +1739,7 @@ footer {
 .events-carousel__viewport {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 0.96;
+  aspect-ratio: 1.15;
   background: var(--cream-2);
 }
 
@@ -1924,6 +1923,10 @@ footer {
   .events-carousel {
     width: min(100%, 620px);
     margin: 0 auto;
+  }
+
+  .events-carousel__viewport {
+    aspect-ratio: 0.96;
   }
 }
 
