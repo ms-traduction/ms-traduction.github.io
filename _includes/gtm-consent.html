@@ -1,0 +1,35 @@
+<script>
+(function () {
+    var gtmLoaded = false;
+
+    function loadGtm() {
+        if (gtmLoaded) {
+            return;
+        }
+
+        gtmLoaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-N4ZNNJKW';
+        document.head.appendChild(script);
+    }
+
+    document.addEventListener('gtag_consentModeOk', loadGtm);
+    document.addEventListener('tac.consent_updated', function () {
+        if (
+            window.tarteaucitron.state.gtag === false &&
+            window.tarteaucitron.launch.gtag === true
+        ) {
+            window.setTimeout(function () {
+                window.location.reload();
+            }, 0);
+        }
+    });
+})();
+</script>
