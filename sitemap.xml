@@ -169,4 +169,49 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/precios/" />
     </url>
 
+    <!-- Aviso legal ES -->
+    <url>
+        <loc>https://www.ms-traduction.com/aviso-legal/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/aviso-legal/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/mentions-legales/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/aviso-legal/" />
+    </url>
+    <!-- Mentions légales FR -->
+    <url>
+        <loc>https://www.ms-traduction.com/fr/mentions-legales/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/aviso-legal/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/mentions-legales/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/aviso-legal/" />
+    </url>
+
+    <!-- Política de privacidad ES -->
+    <url>
+        <loc>https://www.ms-traduction.com/politica-privacidad/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/politica-privacidad/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/politique-confidentialite/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/politica-privacidad/" />
+    </url>
+    <!-- Politique de confidentialité FR -->
+    <url>
+        <loc>https://www.ms-traduction.com/fr/politique-confidentialite/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/politica-privacidad/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/politique-confidentialite/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/politica-privacidad/" />
+    </url>
+
+    <!-- Política de cookies ES -->
+    <url>
+        <loc>https://www.ms-traduction.com/politica-cookies/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/politica-cookies/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/politique-cookies/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/politica-cookies/" />
+    </url>
+    <!-- Politique relative aux cookies FR -->
+    <url>
+        <loc>https://www.ms-traduction.com/fr/politique-cookies/</loc>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ms-traduction.com/politica-cookies/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ms-traduction.com/fr/politique-cookies/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ms-traduction.com/politica-cookies/" />
+    </url>
+
 </urlset>

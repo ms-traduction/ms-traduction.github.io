@@ -1739,7 +1739,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@graph": [
 
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://www.ms-traduction.com/#organization",
       "name": "MS Traduction",
       "url": "https://www.ms-traduction.com/",
@@ -1750,6 +1750,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "image": "https://www.ms-traduction.com/og-image.webp",
       "email": "mailto:mariasalmeron.trad@gmail.com",
       "telephone": "+34644886933",
+      "description": "Servicios de traducción del francés al español e interpretación francés-español para particulares, empresas e instituciones de España y Francia, en persona o a distancia.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montévrain",
+        "addressRegion": "Seine-et-Marne",
+        "postalCode": "77144",
+        "addressCountry": "FR"
+      },
+      "areaServed": [
+        {"@type": "Country", "name": "España"},
+        {"@type": "Country", "name": "Francia"},
+        {"@type": "City", "name": "París"},
+        {"@type": "AdministrativeArea", "name": "Île-de-France"},
+        {"@type": "AdministrativeArea", "name": "Región de Murcia"},
+        {"@type": "City", "name": "Madrid"},
+        {"@type": "City", "name": "Murcia"},
+        {"@type": "City", "name": "Alicante"},
+        {"@type": "City", "name": "Cieza"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de traducción e interpretación",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducción jurada"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interpretación francés-español"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducción de documentos civiles"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducción académica"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducción notarial"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducción comercial"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducción administrativa"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Traducciones urgentes"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interpretación ante notario"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interpretación en juzgados"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Interpretación para bodas"}}
+        ]
+      },
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -1810,78 +1846,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       ]
     },
 
-    {
-      "@type": "ProfessionalService",
-      "@id": "https://www.ms-traduction.com/#service",
-      "name": "MS Traduction",
-      "description": "Servicios de traducción del francés al español e interpretación francés-español para particulares, empresas e instituciones de España y Francia, en persona o a distancia.",
-      "url": "https://www.ms-traduction.com/",
-
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Montévrain",
-        "addressRegion": "Seine-et-Marne",
-        "postalCode": "77144",
-        "addressCountry": "FR"
-      },
-      
-      "areaServed": [
-        {
-          "@type": "Country",
-          "name": "España"
-        },
-        {
-          "@type": "Country",
-          "name": "Francia"
-        },
-        {
-          "@type": "City",
-          "name": "París"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Île-de-France"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Región de Murcia"
-        },
-        {
-          "@type": "City",
-          "name": "Madrid"
-        },
-        {
-          "@type": "City",
-          "name": "Murcia"
-        },
-        {
-          "@type": "City",
-          "name": "Alicante"
-        },
-        {
-          "@type": "City",
-          "name": "Cieza"
-        }
-      ],
-
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Servicios de traducción e interpretación",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción jurada" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interpretación francés-español" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción de documentos civiles" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción académica" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción notarial" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción comercial" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducción administrativa" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traducciones urgentes" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interpretación ante notario" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interpretación en juzgados" }},
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Interpretación para bodas" }}
-        ]
-      }
-    },
     {
       "@type": "WebSite",
       "@id": "https://www.ms-traduction.com/#website",
@@ -2231,7 +2195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <div class="footer-brand">
         <div class="footer-brand-inner">
-          <img src="/logo.webp" alt="Logo María Salmerón" class="logo-small">
+          <img src="/logo.webp" alt="" class="logo-small">
           <div>
             <div class="name">MARÍA SALMERÓN</div>
             <div class="role">Traductora-Intérprete Jurada de francés</div>
