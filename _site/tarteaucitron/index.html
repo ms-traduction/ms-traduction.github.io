@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ms-traduction.github.io | Official website of María Salmerón – Sworn Translator &amp; Interpreter (Spanish ↔ French)</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="ms-traduction.github.io" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Official website of María Salmerón – Sworn Translator &amp; Interpreter (Spanish ↔ French)" />
+<meta property="og:description" content="Official website of María Salmerón – Sworn Translator &amp; Interpreter (Spanish ↔ French)" />
+<meta property="og:site_name" content="ms-traduction.github.io" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ms-traduction.github.io" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Official website of María Salmerón – Sworn Translator &amp; Interpreter (Spanish ↔ French)","headline":"ms-traduction.github.io","url":"/tarteaucitron/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=67c8312f65c817586bfebb80ee4af9e0b4f33dd9">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="/">ms-traduction.github.io</a></h1>
+      
+
+      
+<p><a href="https://www.jsdelivr.com/package/npm/tarteaucitronjs"><img src="https://data.jsdelivr.com/v1/package/npm/tarteaucitronjs/badge" alt="" /></a>
+<a href="https://www.npmjs.com/package/tarteaucitronjs"><img src="https://img.shields.io/npm/v/tarteaucitronjs.svg" alt="npm" /></a> <a href="https://github.com/AmauriC/tarteaucitron.js/graphs/contributors"><img src="https://img.shields.io/github/contributors/AmauriC/tarteaucitron.js.svg" alt="GitHub contributors" /></a> <a href="https://github.com/sponsors/AmauriC"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub" alt="Sponsor" /></a></p>
+
+<p>👋 Hey, I’m Amauri, a french dev that build a GDPR friendly cookie manager.</p>
+
+<p>tarteaucitron was initially a simple script for my personal blog (in 2013), a few months later, the Github repository is opened and tarteaucitron is now reliable and recognized.</p>
+
+<p>The european cookie law regulates the management of cookies and you should ask your visitors their consent before exposing them to third party services.</p>
+
+<p>Clearly this script will:</p>
+<ul>
+  <li>Disable all services by default,</li>
+  <li>Display a banner on the first page view and a small one on other pages,</li>
+  <li>Display a panel to allow or deny each services one by one,</li>
+  <li>Store the consent in a cookie for 365 days.</li>
+</ul>
+
+<p>Bonus:</p>
+<ul>
+  <li>Load service when user click on Allow (without reload of the page),</li>
+  <li>Incorporate a fallback system (display a link instead of social button and a static banner instead of advertising).</li>
+</ul>
+
+<h1 id="how-to-use">How to use</h1>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/tarteaucitron/tarteaucitron.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">tarteaucitron</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+    <span class="dl">"</span><span class="s2">privacyUrl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span> <span class="cm">/* Privacy policy url */</span>
+    <span class="dl">"</span><span class="s2">bodyPosition</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">bottom</span><span class="dl">"</span><span class="p">,</span> <span class="cm">/* or top to bring it as first element for accessibility */</span>
+
+    <span class="dl">"</span><span class="s2">hashtag</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#tarteaucitron</span><span class="dl">"</span><span class="p">,</span> <span class="cm">/* Open the panel with this hashtag */</span>
+    <span class="dl">"</span><span class="s2">cookieName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tarteaucitron</span><span class="dl">"</span><span class="p">,</span> <span class="cm">/* Cookie name */</span>
+
+    <span class="dl">"</span><span class="s2">orientation</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">middle</span><span class="dl">"</span><span class="p">,</span> <span class="cm">/* Banner position (top - bottom - middle - popup) */</span>
+
+    <span class="dl">"</span><span class="s2">groupServices</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Group services by category */</span>
+    <span class="dl">"</span><span class="s2">showDetailsOnClick</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Click to expand the description */</span>
+    <span class="dl">"</span><span class="s2">serviceDefaultState</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">wait</span><span class="dl">"</span><span class="p">,</span> <span class="cm">/* Default state (true - wait - false) */</span>
+
+    <span class="dl">"</span><span class="s2">showAlertSmall</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Show the small banner on bottom right */</span>
+    <span class="dl">"</span><span class="s2">showTitleBanner</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Also show the title (middleBarHead) on the top/bottom banners */</span>
+    <span class="dl">"</span><span class="s2">cookieslist</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Show the cookie list in a mini banner */</span>
+    <span class="dl">"</span><span class="s2">cookieslistEmbed</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Show the cookie list on the control panel */</span>
+    
+    <span class="dl">"</span><span class="s2">showIcon</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Show cookie icon to manage cookies */</span>
+    <span class="c1">// "iconSrc": "", /* Optional: URL or base64 encoded image */</span>
+    <span class="dl">"</span><span class="s2">iconPosition</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BottomRight</span><span class="dl">"</span><span class="p">,</span> <span class="cm">/* Position of the icon between BottomRight, BottomLeft, TopRight and TopLeft */</span>
+
+    <span class="dl">"</span><span class="s2">adblocker</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Show a Warning if an adblocker is detected */</span>
+
+    <span class="dl">"</span><span class="s2">DenyAllCta</span><span class="dl">"</span> <span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Show the deny all button */</span>
+    <span class="dl">"</span><span class="s2">AcceptAllCta</span><span class="dl">"</span> <span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Show the accept all button when highPrivacy on */</span>
+    <span class="dl">"</span><span class="s2">highPrivacy</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* HIGHLY RECOMMANDED Disable auto consent */</span>
+    <span class="dl">"</span><span class="s2">alwaysNeedConsent</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Ask the consent for "Privacy by design" services */</span>
+    
+    <span class="dl">"</span><span class="s2">handleBrowserDNTRequest</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* If Do Not Track == 1, disallow all */</span>
+
+    <span class="dl">"</span><span class="s2">removeCredit</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Remove credit link */</span>
+    <span class="dl">"</span><span class="s2">moreInfoLink</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Show more info link */</span>
+    <span class="dl">"</span><span class="s2">useExternalCss</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* If false, the tarteaucitron.css file will be loaded */</span>
+    <span class="dl">"</span><span class="s2">useExternalJs</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* If false, the tarteaucitron.services.js file and lang files will be loaded */</span>
+
+    <span class="c1">// "cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for subdomain website */</span>
+
+    <span class="dl">"</span><span class="s2">readmoreLink</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span> <span class="cm">/* Change the default readmore link pointing to tarteaucitron.io */</span>
+    
+    <span class="dl">"</span><span class="s2">mandatory</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Show a message about mandatory cookies */</span>
+    <span class="dl">"</span><span class="s2">mandatoryCta</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Show the disabled accept button when mandatory on */</span>
+    
+    <span class="c1">// "customCloserId": "", /* Optional a11y: Custom element ID used to open the panel */</span>
+
+    <span class="dl">"</span><span class="s2">googleConsentMode</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Enable Google Consent Mode v2 for Google ads and GA4 */</span>
+    <span class="dl">"</span><span class="s2">bingConsentMode</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Enable Bing Consent Mode for Clarity and Bing Ads */</span>
+    <span class="dl">"</span><span class="s2">pianoConsentMode</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="cm">/* Enable Piano Analytics Consent Mode */</span>
+    <span class="dl">"</span><span class="s2">pianoConsentModeEssential</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Load in Essential mode instead of opt-out by default */</span>
+    <span class="dl">"</span><span class="s2">softConsentMode</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Soft consent mode (consent is required to load the services) */</span>
+
+    <span class="dl">"</span><span class="s2">dataLayer</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Send an event to dataLayer with the services status */</span>
+    <span class="dl">"</span><span class="s2">serverSide</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span> <span class="cm">/* Server side only, tags are not loaded client side */</span>
+    
+    <span class="dl">"</span><span class="s2">partnersList</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span> <span class="cm">/* Details the number of partners on the popup and middle banner */</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<h1 id="add-a-service">Add a service</h1>
+<p><a href="https://tarteaucitron.io/en/free-installation-open-source/">Installation guide</a></p>
+
+<h1 id="customization">Customization</h1>
+
+<h2 id="create-custom-service">Create custom service</h2>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tarteaucitron</span><span class="p">.</span><span class="nx">services</span><span class="p">.</span><span class="nx">mycustomservice</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">key</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">mycustomservice</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ads|analytic|api|comment|other|social|support|video</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">MyCustomService</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">needConsent</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">cookies</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">'</span><span class="s1">cookie</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">cookie2</span><span class="dl">'</span><span class="p">],</span>
+  <span class="dl">"</span><span class="s2">readmoreLink</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/custom_read_more</span><span class="dl">"</span><span class="p">,</span> <span class="c1">// If you want to change readmore link</span>
+  <span class="dl">"</span><span class="s2">js</span><span class="dl">"</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">use strict</span><span class="dl">"</span><span class="p">;</span>
+    <span class="c1">// When user allow cookie</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">fallback</span><span class="dl">"</span><span class="p">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">use strict</span><span class="dl">"</span><span class="p">;</span>
+    <span class="c1">// when use deny cookie</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="events">Events</h2>
+
+<p>The following events are available:</p>
+<ul>
+  <li>(document) <code class="language-plaintext highlighter-rouge">{SERVICE_KEY}_added</code> for each enabled service</li>
+  <li>(document) <code class="language-plaintext highlighter-rouge">{SERVICE_KEY}_loaded</code> for each enabled service</li>
+  <li>(document) <code class="language-plaintext highlighter-rouge">{SERVICE_KEY}_allowed</code> for each service when allowed</li>
+  <li>
+    <p>(document) <code class="language-plaintext highlighter-rouge">{SERVICE_KEY}_disallowed </code> for each service when disallowed</p>
+  </li>
+  <li>(window) <code class="language-plaintext highlighter-rouge">tac.root_available</code>: the root element with panel has been created, services will be loaded</li>
+  <li>(window) <code class="language-plaintext highlighter-rouge">tac.open_alert</code></li>
+  <li>(window) <code class="language-plaintext highlighter-rouge">tac.close_alert</code></li>
+  <li>(window) <code class="language-plaintext highlighter-rouge">tac.open_panel</code></li>
+  <li>(window) <code class="language-plaintext highlighter-rouge">tac.close_panel</code></li>
+</ul>
+
+<h2 id="customize-text">Customize text</h2>
+
+<p>To change a translation, use <code class="language-plaintext highlighter-rouge">tarteaucitronCustomText</code> variable. It will be merge with the translation shipping with TAC. This variable must be defined before the initialization. For example:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tarteaucitronCustomText</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">'</span><span class="s1">support</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">title</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Support client</span><span class="dl">'</span><span class="p">,</span>
+  <span class="p">},</span>
+  <span class="dl">'</span><span class="s1">close</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Enregistrer et fermer</span><span class="dl">'</span><span class="p">,</span>
+<span class="p">};</span>
+<span class="nx">tarteaucitron</span><span class="p">.</span><span class="nx">init</span><span class="p">(...);</span>
+</code></pre></div></div>
+
+<p>There is a special case for engagement text. By the default, the engagement text is  <em>{SERVICE_NAME} is disabled.</em>, however you can change it per service. For example:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">tarteaucitronCustomText</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="dl">'</span><span class="s1">engage-twitter</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Follow us on Twitter!</span><span class="dl">'</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<!--
+# Thanks to the sponsors 😊
+
+| ![Amaury Cleuziou](https://avatars.githubusercontent.com/u/26336203?v=4&s=60) |                                                              |   |
+|---|--------------------------------------------------------------|---|
+|  [Amaury Cleuziou](https://github.com/MoryCorp) - first sponsor 🎉 |                                                              |  |
+| |                                                              |   |
+-->
+
+
+
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
