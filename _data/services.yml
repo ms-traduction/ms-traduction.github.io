@@ -67,14 +67,44 @@ legal:
     title: Traducción jurada de documentos notariales y jurídicos
     meta_title: Traducción jurada de documentos notariales | María Salmerón
     meta_description: Traducción jurada francés-español de poderes, escrituras, contratos, testamentos y sentencias para trámites notariales y judiciales
-    documents:
-      - Poderes notariales
-      - Escrituras públicas
-      - Contratos
-      - Testamentos
-      - Actas notariales
-      - Sentencias judiciales
-      - Documentación de herencias y sucesiones
+    document_groups:
+      - title: Poderes notariales
+        documents:
+          - Poderes generales y especiales
+          - Poderes de representación
+      - title: Documentos públicos y actas notariales
+        documents:
+          - Escrituras públicas
+          - Actas notariales
+          - Documentos notariales
+          - Actas de notoriedad
+      - title: Documentos relativos a herencias y donaciones
+        documents:
+          - Testamentos
+          - Escrituras de aceptación y adjudicación de herencia
+          - Escrituras de partición de herencia
+          - Escrituras de donación
+          - Donaciones inter vivos
+          - Documentación necesaria en procedimientos sucesorios
+      - title: Documentos relativos a la compraventa y a las operaciones inmobiliarias
+        documents:
+          - Contratos de arras
+          - Contratos de compraventa
+          - Escrituras públicas de compraventa
+          - Títulos de propiedad
+          - Notas simples registrales
+          - Contratos de arrendamiento
+          - Documentos relativos a operaciones inmobiliarias
+      - title: Contratos y documentos de derecho de familia
+        documents:
+          - Capitulaciones matrimoniales, incluidas las relativas a la separación de bienes
+          - Documentos de modificación del régimen económico matrimonial
+          - Convenios reguladores
+          - Documentos relativos a parejas de hecho
+          - Documentos relacionados con la filiación
+      - title: Documentos judiciales
+        documents:
+          - Sentencias judiciales
     cta_title: ¿Tienes documentación notarial o jurídica?
     cta_email_subject: Solicitud de traducción jurada – Documentos notariales y jurídicos
   fr:
@@ -83,14 +113,37 @@ legal:
     title: Traduction certifiée de documents notariés et juridiques
     meta_title: Traduction de documents notariés espagnols | María Salmerón
     meta_description: Traduction assermentée espagnol-français de procurations, actes notariés, contrats et décisions de justice pour vos démarches juridiques
-    documents:
-      - Procurations notariées
-      - Actes authentiques
-      - Contrats
-      - Testaments
-      - Actes notariés
-      - Jugements
-      - Documents relatifs aux successions
+    document_groups:
+      - title: Procurations
+        documents:
+          - Procurations notariées
+          - Procurations générales et spéciales
+          - Procurations aux fins de représentation
+      - title: Actes authentiques
+        documents:
+          - Actes notariés
+      - title: Documents relatifs aux successions et aux donations
+        documents:
+          - Actes de notoriété
+          - Actes de donation-partage
+          - Testaments
+          - Documents relatifs aux successions
+          - Documents relatifs aux donations
+      - title: Documents relatifs à l’achat et à la vente immobilière
+        documents:
+          - Promesses de vente
+          - Attestations de propriété
+          - Baux notariés
+          - Documents relatifs aux transactions immobilières
+      - title: Contrats et documents familiaux
+        documents:
+          - Contrats de mariage
+          - Contrats de changement de régime matrimonial
+          - Conventions de PACS
+          - Actes liés à la filiation
+      - title: Décisions judiciaires
+        documents:
+          - Jugements
     cta_title: Vous avez des documents notariés ou juridiques ?
     cta_email_subject: Demande de traduction assermentée – Documents notariés et juridiques
 
