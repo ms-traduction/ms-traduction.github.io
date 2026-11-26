@@ -70,41 +70,41 @@ legal:
     document_groups:
       - title: Poderes notariales
         documents:
-          - Poderes generales y especiales
-          - Poderes de representación
+          - Poder general o especial
+          - Poder de representación
       - title: Documentos públicos y actas notariales
         documents:
-          - Escrituras públicas
-          - Actas notariales
-          - Documentos notariales
-          - Actas de notoriedad
+          - Escritura pública
+          - Acta notarial
+          - Documento notarial
+          - Acta de notoriedad
       - title: Documentos relativos a herencias y donaciones
         documents:
-          - Testamentos
-          - Escrituras de aceptación y adjudicación de herencia
-          - Escrituras de partición de herencia
-          - Escrituras de donación
-          - Donaciones inter vivos
-          - Documentación necesaria en procedimientos sucesorios
+          - Testamento
+          - Escritura de aceptación y adjudicación de herencia
+          - Escritura de partición de herencia
+          - Escritura de donación
+          - Donación inter vivos
+          - Documentación necesaria en un procedimiento sucesorio
       - title: Documentos relativos a la compraventa y a las operaciones inmobiliarias
         documents:
-          - Contratos de arras
-          - Contratos de compraventa
-          - Escrituras públicas de compraventa
-          - Títulos de propiedad
-          - Notas simples registrales
-          - Contratos de arrendamiento
-          - Documentos relativos a operaciones inmobiliarias
+          - Contrato de arras
+          - Contrato de compraventa
+          - Escritura pública de compraventa
+          - Título de propiedad
+          - Nota simple registral
+          - Contrato de arrendamiento
+          - Documento relativo a una operación inmobiliaria
       - title: Contratos y documentos de derecho de familia
         documents:
-          - Capitulaciones matrimoniales, incluidas las relativas a la separación de bienes
-          - Documentos de modificación del régimen económico matrimonial
-          - Convenios reguladores
-          - Documentos relativos a parejas de hecho
-          - Documentos relacionados con la filiación
+          - Capitulación matrimonial, incluidas las relativas a la separación de bienes
+          - Documento de modificación del régimen económico matrimonial
+          - Convenio regulador
+          - Documento relativo a una pareja de hecho
+          - Documento relacionado con la filiación
       - title: Documentos judiciales
         documents:
-          - Sentencias judiciales
+          - Sentencia judicial
     cta_title: ¿Tienes documentación notarial o jurídica?
     cta_email_subject: Solicitud de traducción jurada – Documentos notariales y jurídicos
   fr:
@@ -116,34 +116,34 @@ legal:
     document_groups:
       - title: Procurations
         documents:
-          - Procurations notariées
-          - Procurations générales et spéciales
-          - Procurations aux fins de représentation
+          - Procuration notariée
+          - Procuration générale ou spéciale
+          - Procuration aux fins de représentation
       - title: Actes authentiques
         documents:
-          - Actes notariés
+          - Acte notarié
       - title: Documents relatifs aux successions et aux donations
         documents:
-          - Actes de notoriété
-          - Actes de donation-partage
-          - Testaments
-          - Documents relatifs aux successions
-          - Documents relatifs aux donations
+          - Acte de notoriété
+          - Acte de donation-partage
+          - Testament
+          - Document relatif à une succession
+          - Document relatif à une donation
       - title: Documents relatifs à l’achat et à la vente immobilière
         documents:
-          - Promesses de vente
-          - Attestations de propriété
-          - Baux notariés
-          - Documents relatifs aux transactions immobilières
+          - Promesse de vente
+          - Attestation de propriété
+          - Bail notarié
+          - Document relatif à une transaction immobilière
       - title: Contrats et documents familiaux
         documents:
-          - Contrats de mariage
-          - Contrats de changement de régime matrimonial
-          - Conventions de PACS
-          - Actes liés à la filiation
+          - Contrat de mariage
+          - Contrat de changement de régime matrimonial
+          - Convention de PACS
+          - Acte lié à la filiation
       - title: Décisions judiciaires
         documents:
-          - Jugements
+          - Jugement
     cta_title: Vous avez des documents notariés ou juridiques ?
     cta_email_subject: Demande de traduction assermentée – Documents notariés et juridiques
 
